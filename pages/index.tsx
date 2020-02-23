@@ -1,50 +1,29 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Nav from "../components/Nav";
+import Post from '../components/Post'
 
 const Home = () => (
   <div className="container">
     <Head>
-      <title>Create Next App</title>
+      <title>Karnell.site</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
-    <main>
-      <h1 className="title">
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
-
-      <p className="description">
-        Get started by editing <code>pages/index.js</code>
-      </p>
-
-      <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Learn &rarr;</h3>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
-        </a>
-
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
-        </a>
-
-        <a
-          href="https://zeit.co/new?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="card"
-        >
-          <h3>Deploy &rarr;</h3>
-          <p>
-            Instantly deploy your Next.js site to a public URL with ZEIT Now.
+    <Nav/>
+    <main className="container">
+      <div className="">
+        <div className="">
+          <h3 className="title"> Hey, I'm Karnell 👋🏽</h3>
+          <p className="description">
+            I'm a software developer interested in democrotizing web
+            technologies. I create{" "}
+            <a href="https://github.com/KarnellSchultz">open source</a>{" "}
+            &nbsp;projects and write about my experiences in tech.
           </p>
-        </a>
+        </div>
       </div>
+
+<Post />
+
     </main>
 
     <footer>
@@ -52,13 +31,15 @@ const Home = () => (
         href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         target="_blank"
         rel="noopener noreferrer"
-      >
-        Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
+        >
+        Powered by &nbsp; 🌍
       </a>
     </footer>
 
     <style jsx>{`
       .container {
+        color: #b3b9c5;
+        background: #202020;
         min-height: 100vh;
         padding: 0 0.5rem;
         display: flex;
@@ -66,7 +47,6 @@ const Home = () => (
         justify-content: center;
         align-items: center;
       }
-
       main {
         padding: 5rem 0;
         flex: 1;
@@ -96,8 +76,13 @@ const Home = () => (
       }
 
       a {
-        color: inherit;
+        color: #5c73ff;
         text-decoration: none;
+        transition: color 0.15s ease;
+      }
+      a:hover {
+        color: #8899ff;
+        text-decoration: underline;
       }
 
       .title a {
@@ -114,8 +99,9 @@ const Home = () => (
       .title {
         margin: 0;
         line-height: 1.15;
-        font-size: 4rem;
+        font-size: 3.3rem;
       }
+
 
       .title,
       .description {
@@ -146,6 +132,8 @@ const Home = () => (
         margin-top: 3rem;
       }
 
+
+
       .card {
         margin: 1rem;
         flex-basis: 45%;
@@ -157,6 +145,8 @@ const Home = () => (
         border-radius: 10px;
         transition: color 0.15s ease, border-color 0.15s ease;
       }
+
+
 
       .card:hover,
       .card:focus,
@@ -198,6 +188,6 @@ const Home = () => (
       }
     `}</style>
   </div>
-)
+);
 
-export default Home
+export default Home;
