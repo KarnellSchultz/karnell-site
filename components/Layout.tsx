@@ -1,34 +1,56 @@
+import Nav from "./Nav";
 import Head from "next/head";
-import Post from "../components/Post";
-import Layout from "../components/Layout";
 
-import Hey from "../Hey.mdx";
-
-const Home = () => (
-  <Layout>
-        {/* <Hey></Hey> */}
-        <div >
-          <div >
-            <h1 className="title">Karnell Schultz </h1>
-            <p className="description">
-              🤙 I'm a Javascript developer interested in creating tools to
-              democrotize the web. I create{" "}
-              <a href="https://github.com/KarnellSchultz">open source</a>
-              &nbsp;projects and write about my experiences in tech. <br></br>
-              <div className=''>
-              <a href="/">More about me &rarr;</a>
-              </div>
-            </p>
-          </div>
-        </div>
-
-        <Post />
-
+export default function Layout({ children }) {
+  return (
+    <div className="container">
+      <Head>
+        <title>Karnell.site</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Nav />
+      <main>
+        <div>{children}</div>
+      </main>
+      <footer>
+        <a
+          href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by &rarr; 🌍
+        </a>
+      </footer>
       <style jsx>{`
- 
+        .container {
+          color: #b3b9c5;
+          background: #202020;
+          min-height: 100vh;
+          min-width: 100vw;
 
+          display: flex;
+          flex-direction: column;
+        }
+        main {
+          padding: 5rem 0;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          background: #202020;
+        }
 
+        footer {
+          width: 100%;
+          height: 100px;
+          border-top: 1px solid #eaeaea;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
 
+        footer img {
+          margin-left: 0.5rem;
+        }
 
         footer a {
           display: flex;
@@ -60,13 +82,13 @@ const Home = () => (
         .title {
           margin: 0;
           line-height: 1.15;
-          font-size: 2.5rem;
+          font-size: 3.3rem;
         }
 
         .title,
         .description {
           text-align: left;
-          margin: 1rem;
+          margin: 3rem;
         }
 
         .description {
@@ -130,21 +152,6 @@ const Home = () => (
           }
         }
       `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-  </Layout>
-);
-
-export default Home;
+    </div>
+  );
+}

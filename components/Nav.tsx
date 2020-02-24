@@ -1,50 +1,83 @@
 import React from "react";
+import Button from "./Button";
+import Link from "next/link";
 
 export default function Nav() {
   return (
     <div className="nav-container">
-      <div className="nav">
-        <ul>
-          <li className='nav-name' >Karnell </li>
-        </ul>
-
-        <ul className="nav-links">
-          <li>About Me</li>
-          <li>Articles</li>
-          <li>Contact</li>
-        </ul>
-      </div>
+      <ul className="nav-links">
+        <li className="nav-home">
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </li>
+        <li className="nav-about">
+          <Link href="/About">
+            <a>About</a>
+          </Link>
+        </li>
+        <li className="nav-articles">
+          <Link href="/projects">
+            <a>Projects</a>
+          </Link>
+        </li>
+        <li className="nav-articles">
+          <Link href="/articles">
+            <a>Articles</a>
+          </Link>
+        </li>
+      </ul>
+      <ul className="nav-contact">
+        <li className="contact-item">
+          <Button text="Contact ✌️"></Button>
+        </li>
+      </ul>
 
       <style jsx>{`
+        a {
+          color: #b3b9c5;
+          text-decoration: inherit;
+        }
+        a:hover,
+        a:active,
+        a:focus {
+          color: #5c73ff;
+
+        }
+
         .nav-container {
           display: flex;
           flex-direction: row;
           justify-content: center;
-          background: white;
+          align-items: center;
           width: 100%;
-          background: cornsilk;
-
+          line-height: 2rem;
+          background: #0e1111;
+          font-weight: 600;
           position: -webkit-sticky;
           position: sticky;
           top: 0px;
         }
-        .nav {
-          width: 800px;
-          border: solid red 1px;
-          display: flex;
-          display: flex;
-          margin: 1.2rem;
-        }
-        .nav-links {
-          display: flex;
-  justify-content: flex-end;
 
-          border: solid red 1px;
+        .nav-links {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          margin-left: 1.5rem;
         }
-        .nav-name {
-          margin-left: 20px;
-          border: solid red 1px;
+        .nav-contact {
+          width: 100%;
+          display: felx;
+          align-items: center;
+          justify-content: center;
         }
+        .contact-item {
+        }
+        li {
+          margin-left: 2rem;
+          list-style: none;
+        }
+
       `}</style>
     </div>
   );

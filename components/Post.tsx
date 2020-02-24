@@ -5,6 +5,7 @@ export default function Post() {
     <>
       <div className="content-container">
         <h3 className="title2">Latest Articles</h3>
+        <p>Here is some stuff I have written</p>
         <div className="post-card">
           <h3 className=""> 👨🏽‍🚀 A case for Markdown</h3>
         </div>
@@ -24,10 +25,13 @@ export default function Post() {
         }
 
         .title2 {
-          margin: 1.5rem;
-          padding: 1.5rem;
+          width: 90%;
+          margin: 1.2rem;
+          padding: 1.2rem;
           line-height: 1.15;
-          font-size: 1.75rem;
+          font-size: 1.7rem;
+          display:flex;
+          justify-content:flex-start;
         }
 
         .post-card {
