@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Nav from "../components/Nav";
-import Post from '../components/Post'
+import Post from "../components/Post";
+
+import Hey from '../Hey.mdx';
 
 const Home = () => (
   <div className="container">
@@ -8,22 +10,24 @@ const Home = () => (
       <title>Karnell.site</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <Nav/>
+    <Nav />
     <main className="container">
+
+
       <div className="">
         <div className="">
-          <h3 className="title"> Hey, I'm Karnell 👋🏽</h3>
+          <h3 className="title">Karnell Schultz </h3>
           <p className="description">
-            I'm a software developer interested in democrotizing web
-            technologies. I create{" "}
-            <a href="https://github.com/KarnellSchultz">open source</a>{" "}
+           
+🤙 I'm a Javascript developer interested in creating tools to democrotize the web. I create{" "}
+            <a href="https://github.com/KarnellSchultz">open source</a>
             &nbsp;projects and write about my experiences in tech.
           </p>
+  <p><a href="/">More about me &rarr;</a></p>
         </div>
       </div>
 
-<Post />
-
+      <Post />
     </main>
 
     <footer>
@@ -31,7 +35,7 @@ const Home = () => (
         href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         target="_blank"
         rel="noopener noreferrer"
-        >
+      >
         Powered by &nbsp; 🌍
       </a>
     </footer>
@@ -102,7 +106,6 @@ const Home = () => (
         font-size: 3.3rem;
       }
 
-
       .title,
       .description {
         text-align: center;
@@ -132,8 +135,6 @@ const Home = () => (
         margin-top: 3rem;
       }
 
-
-
       .card {
         margin: 1rem;
         flex-basis: 45%;
@@ -145,8 +146,6 @@ const Home = () => (
         border-radius: 10px;
         transition: color 0.15s ease, border-color 0.15s ease;
       }
-
-
 
       .card:hover,
       .card:focus,

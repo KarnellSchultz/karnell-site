@@ -6,11 +6,11 @@ export default function Post() {
       <div className="content-container">
         <h3 className="title2">Latest Articles</h3>
         <div className="post-card">
-          <h3 className=""> 👨🏽‍🚀Cool card </h3>
+          <h3 className=""> 👨🏽‍🚀 A case for Markdown</h3>
         </div>
         <div className="post-card">
           <h3>
-            😋 Get Emoji — All Emojis to ✂️ Copy and 📋 Paste 👌Cool card{" "}
+            😋 Get Emoji — All Emojis to ✂️ Copy and 📋 Paste 👌{" "}
           </h3>
         </div>
       </div>
