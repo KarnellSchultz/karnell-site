@@ -1,11 +1,12 @@
-import React from "react";
+import Section from './Section'
+
 
 export default function Post() {
   return (
     <>
-      <div className="content-container">
+  <Section>
         <h3 className="title2">Latest Articles</h3>
-        <p>Here is some stuff I have written</p>
+        <p className='title-description' >Here is some stuff I have written</p>
         <div className="post-card">
           <h3 className=""> 👨🏽‍🚀 A case for Markdown</h3>
         </div>
@@ -14,22 +15,23 @@ export default function Post() {
             😋 Get Emoji — All Emojis to ✂️ Copy and 📋 Paste 👌{" "}
           </h3>
         </div>
-      </div>
+  </Section>
       <style jsx>{`
-        .content-container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-        }
-
+  
         .title2 {
           width: 90%;
           margin: 1.2rem;
           padding: 1.2rem;
           line-height: 1.15;
           font-size: 1.7rem;
+          display:flex;
+          justify-content:flex-start;
+        }
+        .title-description {
+          width: 90%;
+          margin-left: 2rem;
+          line-height: 1.15;
+
           display:flex;
           justify-content:flex-start;
         }
