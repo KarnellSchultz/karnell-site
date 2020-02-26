@@ -1,17 +1,3 @@
-
-// import Layout from '../components/Layout'
-// import { AppProps } from 'next/app'
-
-// function MyApp({ Component, pageProps }: AppProps) {
-//   return (
-//   <Layout >
-//   <Component {...pageProps} />
-//   </Layout>
-//   )
-// }
-
-
-
 import App from 'next/app'
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
@@ -20,9 +6,10 @@ import Layout from '../components/Layout'
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    // primary: '#0070f3',
+    primary: '#5c73ff',
+    primaryHover: '#8899ff',
     pink:'papayawhip',
-    
   },
 }
 
@@ -31,7 +18,7 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <ThemeProvider theme={theme}>
-        <Layout>
+        <Layout  >
         <Component {...pageProps} />
         </Layout>
       </ThemeProvider>

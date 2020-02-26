@@ -1,7 +1,13 @@
 import Post from "../components/Post";
+import Head from "next/head";
+
 
 const Home = () => (
 <>
+<Head>
+        <title>Karnell.site - Home </title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
     <div className="header">
       <h1 className="title">pop smoke </h1>
       <p className="description">

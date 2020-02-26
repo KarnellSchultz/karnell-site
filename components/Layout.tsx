@@ -2,15 +2,14 @@ import Nav from "./Nav";
 import Head from "next/head";
 
 interface props {
-  pageName?: string;
   children: any;
 }
 
-export default function Layout({ children, pageName }: props) {
+export default function Layout({ children }: props) {
   return (
     <>
       <Head>
-        <title>Karnell.site - {pageName} </title>
+        <title>Karnell.site -  </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />

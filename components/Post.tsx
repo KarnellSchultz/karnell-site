@@ -1,6 +1,8 @@
 import Section from './Section'
 import Button from '../components/Button'
 
+
+
 export default function Post() {
   return (
     <>

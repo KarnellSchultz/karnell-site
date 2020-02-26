@@ -1,12 +1,15 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 
-export default function NavButton({link = '/', text = 'Nav Button'}) {
-    return (
-            <>
-    <Link href={link} >
+
+
+
+export default function NavButton({ link = "/", text = "Nav Button" }) {
+  return (
+    <>
+      <Link href={link}>
         <button type="button">{text}</button>
-    </Link>
+      </Link>
       <style jsx>{`
         .button,
         a.button,
@@ -26,7 +29,6 @@ export default function NavButton({link = '/', text = 'Nav Button'}) {
           font-size: 1rem;
           text-transform: none;
           padding: 0.75rem 1.25rem;
-
           vertical-align: middle;
           text-align: center;
           cursor: pointer;
@@ -42,7 +44,7 @@ export default function NavButton({link = '/', text = 'Nav Button'}) {
         [type="button"]:hover {
           border: 1px solid #0e1111;
           background: #0e1111;
-          color: #ffffff;
+          color: #5c73ff;
           text-decoration: none;
         }
 
@@ -75,6 +77,5 @@ export default function NavButton({link = '/', text = 'Nav Button'}) {
         }
       `}</style>
     </>
-
-    )
+  );
 }

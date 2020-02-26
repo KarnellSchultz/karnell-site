@@ -1,14 +1,11 @@
 import Head from "next/head";
-import React from "react";
-import Layout from "../../components/Layout";
 import Post from "../../components/Post";
 import ArticleCard from "../../components/ArticleCard";
 
-
 export default function articles() {
   return (
-    <Layout pageName='Articles'>
-        <Head>
+    <>
+      <Head>
         <title>Karnell.site - Articles</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -18,9 +15,7 @@ export default function articles() {
         </div>
         <ArticleCard></ArticleCard>
 
-<div className='heading' >
-
-</div>
+        <div className="heading"></div>
         <ArticleCard
           heading="Markdown is cool"
           body="Dang this is a cool component"
@@ -32,7 +27,7 @@ export default function articles() {
         }
 
         a {
-          color: green
+          color: green;
         }
         .grid {
           display: flex;
@@ -44,6 +39,6 @@ export default function articles() {
           margin-top: 3rem;
         }
       `}</style>
-    </Layout>
+    </>
   );
 }

@@ -1,16 +1,16 @@
 import React from "react";
 import Link from "next/link";
 
-const primeColor = '#0250bc';
-const darkColor =  '#e3e3e3';
 
 interface props {
   link?: string;
   text: string;
-  color?: '#0250bc'
+  color?: '#0366ee'
 }
 
-export default function Button({ link = "/", text = "Click 👷🏼‍♀️" , color ='#0250bc' }:props) {
+
+
+export default function Button({ link = "/", text = "Click 👷🏼‍♀️" , color ='#0366ee' }:props) {
 
   return (
     <>
@@ -51,8 +51,8 @@ export default function Button({ link = "/", text = "Click 👷🏼‍♀️" , 
         [type="submit"]:hover,
         [type="reset"]:hover,
         [type="button"]:hover {
-          border: 1px solid ${color};
-          background: ${color};
+          border: 1px solid #5c73ff;
+          background: #5c73ff;
           color: #ffffff;
           text-decoration: none;
         }
@@ -69,8 +69,8 @@ export default function Button({ link = "/", text = "Click 👷🏼‍♀️" , 
         [type="reset"]:active,
         [type="button"]:focus,
         [type="button"]:active {
-          border: 1px solid #0250bc;
-          background: #0250bc;
+          border: 1px solid #5c73ff;
+          background: #5c73ff;
           color: #ffffff;
           text-decoration: none;
         }

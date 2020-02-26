@@ -5,21 +5,12 @@
 
 Karnell Site is my personal blog. Created as a platform to help share my experinces learning on the web.
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-### Deploy on ZEIT Now
+## Deploy on ZEIT Now
 
 #### To do
 
 - [ ] Get a domain
-- [ ] Post Markdown guide
+- [X] Add Styled-components to Nextjs
 - [ ] create a Apolo backend
 - [ ] Graphql server
+- [ ] Post Markdown guide

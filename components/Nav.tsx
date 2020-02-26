@@ -1,34 +1,28 @@
 import React from "react";
-import NavButton from './NavButton'
-import Link from "next/link";
+import NavButton from "./NavButton";
+
+import Button from "./Button";
 
 export default function Nav() {
   return (
     <div className="nav-container">
       <ul className="nav-links">
         <li className="nav-home">
-
-<NavButton text="Home" link="/"  ></NavButton>
+          <NavButton text="Home" link="/"></NavButton>
         </li>
         <li className="nav-about">
-          <Link href="/About">
-            <a>About</a>
-          </Link>
+          <NavButton text="About" link="/about"></NavButton>
         </li>
         <li className="nav-articles">
-          <Link href="/projects">
-            <a>Projects</a>
-          </Link>
+          <NavButton text="Projects" link="/pojects"></NavButton>
         </li>
         <li className="nav-articles">
-          <Link href="/articles">
-            <a>Articles</a>
-          </Link>
+          <NavButton text="Articles" link="/articles"></NavButton>
         </li>
       </ul>
       <ul className="nav-contact">
         <li className="contact-item">
-          <NavButton link='/'  text="Contact ✌️"></NavButton>
+          <Button link="/" text="Contact ✌️"></Button>
         </li>
       </ul>
 
@@ -41,7 +35,6 @@ export default function Nav() {
         a:active,
         a:focus {
           color: #5c73ff;
-
         }
 
         .nav-container {
@@ -76,7 +69,6 @@ export default function Nav() {
           margin-left: 2rem;
           list-style: none;
         }
-
       `}</style>
     </div>
   );
