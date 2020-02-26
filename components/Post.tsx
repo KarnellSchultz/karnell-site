@@ -1,11 +1,16 @@
 import Section from './Section'
-
+import Button from '../components/Button'
 
 export default function Post() {
   return (
     <>
   <Section>
-        <h3 className="title2">Latest Articles</h3>
+    <div className='sub-heading-container' >
+        <h2 className="sub-heading-item">Latest Articles</h2>
+        <div className="sub-heading-item" >
+        <Button link='/articles' text='View All'  ></Button>
+        </div>
+    </div>
         <p className='title-description' >Here is some stuff I have written</p>
         <div className="post-card">
           <h3 className=""> 👨🏽‍🚀 A case for Markdown</h3>
@@ -17,6 +22,20 @@ export default function Post() {
         </div>
   </Section>
       <style jsx>{`
+
+        .sub-heading-container {
+          width: 100%;
+          display: flex;
+          align-items:center;
+          justify-content: flex-start;
+          margin-top: 3rem;
+          margin-left: 2rem;
+
+        }
+        .sub-heading-item {
+          margin-left: 3rem;
+          
+        }
   
         .title2 {
           width: 90%;

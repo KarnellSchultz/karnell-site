@@ -1,11 +1,16 @@
 import Nav from "./Nav";
 import Head from "next/head";
 
-export default function Layout({ children }) {
+interface props {
+  pageName?: string;
+  children: any;
+}
+
+export default function Layout({ children, pageName }: props) {
   return (
     <>
       <Head>
-        <title>Karnell.site</title>
+        <title>Karnell.site - {pageName} </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
@@ -26,7 +31,6 @@ export default function Layout({ children }) {
           .container {
             color: #b3b9c5;
             background: #202020;
-            border: 1px solid green;
             min-height: 100vh;
             min-width: 100vw;
 
@@ -43,8 +47,6 @@ export default function Layout({ children }) {
             display: flex;
             flex-direction: column;
             background: #202020;
-
-
           }
 
           footer {
@@ -160,6 +162,18 @@ export default function Layout({ children }) {
             }
           }
         `}</style>
+        <style jsx global>{`
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    `}</style>
       </div>
     </>
   );

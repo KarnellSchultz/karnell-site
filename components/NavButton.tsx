@@ -1,23 +1,12 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react'
+import Link from 'next/link'
 
-const primeColor = '#0250bc';
-const darkColor =  '#e3e3e3';
-
-interface props {
-  link?: string;
-  text: string;
-  color?: '#0250bc'
-}
-
-export default function Button({ link = "/", text = "Click 👷🏼‍♀️" , color ='#0250bc' }:props) {
-
-  return (
-    <>
+export default function NavButton({link = '/', text = 'Nav Button'}) {
+    return (
+            <>
     <Link href={link} >
         <button type="button">{text}</button>
     </Link>
-
       <style jsx>{`
         .button,
         a.button,
@@ -27,9 +16,9 @@ export default function Button({ link = "/", text = "Click 👷🏼‍♀️" , 
         [type="button"] {
           -webkit-appearance: none;
           display: inline-block;
-          border: 1px solid #0366ee;
+          border: 1px solid #0e1111;
           border-radius: 4px;
-          background: #0366ee;
+          background: #0e1111;
           color: #ffffff;
           font-weight: 600;
           font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue,
@@ -51,8 +40,8 @@ export default function Button({ link = "/", text = "Click 👷🏼‍♀️" , 
         [type="submit"]:hover,
         [type="reset"]:hover,
         [type="button"]:hover {
-          border: 1px solid ${color};
-          background: ${color};
+          border: 1px solid #0e1111;
+          background: #0e1111;
           color: #ffffff;
           text-decoration: none;
         }
@@ -69,8 +58,8 @@ export default function Button({ link = "/", text = "Click 👷🏼‍♀️" , 
         [type="reset"]:active,
         [type="button"]:focus,
         [type="button"]:active {
-          border: 1px solid #0250bc;
-          background: #0250bc;
+          border: 1px solid #0e1111;
+          background: #0e1111;
           color: #ffffff;
           text-decoration: none;
         }
@@ -86,5 +75,6 @@ export default function Button({ link = "/", text = "Click 👷🏼‍♀️" , 
         }
       `}</style>
     </>
-  );
+
+    )
 }

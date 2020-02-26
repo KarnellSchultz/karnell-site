@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import NavButton from './NavButton'
 import Link from "next/link";
 
 export default function Nav() {
@@ -7,9 +7,8 @@ export default function Nav() {
     <div className="nav-container">
       <ul className="nav-links">
         <li className="nav-home">
-          <Link href="/">
-            <a>Home</a>
-          </Link>
+
+<NavButton text="Home" link="/"  ></NavButton>
         </li>
         <li className="nav-about">
           <Link href="/About">
@@ -29,7 +28,7 @@ export default function Nav() {
       </ul>
       <ul className="nav-contact">
         <li className="contact-item">
-          <Button text="Contact ✌️"></Button>
+          <NavButton link='/'  text="Contact ✌️"></NavButton>
         </li>
       </ul>
 

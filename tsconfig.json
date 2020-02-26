@@ -24,6 +24,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", "pages/index.tsx", "types/mdx.d.ts"
+    "**/*.tsx", 
+    "pages/index.tsx", 
+    "types/mdx.d.ts",
   ]
 }
