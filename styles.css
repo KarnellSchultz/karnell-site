@@ -24,3 +24,7 @@ footer a {
   justify-content: center;
   align-items: center;
 }
+/* 
+High-emphasis text -> #FFFFFF (87% opacity)
+Medium-emphasis text -> #FFFFFF (60% opacity)
+Disabled text -> #FFFFFF (38% opacity) */

@@ -24,6 +24,7 @@ const StyledLayout = styled.div`
     text-decoration: underline;
   }
   footer {
+    position: sticky;
   }
 `;
 
@@ -32,15 +33,9 @@ export default function Layout({ children }: props) {
     <StyledLayout>
       <Nav />
       <main>{children}</main>
-      <footer>
-        <a
-          href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by &rarr; 🌍
-        </a>
-      </footer>
+      {/* <footer>
+        <p>Powered by &rarr; 🌍</p>
+      </footer> */}
     </StyledLayout>
   );
 }

@@ -9,6 +9,7 @@ const theme = {
     pink: "papayawhip",
     black: "#0e1111",
     text: "#b3b9c5",
+    // text: "#FFFFFA",
     textHighlight: "#fafafa",
     body: "#202020"
   }

@@ -1,6 +1,5 @@
 import React from "react";
 import NavButton from "./Button";
-
 import styled from "styled-components";
 
 const StyledNav = styled.nav`

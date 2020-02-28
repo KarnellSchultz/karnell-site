@@ -11,6 +11,8 @@ const Section = styled.section`
     font-size: 40px;
     font-weight: 800;
   }
+  p {
+  }
 `;
 
 const Home = () => (
@@ -18,7 +20,7 @@ const Home = () => (
     <HeadTag pageName="🔥 Home" />
     <Section>
       <header>
-        <h1>list of stuff in here </h1>
+        <h1>Karnell Schultz</h1>
         <p className="description">
           🤙 I'm a Javascript developer interested in creating tools to
           democrotize the web. I create{" "}
