@@ -33,7 +33,6 @@ const MainStyledButton = styled(StyledNavButton)`
   border-radius: 4px;
   background: ${({ theme }) => theme.colors.primary};
   color: #ffffff;
-  font-weight: 600;
   font-size: 1rem;
   text-transform: none;
   padding: 0.75rem 1.25rem;

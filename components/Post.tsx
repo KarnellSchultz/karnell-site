@@ -35,8 +35,6 @@ export default function Post() {
         <Button main={true} link="/articles" text="View All"></Button>
       </StyledArticle>
 
-      <p></p>
-
       <StyledPostRow>
         <h3> &rarr; &nbsp; &nbsp; 💁🏾 &nbsp; A case for Learning Markdown 🔽</h3>
         <Button link={"/"} text={"New"} main={true} />

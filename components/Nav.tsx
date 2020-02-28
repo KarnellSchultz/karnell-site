@@ -19,7 +19,8 @@ const StyledNav = styled.nav`
   div {
     display: flex;
     width: 100%;
-    max-width: 960px;
+    max-width: 850px;
+    background: ${({ theme }) => theme.colors.black};
   }
   .nav-contact {
     width: 100%;
