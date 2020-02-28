@@ -3,9 +3,9 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const StyledNavButton = styled.button`
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.3rem;
-  padding: 0.75rem 1.25rem;
+  padding: 1rem 1.5rem;
   background: ${props => props.theme.colors.black};
   color: #ffffff;
   height: 100%;

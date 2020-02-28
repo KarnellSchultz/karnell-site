@@ -6,8 +6,8 @@ const StyledNav = styled.nav`
   display: flex;
   flex-direction: row;
   align-items: column;
-  justify-content: flex-start;
-  background: #0e1111;
+  justify-content: center;
+  background: ${({ theme }) => theme.colors.black};
   width: 100%;
   li {
     list-style: none;
