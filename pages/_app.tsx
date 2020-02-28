@@ -1,15 +1,15 @@
 import App from "next/app";
 import { ThemeProvider } from "styled-components";
 import Layout from "../components/Layout";
-import "../styles.css";
 const theme = {
   colors: {
-    // primary: '#0070f3',
+    // primary: "palevioletred",
     primary: "#5c73ff",
     primaryHover: "#8899ff",
     pink: "papayawhip",
     black: "#0e1111",
     text: "#b3b9c5",
+    textHighlight: "#fafafa",
     body: "#202020"
   }
 };
@@ -26,3 +26,5 @@ export default class MyApp extends App {
     );
   }
 }
+
+import "../styles.css";

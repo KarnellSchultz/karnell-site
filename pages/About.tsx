@@ -1,6 +1,6 @@
-import Head from "next/head";
 import AboutMe from "../content/aboutContent.mdx";
 import styled from "styled-components";
+import HeadTag from "../components/HeadTag";
 
 const Section = styled.section`
   padding: 5rem 2rem 0 2rem;
@@ -17,10 +17,7 @@ const Section = styled.section`
 export default function About() {
   return (
     <>
-      <Head>
-        <title>Karnell.site - About </title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadTag pageName=" 🤙🏾 About" />
       <Section>
         <AboutMe />
       </Section>

@@ -50,7 +50,7 @@ export default function Nav() {
         </ul>
         <ul className="nav-contact">
           <li className="contact-item">
-            <NavButton main={true} link="/" text="Contact ✌️"></NavButton>
+            <NavButton main={true} link="" text="Contact ✌️"></NavButton>
           </li>
         </ul>
       </div>

@@ -29,7 +29,7 @@ const StyledNavButton = styled.button`
 const MainStyledButton = styled(StyledNavButton)`
   -webkit-appearance: none;
   display: inline-block;
-  border: 1px solid #0366ee;
+  border: 1px solid ${({ theme }) => theme.colors.primary};
   border-radius: 4px;
   background: ${({ theme }) => theme.colors.primary};
   color: #ffffff;

@@ -1,6 +1,6 @@
 import Post from "../components/Post";
-import Head from "next/head";
 import styled from "styled-components";
+import HeadTag from "../components/HeadTag";
 
 const Section = styled.section`
   padding: 5rem 2rem 0 2rem;
@@ -15,10 +15,7 @@ const Section = styled.section`
 
 const Home = () => (
   <>
-    <Head>
-      <title>Karnell.site - Home </title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+    <HeadTag pageName="🔥 Home" />
     <Section>
       <header>
         <h1>list of stuff in here </h1>

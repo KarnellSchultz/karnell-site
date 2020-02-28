@@ -1,14 +1,12 @@
 import Head from "next/head";
 import Post from "../../components/Post";
 import ArticleCard from "../../components/ArticleCard";
+import HeadTag from "../../components/HeadTag";
 
 export default function articles() {
   return (
     <>
-      <Head>
-        <title>Karnell.site - Articles</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadTag pageName={"📰 Articles"} />
       <div className="grid-container">
         <div className="grid">
           <Post></Post>

@@ -1,6 +1,6 @@
 {
-  "name": "karnell-site",
-  "version": "0.1.0",
+  "name": "karnellschultz.com",
+  "version": "0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",

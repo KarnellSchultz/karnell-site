@@ -3,35 +3,43 @@ import styled from "styled-components";
 
 const StyledPostRow = styled.div`
   border-radius: 12px;
-  padding: 0.8rem;
+  padding: 0.5rem;
+  line-height: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   :hover,
   :active,
   :focus {
-    color: #e3e3e3;
+    color: ${({ theme }) => theme.colors.textHighlight};
     border-radius: 12px;
-
     background: #3e3e3e;
     border-color: #0070f3;
+  }
+`;
+
+const StyledArticle = styled.article`
+  display: flex;
+  align-items: center;
+  button {
+    margin-left: 2rem;
   }
 `;
 
 export default function Post() {
   return (
     <>
-      <article>
+      <StyledArticle>
         <h2>Latest Articles</h2>
         <Button main={true} link="/articles" text="View All"></Button>
-      </article>
+      </StyledArticle>
 
-      <p>Here is some stuff I have written</p>
-      <div>
-        <h3>😋 Get Emoji — All Emojis to ✂️ Copy and 📋 Paste 👌 </h3>
-      </div>
+      <p></p>
+
       <StyledPostRow>
-        <h3> 👨🏽‍🚀 A case for Markdown</h3>
-      </StyledPostRow>
-      <StyledPostRow>
-        <h3> 👨🏽‍🚀 A case for Markdown</h3>
+        <h3> &rarr; &nbsp; &nbsp; 💁🏾 &nbsp; A case for Learning Markdown 🔽</h3>
+        <Button link={"/"} text={"New"} main={true} />
       </StyledPostRow>
     </>
   );
