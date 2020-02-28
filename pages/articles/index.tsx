@@ -21,24 +21,6 @@ export default function articles() {
           body="Dang this is a cool component"
         />
       </div>
-      <style jsx>{`
-        .heading {
-          text-decoration: none;
-        }
-
-        a {
-          color: green;
-        }
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-      `}</style>
     </>
   );
 }

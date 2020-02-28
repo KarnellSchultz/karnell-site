@@ -1,15 +1,23 @@
 import React from "react";
 import Link from "next/link";
 
+interface props {
+  link?: string;
+  text: string;
+  color?: "#5c73ff";
+}
 
-
-
-export default function NavButton({ link = "/", text = "Nav Button" }) {
+export default function Button({
+  link = "/",
+  text = "Click 👷🏼‍♀️",
+  color = "#5c73ff"
+}: props) {
   return (
     <>
       <Link href={link}>
         <button type="button">{text}</button>
       </Link>
+
       <style jsx>{`
         .button,
         a.button,
@@ -19,9 +27,9 @@ export default function NavButton({ link = "/", text = "Nav Button" }) {
         [type="button"] {
           -webkit-appearance: none;
           display: inline-block;
-          border: 1px solid #0e1111;
+          border: 1px solid #0366ee;
           border-radius: 4px;
-          background: #0e1111;
+          background: #0366ee;
           color: #ffffff;
           font-weight: 600;
           font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue,
@@ -29,6 +37,7 @@ export default function NavButton({ link = "/", text = "Nav Button" }) {
           font-size: 1rem;
           text-transform: none;
           padding: 0.75rem 1.25rem;
+
           vertical-align: middle;
           text-align: center;
           cursor: pointer;
@@ -42,9 +51,9 @@ export default function NavButton({ link = "/", text = "Nav Button" }) {
         [type="submit"]:hover,
         [type="reset"]:hover,
         [type="button"]:hover {
-          border: 1px solid #0e1111;
-          background: #0e1111;
-          color: #5c73ff;
+          border: 1px solid #5c73ff;
+          background: #5c73ff;
+          color: #ffffff;
           text-decoration: none;
         }
 
@@ -60,8 +69,8 @@ export default function NavButton({ link = "/", text = "Nav Button" }) {
         [type="reset"]:active,
         [type="button"]:focus,
         [type="button"]:active {
-          border: 1px solid #0e1111;
-          background: #0e1111;
+          border: 1px solid #5c73ff;
+          background: #5c73ff;
           color: #ffffff;
           text-decoration: none;
         }
