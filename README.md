@@ -3,14 +3,20 @@
 
 > Update project name coming soon.
 
-Karnell Site is my personal blog. Created as a platform to help share my experinces learning on the web.
+My personal website/blog. Built with:
+
+- React
+- Next.js
+- Styled-components
+ 
 
 ## Deploy on ZEIT Now
 
 #### To do
 
 - [ ] Get a domain
-- [X] Add Styled-components to Nextjs
-- [ ] create a Apolo backend
+- [ ] create a Apollo backend
 - [ ] Graphql server
 - [ ] Post Markdown guide
+- [ ] Remove projects tab for now >> add projects to main page
+- [X] Add Styled-components to Nextjs
