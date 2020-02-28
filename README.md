@@ -9,10 +9,7 @@ My personal website/blog. Built with:
 - Next.js
 - Styled-components
  
-
-## Deploy on ZEIT Now
-
-#### To do
+ ## To do
 
 - [ ] Get a domain
 - [ ] create a Apollo backend
