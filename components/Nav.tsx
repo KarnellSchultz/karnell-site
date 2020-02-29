@@ -1,6 +1,7 @@
 import React from 'react';
 import NavButton from './Button';
 import styled from 'styled-components';
+import { MainStyledButton } from '../components/Button';
 
 const StyledNav = styled.nav`
 	display: flex;
@@ -38,7 +39,7 @@ export default function Nav() {
 						<NavButton text="Home" link="/"></NavButton>
 					</li>
 					<li className="nav-about">
-						<NavButton text="about" link="/about"></NavButton>
+						<NavButton text="About" link="/about"></NavButton>
 					</li>
 					{/* <li className="nav-articles">
 						<NavButton text="Projects" link="/pojects"></NavButton>
@@ -49,7 +50,9 @@ export default function Nav() {
 				</ul>
 				<ul className="nav-contact">
 					<li className="contact-item">
-						<NavButton main={true} link="" text="Contact ✌️"></NavButton>
+						<a href="mailto:karnellschultz@gmail.com" target="_blank">
+							<MainStyledButton>Contact</MainStyledButton>
+						</a>
 					</li>
 				</ul>
 			</div>

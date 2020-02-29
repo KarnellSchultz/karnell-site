@@ -26,7 +26,7 @@ const StyledNavButton = styled.button`
 	}
 `;
 
-const MainStyledButton = styled(StyledNavButton)`
+export const MainStyledButton = styled(StyledNavButton)`
 	-webkit-appearance: none;
 	display: inline-block;
 	border: 1px solid ${({ theme }) => theme.colors.primary};

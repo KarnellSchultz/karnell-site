@@ -4,16 +4,16 @@ import { ThemeProvider } from 'styled-components';
 import Layout from '../components/Layout';
 const theme = {
 	colors: {
-		// primary: 'palevioletred',
-		primary: '#5c73ff',
-		primaryHover: '#8899ff',
+		primary: 'palevioletred',
+		primaryHover: '#E28DA9',
+		// primary: '#5c73ff',
+		// primaryHover: '#8899ff',
 		pink: 'papayawhip',
-		black: '#0e1111',
 		text: '#b3b9c5',
-		// text: "#FFFFFA",
 		textHighlight: '#fafafa',
 		body: '#202020',
 		darkBackground: '#252525',
+		black: '#0e1111',
 	},
 };
 

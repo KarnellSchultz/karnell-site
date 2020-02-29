@@ -9,14 +9,20 @@ const StyledPostRow = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background: #252525;
+
+	box-shadow: none;
+	transition: transform 300ms ease-in-out, box-shadow 400ms ease,
+		background 100ms ease;
+	background: ${({ theme }) => theme.colors.darkBackground};
 
 	:hover,
 	:active,
 	:focus {
-		color: ${({ theme }) => theme.colors.textHighlight};
 		border-radius: 12px;
-		background: #3e3e3e;
+		color: ${({ theme }) => theme.colors.textHighlight};
+		background: ${({ theme }) => theme.colors.black};
+		box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+		transform: translateY(-0.5rem);
 		border-color: #0070f3;
 		cursor: pointer;
 	}
@@ -37,14 +43,12 @@ export default function Post() {
 				<h2>Latest Articles</h2>
 				<Button main={true} link="/articles" text="View All"></Button>
 			</StyledArticle>
-
 			<Link href="/articles/markdownguide">
 				<StyledPostRow>
 					<h3>
-						{' '}
 						&rarr; &nbsp; &nbsp; 💁🏾 &nbsp; A case for Learning Markdown 🔽
 					</h3>
-					<Button link={'/'} text={'New'} main={true} />
+					<Button link={'/'} text={'Tech'} main={true} />
 				</StyledPostRow>
 			</Link>
 		</>
