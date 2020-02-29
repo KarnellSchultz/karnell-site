@@ -38,7 +38,7 @@ export default function Nav() {
 						<NavButton text="Home" link="/"></NavButton>
 					</li>
 					<li className="nav-about">
-						<NavButton text="About" link="/about"></NavButton>
+						<NavButton text="about" link="/about"></NavButton>
 					</li>
 					{/* <li className="nav-articles">
 						<NavButton text="Projects" link="/pojects"></NavButton>
