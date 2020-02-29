@@ -1,24 +1,40 @@
-import Head from "next/head";
-import Post from "../../components/Post";
-import ArticleCard from "../../components/ArticleCard";
-import HeadTag from "../../components/HeadTag";
+import Post from '../../components/Post';
+import ArticleCard from '../../components/ArticleCard';
+import HeadTag from '../../components/HeadTag';
+import styled from 'styled-components';
+import { Section } from '../index';
+
+const Grid = styled.div`
+	display: flex;
+	flex: wrap;
+	justify-content: space-between;
+
+	div {
+		padding: 0.6rem;
+	}
+`;
 
 export default function articles() {
-  return (
-    <>
-      <HeadTag pageName={"📰 Articles"} />
-      <div className="grid-container">
-        <div className="grid">
-          <Post></Post>
-        </div>
-        <ArticleCard></ArticleCard>
-
-        <div className="heading"></div>
-        <ArticleCard
-          heading="Markdown is cool"
-          body="Dang this is a cool component"
-        />
-      </div>
-    </>
-  );
+	return (
+		<>
+			<HeadTag pageName={'📰 Articles'} />
+			<Section>
+				<Post></Post>
+				<Grid>
+					<div>
+						<ArticleCard
+							heading={'Smart stuff here'}
+							body={'Wow im so good at this'}
+						/>
+					</div>
+					<div>
+						<ArticleCard
+							heading={'Markdown is cool'}
+							body={'Dang this is a cool component'}
+						/>
+					</div>
+				</Grid>
+			</Section>
+		</>
+	);
 }
