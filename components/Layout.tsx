@@ -34,8 +34,8 @@ export default function Layout({ children }: props) {
 			<Nav />
 			<main>{children}</main>
 			{/* <footer>
-        <p>Powered by &rarr; 🌍</p>
-      </footer> */}
+				<p>Powered by &rarr; 🌍</p>
+			</footer> */}
 		</StyledLayout>
 	);
 }

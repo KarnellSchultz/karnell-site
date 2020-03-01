@@ -19,9 +19,11 @@ const StyledNavButton = styled.button`
 	text-decoration: none;
 	line-height: 1;
 
-	&:hover {
+	&:hover,
+	:active {
 		cursor: pointer;
 		text-transform: none;
+
 		color: ${({ theme }) => theme.colors.primaryHover};
 	}
 `;
@@ -47,7 +49,8 @@ export const MainStyledButton = styled(StyledNavButton)`
 		text-decoration: none;
 		cursor: pointer;
 		text-transform: none;
-		color: #ffffff;
+		font-weight: 400;
+		color: ${({ theme }) => theme.colors.textHighlight};
 		background: ${({ theme }) => theme.colors.primaryHover};
 	}
 `;

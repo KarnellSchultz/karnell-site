@@ -20,7 +20,8 @@ export const Section = styled.section`
 export const Grid = styled.div`
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
+	align-items: center;
 
 	padding-bottom: 2rem;
 
@@ -29,13 +30,15 @@ export const Grid = styled.div`
 	}
 `;
 
+const GridSection = styled(Section)``;
+
 const Home = () => (
 	<>
 		<HeadTag pageName="🔥 Home" />
 		<Section>
 			<h1>Karnell Schultz</h1>
 			<p className="description">
-				🤙 I'm a Javascript developer interested in creating tools to
+				🤙🏾 I'm a Javascript developer interested in creating tools to
 				democrotize the web. I create{' '}
 				<a href="https://github.com/KarnellSchultz">open source</a>
 				&nbsp;projects and write about my experiences in tech. <br></br>
@@ -45,7 +48,7 @@ const Home = () => (
 		<Section>
 			<Post />
 		</Section>
-		<Section>
+		<GridSection>
 			<Grid>
 				<div>
 					<ArticleCard
@@ -78,7 +81,7 @@ const Home = () => (
 					/>
 				</div>
 			</Grid>
-		</Section>
+		</GridSection>
 	</>
 );
 

@@ -15,6 +15,12 @@ const StyledPostRow = styled.div`
 		background 100ms ease;
 	background: ${({ theme }) => theme.colors.darkBackground};
 
+	h3 {
+		height: 3rem;
+		display: flex;
+		align-items: center;
+	}
+
 	:hover,
 	:active,
 	:focus {

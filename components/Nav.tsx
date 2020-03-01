@@ -12,6 +12,7 @@ const StyledNav = styled.nav`
 	width: 100%;
 	li {
 		list-style: none;
+		margin-right: 0.2rem;
 	}
 	ul {
 		display: flex;
@@ -51,7 +52,7 @@ export default function Nav() {
 				<ul className="nav-contact">
 					<li className="contact-item">
 						<a href="mailto:karnellschultz@gmail.com" target="_blank">
-							<MainStyledButton>Contact</MainStyledButton>
+							<MainStyledButton>Contact ✌️</MainStyledButton>
 						</a>
 					</li>
 				</ul>

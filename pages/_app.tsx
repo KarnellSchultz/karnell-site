@@ -4,8 +4,9 @@ import { ThemeProvider } from 'styled-components';
 import Layout from '../components/Layout';
 const theme = {
 	colors: {
-		primary: 'palevioletred',
-		primaryHover: '#E28DA9',
+		primary: '#E28DA9',
+		// primary: '#FFA7C4',
+		primaryHover: 'palevioletred',
 		// primary: '#5c73ff',
 		// primaryHover: '#8899ff',
 		pink: 'papayawhip',
@@ -14,6 +15,10 @@ const theme = {
 		body: '#202020',
 		darkBackground: '#252525',
 		black: '#0e1111',
+	},
+	pinkTheme: {
+		primary: '#E28DA9',
+		primaryHover: 'palevioletred',
 	},
 };
 
