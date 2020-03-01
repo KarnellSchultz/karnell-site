@@ -17,6 +17,11 @@ export const Section = styled.section`
 		font-size: 1.3rem;
 	}
 `;
+
+const ArticleSection = styled(Section)`
+	margin-top: 2rem;
+`;
+
 export const Grid = styled.div`
 	display: flex;
 	flex-wrap: wrap;
@@ -41,14 +46,14 @@ const Home = () => (
 				🤙🏾 I'm a Javascript developer interested in creating tools to
 				democrotize the web. I create{' '}
 				<a href="https://github.com/KarnellSchultz">open source</a>
-				&nbsp;projects and write about my experiences in tech. <br></br>
+				&nbsp;projects and write about my experiences in tech.
 			</p>
 			<a href="/about">More about me &rarr;</a>
 		</Section>
-		<Section>
+		<ArticleSection>
 			<Post />
-		</Section>
-		<GridSection>
+		</ArticleSection>
+		{/* <GridSection>
 			<Grid>
 				<div>
 					<ArticleCard
@@ -81,7 +86,7 @@ const Home = () => (
 					/>
 				</div>
 			</Grid>
-		</GridSection>
+		</GridSection> */}
 	</>
 );
 

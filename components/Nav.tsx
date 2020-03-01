@@ -45,9 +45,9 @@ export default function Nav() {
 					{/* <li className="nav-articles">
 						<NavButton text="Projects" link="/pojects"></NavButton>
 					</li> */}
-					<li className="nav-articles">
+					{/* <li className="nav-articles">
 						<NavButton text="Articles" link="/articles"></NavButton>
-					</li>
+					</li> */}
 				</ul>
 				<ul className="nav-contact">
 					<li className="contact-item">

@@ -50,8 +50,9 @@ export const MainStyledButton = styled(StyledNavButton)`
 		cursor: pointer;
 		text-transform: none;
 		font-weight: 400;
+		border: 1px solid ${({ theme }) => theme.colors.black};
 		color: ${({ theme }) => theme.colors.textHighlight};
-		background: ${({ theme }) => theme.colors.primaryHover};
+		background: ${({ theme }) => theme.colors.buttonTextHover};
 	}
 `;
 

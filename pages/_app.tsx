@@ -4,11 +4,8 @@ import { ThemeProvider } from 'styled-components';
 import Layout from '../components/Layout';
 const theme = {
 	colors: {
-		primary: '#E28DA9',
-		// primary: '#FFA7C4',
-		primaryHover: 'palevioletred',
-		// primary: '#5c73ff',
-		// primaryHover: '#8899ff',
+		primary: '#5c73ff',
+		primaryHover: '#8899ff',
 		pink: 'papayawhip',
 		text: '#b3b9c5',
 		textHighlight: '#fafafa',
@@ -22,11 +19,27 @@ const theme = {
 	},
 };
 
+const pinkTheme = {
+	colors: {
+		primary: '#E28DA9',
+		primaryHover: '#EDB6C8',
+		buttonTextHover: '#AF5A76',
+		textHighlight: '#FFF',
+		text: '#b3b9c5',
+		body: '#202020',
+		darkBackground: '#252525',
+		black: '#0e1111',
+	},
+};
+
+// palevioletred = #DB7093
+// #AF5A76
+
 export default class MyApp extends App {
 	render() {
 		const { Component, pageProps } = this.props;
 		return (
-			<ThemeProvider theme={theme}>
+			<ThemeProvider theme={pinkTheme}>
 				<Layout>
 					<Component {...pageProps} />
 				</Layout>

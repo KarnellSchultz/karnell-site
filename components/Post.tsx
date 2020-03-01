@@ -7,7 +7,7 @@ const StyledPostRow = styled.div`
 	padding: 0.5rem;
 	line-height: 1rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 
 	box-shadow: none;
@@ -19,6 +19,7 @@ const StyledPostRow = styled.div`
 		height: 3rem;
 		display: flex;
 		align-items: center;
+		color: ${({ theme }) => theme.colors.primary};
 	}
 
 	:hover,
@@ -29,13 +30,18 @@ const StyledPostRow = styled.div`
 		background: ${({ theme }) => theme.colors.black};
 		box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
 		transform: translateY(-0.5rem);
-		border-color: #0070f3;
+		/* border-color: #0070f3; */
+
+		h3 {
+			color: ${({ theme }) => theme.colors.primaryHover};
+		}
 		cursor: pointer;
 	}
 `;
 
 const StyledArticle = styled.article`
 	display: flex;
+
 	align-items: center;
 	button {
 		margin-left: 2rem;
@@ -46,15 +52,13 @@ export default function Post() {
 	return (
 		<>
 			<StyledArticle>
-				<h2>Latest Articles</h2>
-				<Button main={true} link="/articles" text="View All"></Button>
+				<h2>Blog Posts</h2>
+				{/* <Button main={true} link="/articles" text="View All"></Button> */}
 			</StyledArticle>
+			<p> A collection of my thoughts and expeiences.</p>
 			<Link href="/articles/markdownguide">
 				<StyledPostRow>
-					<h3>
-						&rarr; &nbsp; &nbsp; 💁🏾 &nbsp; A case for Learning Markdown 🔽
-					</h3>
-					<Button link={'/'} text={'Tech'} main={true} />
+					<h3>💁🏾 &nbsp; A case for Learning Markdown 🔽</h3>
 				</StyledPostRow>
 			</Link>
 		</>
