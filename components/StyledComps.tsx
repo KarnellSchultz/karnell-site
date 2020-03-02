@@ -19,6 +19,9 @@ export const StyledButton = styled.button`
 `;
 
 export const Section = styled.section`
+	@media (max-width: 576px) {
+		padding: 2rem 2rem 0 2rem;
+	}
 	padding: 5rem 2rem 0 2rem;
 	max-width: 800px;
 	font-size: 20px;

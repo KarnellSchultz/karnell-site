@@ -12,7 +12,7 @@ const StyledPostRow = styled.div`
 	box-shadow: none;
 	transition: transform 300ms ease-in-out, box-shadow 400ms ease,
 		background 100ms ease;
-	background: ${({ theme }) => theme.colors.buttonBackground};
+	background: ${({ theme }) => theme.colors.darkBackground};
 
 	h3 {
 		height: 3rem;
@@ -26,7 +26,7 @@ const StyledPostRow = styled.div`
 	:focus {
 		border-radius: 12px;
 		color: ${({ theme }) => theme.colors.textHighlight};
-		background: ${({ theme }) => theme.colors.buttonBackground};
+		background: ${({ theme }) => theme.colors.black};
 		box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
 		transform: translateY(-0.5rem);
 

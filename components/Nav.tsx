@@ -4,10 +4,42 @@ import styled from 'styled-components';
 import { MainStyledButton } from '../components/Button';
 
 const StyledNav = styled.nav`
+	@media (max-width: 576px) {
+		width: 100%;
+		height: 5.6rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		div {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+		}
+		ul {
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			padding: 0 0 0 0;
+		}
+		.nav-links {
+			margin: 0;
+		}
+		.nav-contact {
+			visibility: hidden;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+		.contact-item {
+			width: 8rem;
+		}
+	}
+
 	display: flex;
 	flex-direction: row;
 	align-items: column;
 	justify-content: center;
+
 	background: ${({ theme }) => theme.colors.body};
 	width: 100%;
 	li {
