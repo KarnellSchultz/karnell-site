@@ -7,7 +7,7 @@ const StyledNavButton = styled.button`
 	font-size: 1.3rem;
 	padding: 1rem 1.5rem;
 	background: ${props => props.theme.colors.body};
-	color: #ffffff;
+	color: ${({ theme }) => theme.colors.text};
 	height: 100%;
 	text-decoration: none;
 	text-transform: none;
@@ -20,21 +20,23 @@ const StyledNavButton = styled.button`
 	line-height: 1;
 
 	&:hover,
-	:active {
+	:active,
+	:focus {
 		cursor: pointer;
 		text-transform: none;
-
-		color: ${({ theme }) => theme.colors.primaryHover};
+		border-radius: 4px;
+		background: ${props => props.theme.colors.buttonBackground};
+		color: ${({ theme }) => theme.colors.buttonTextHover};
 	}
 `;
 
 export const MainStyledButton = styled(StyledNavButton)`
 	-webkit-appearance: none;
 	display: inline-block;
-	border: 1px solid ${({ theme }) => theme.colors.primary};
+	border: 1px solid ${({ theme }) => theme.colors.buttonTextHover};
 	border-radius: 4px;
 	background: ${({ theme }) => theme.colors.primary};
-	color: #ffffff;
+	color: ${({ theme }) => theme.colors.buttonText};
 	font-size: 1rem;
 	text-transform: none;
 	padding: 0.75rem 1.25rem;
@@ -45,12 +47,14 @@ export const MainStyledButton = styled(StyledNavButton)`
 	text-decoration: none;
 	line-height: 1;
 
-	&:hover {
+	&:hover,
+	:active,
+	:focus {
 		text-decoration: none;
 		cursor: pointer;
 		text-transform: none;
 		font-weight: 400;
-		border: 1px solid ${({ theme }) => theme.colors.black};
+		border: 1px solid ${({ theme }) => theme.colors.buttonBackground};
 		color: ${({ theme }) => theme.colors.textHighlight};
 		background: ${({ theme }) => theme.colors.buttonTextHover};
 	}
