@@ -2,7 +2,7 @@ import Post from '../../components/Post';
 import ArticleCard from '../../components/ArticleCard';
 import HeadTag from '../../components/HeadTag';
 import styled from 'styled-components';
-import { Section } from '../../components/StyledComps.tsx';
+import { Section } from '../../components/StyledComps';
 
 const Grid = styled.div`
 	display: flex;

@@ -47,6 +47,7 @@ const pinkDarkTheme = {
 		darkBackground: '#252525',
 		black: '#0e1111',
 		text: '#b3b9c5',
+		codeBackground: '#3A3A3A',
 	},
 };
 

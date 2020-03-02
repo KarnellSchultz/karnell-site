@@ -8,7 +8,8 @@ const PostSection = styled(Section)`
 		justify-content: space-between;
 	}
 	code {
-		color: papayawhip;
+		color: ${({ theme }) => theme.colors.textHighlight};
+		background-color: ${({ theme }) => theme.colors.codeBackground};
 	}
 
 	img {
