@@ -8,6 +8,7 @@ const StyledPostRow = styled.div`
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	margin-top: 1rem;
 
 	box-shadow: none;
 	transition: transform 300ms ease-in-out, box-shadow 400ms ease,
@@ -54,6 +55,11 @@ export default function Post() {
 				{/* <Button main={true} link="/articles" text="View All"></Button> */}
 			</StyledArticle>
 			<p>A collection of my thoughts and expeiences.</p>
+			<Link href="/articles/whyblog">
+				<StyledPostRow>
+					<h3>😅 &nbsp; A New Blog? What is this, 2006? ✍🏽 </h3>
+				</StyledPostRow>
+			</Link>
 			<Link href="/articles/markdownguide">
 				<StyledPostRow>
 					<h3>💁🏾 &nbsp; A case for Learning Markdown 🔽</h3>

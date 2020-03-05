@@ -1,10 +1,10 @@
-import Mark from '../../content/MarkdownArticle.mdx';
+import WhyblogMarkdown from '../../content/newblog.mdx';
 import { StyledBlogPost } from '../../components/StyledComps';
 
-export default function markdownGuide() {
+export default function whyblog() {
 	return (
 		<StyledBlogPost>
-			<Mark />
+			<WhyblogMarkdown />
 		</StyledBlogPost>
 	);
 }

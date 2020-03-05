@@ -3,11 +3,6 @@ import styled from 'styled-components';
 import HeadTag from '../components/HeadTag';
 import { Section } from '../components/StyledComps';
 
-import { useState } from 'react';
-import { MainStyledButton as Button } from '../components/Button';
-
-// const [darkMode, setDarkMode] = useState(true);
-
 const ArticleSection = styled(Section)`
 	margin-top: 2rem;
 `;

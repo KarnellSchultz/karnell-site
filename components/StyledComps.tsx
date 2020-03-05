@@ -45,3 +45,67 @@ export const Section = styled.section`
 		line-height: 1.8rem;
 	}
 `;
+
+export const StyledBlogPost = styled.div`
+	@media (max-width: 576px) {
+		padding: 1rem 1rem 1rem 1rem;
+		margin: 1rem 0rem 1rem 0rem;
+		heading {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		h1 {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			font-size: 2.5rem;
+		}
+		h2,
+		h3,
+		h4 {
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			font-size: 2rem;
+		}
+
+		img {
+			width: 50px;
+		}
+	}
+
+	padding: 1rem 1rem 1rem 1rem;
+	margin: 1rem 1rem 1rem 1rem;
+	max-width: 800px;
+	heading {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	h1 {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		font-size: 2.5rem;
+	}
+	h2,
+	h3,
+	h4 {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		font-size: 2rem;
+	}
+	p {
+		margin: 2rem 0.3rem 2.3rem;
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+	}
+	img {
+		width: 100px;
+	}
+	code {
+		color: ${({ theme }) => theme.colors.textHighlight};
+		background-color: ${({ theme }) => theme.colors.codeBackground};
+	}
+`;
