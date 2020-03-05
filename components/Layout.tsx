@@ -34,6 +34,20 @@ const StyledLayout = styled.div`
 	footer {
 		position: sticky;
 		background: ${({ theme }) => theme.colors.darkBackground};
+		width: 100%;
+		height: 100px;
+		border-top: 1px solid grey;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	footer img {
+		margin-left: 0.5rem;
+	}
+	footer a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 `;
 
