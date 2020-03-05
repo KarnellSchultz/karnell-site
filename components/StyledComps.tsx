@@ -88,6 +88,7 @@ export const StyledBlogPost = styled.div`
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 		font-size: 2.5rem;
+		font-weight: 400;
 	}
 	h2,
 	h3,
@@ -95,6 +96,7 @@ export const StyledBlogPost = styled.div`
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 		font-size: 2rem;
+		font-weight: 400;
 	}
 	p {
 		margin: 2rem 0.3rem 2.3rem;

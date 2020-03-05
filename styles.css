@@ -38,6 +38,7 @@ footer a {
 	h2,
 	h3 {
 		line-height: 3rem;
+		font-weight: 400;
 	}
 }
 
