@@ -41,7 +41,7 @@ const Section = styled.section`
 	}
 	p {
 		margin: 0 0 2rem;
-		font-size: 1.3rem;
+		font-size: 20px;
 	}
 	li {
 		line-height: 1.8rem;
@@ -144,6 +144,8 @@ const StyledPostRow = styled.div`
 	:hover,
 	:active,
 	:focus {
+		/* text-decoration: underline; */
+
 		border-radius: 12px;
 		color: ${({ theme }) => theme.colors.textHighlight};
 		background: ${({ theme }) => theme.colors.black};
