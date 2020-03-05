@@ -40,6 +40,8 @@ const StyledLayout = styled.div`
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		font-size: 12px;
+		margin-top: 4rem;
 	}
 	footer img {
 		margin-left: 0.5rem;
@@ -57,7 +59,9 @@ export default function Layout({ children }: props) {
 			<Nav />
 			<main>{children}</main>
 			<footer>
-				<p>Karnell Schultz " 🌍"</p>
+				<p>
+					<em>🌍Personal blog of Karnell Schultz 🌍</em>
+				</p>
 			</footer>
 		</StyledLayout>
 	);
