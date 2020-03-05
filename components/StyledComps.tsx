@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button`
+export { StyledButton, Section, StyledBlogPost, StyledPostRow };
+
+const StyledButton = styled.button`
 	font-weight: 600;
 	font-size: 1.3rem;
 	padding: 0.75rem 1.25rem;
@@ -18,7 +20,7 @@ export const StyledButton = styled.button`
 	}
 `;
 
-export const Section = styled.section`
+const Section = styled.section`
 	@media (max-width: 576px) {
 		padding: 2rem 2rem 0 2rem;
 	}
@@ -46,7 +48,7 @@ export const Section = styled.section`
 	}
 `;
 
-export const StyledBlogPost = styled.div`
+const StyledBlogPost = styled.div`
 	@media (max-width: 576px) {
 		padding: 1rem 1rem 1rem 1rem;
 		margin: 1rem 0rem 1rem 0rem;
@@ -112,7 +114,7 @@ export const StyledBlogPost = styled.div`
 	}
 `;
 
-export const StyledPostRow = styled.div`
+const StyledPostRow = styled.div`
 	border-radius: 12px;
 	padding: 0.5rem;
 	line-height: 1rem;

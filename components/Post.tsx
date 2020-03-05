@@ -19,25 +19,33 @@ const StyledList = styled.ul`
 	}
 `;
 
-const PostDetails: { title: string; date: string; link: string }[] = [
+const PostDetails: {
+	id: number;
+	title: string;
+	date: string;
+	link: string;
+}[] = [
 	{
-		title: '💁🏾 A case for Learning Markdown 🔽',
-		date: 'March 2020',
-		link: '/articles/markdownguide',
-	},
-	{
+		id: 1,
 		title: '😅 A New Blog? What is this, 2006? ✍🏽',
 		date: 'March 2020',
 		link: '/articles/whyblog',
 	},
+	{
+		id: 0,
+		title: '💁🏾 A case for Learning Markdown 🔽',
+		date: 'March 2020',
+		link: '/articles/markdownguide',
+	},
 ];
+//They appear in the order listed top to bottom
 
 const PostRow = (
-	PostDetails: { title: string; date: string; link: string }[],
+	PostDetails: { id: number; title: string; date: string; link: string }[],
 ): any => {
 	return PostDetails.map(row => {
 		return (
-			<li>
+			<li key={row.id}>
 				<Link href={row.link}>
 					<StyledPostRow>
 						<h3> {row.title} </h3>
