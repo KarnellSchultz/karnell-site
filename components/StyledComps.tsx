@@ -115,6 +115,12 @@ const StyledBlogPost = styled.div`
 `;
 
 const StyledPostRow = styled.div`
+	@media (max-width: 576px) {
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		height: 170px;
+	}
 	border-radius: 12px;
 	padding: 0.5rem;
 	line-height: 1rem;
@@ -129,7 +135,7 @@ const StyledPostRow = styled.div`
 	background: ${({ theme }) => theme.colors.darkBackground};
 
 	h3 {
-		height: 3rem;
+		height: 2rem;
 		display: flex;
 		align-items: center;
 		color: ${({ theme }) => theme.colors.primary};
@@ -142,7 +148,7 @@ const StyledPostRow = styled.div`
 		color: ${({ theme }) => theme.colors.textHighlight};
 		background: ${({ theme }) => theme.colors.black};
 		box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
-		transform: translateY(-0.5rem);
+		transform: translateY(-0.2rem);
 
 		h3 {
 			color: ${({ theme }) => theme.colors.primaryHover};
