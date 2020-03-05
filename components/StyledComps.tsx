@@ -109,3 +109,40 @@ export const StyledBlogPost = styled.div`
 		background-color: ${({ theme }) => theme.colors.codeBackground};
 	}
 `;
+
+export const StyledPostRow = styled.div`
+	border-radius: 12px;
+	padding: 0.5rem;
+	line-height: 1rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 1rem;
+
+	box-shadow: none;
+	transition: transform 300ms ease-in-out, box-shadow 400ms ease,
+		background 100ms ease;
+	background: ${({ theme }) => theme.colors.darkBackground};
+
+	h3 {
+		height: 3rem;
+		display: flex;
+		align-items: center;
+		color: ${({ theme }) => theme.colors.primary};
+	}
+
+	:hover,
+	:active,
+	:focus {
+		border-radius: 12px;
+		color: ${({ theme }) => theme.colors.textHighlight};
+		background: ${({ theme }) => theme.colors.black};
+		box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+		transform: translateY(-0.5rem);
+
+		h3 {
+			color: ${({ theme }) => theme.colors.primaryHover};
+		}
+		cursor: pointer;
+	}
+`;

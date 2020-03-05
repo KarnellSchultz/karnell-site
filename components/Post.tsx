@@ -1,44 +1,8 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import { StyledPostRow } from '../components/StyledComps';
 
-const StyledPostRow = styled.div`
-	border-radius: 12px;
-	padding: 0.5rem;
-	line-height: 1rem;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	margin-top: 1rem;
-
-	box-shadow: none;
-	transition: transform 300ms ease-in-out, box-shadow 400ms ease,
-		background 100ms ease;
-	background: ${({ theme }) => theme.colors.darkBackground};
-
-	h3 {
-		height: 3rem;
-		display: flex;
-		align-items: center;
-		color: ${({ theme }) => theme.colors.primary};
-	}
-
-	:hover,
-	:active,
-	:focus {
-		border-radius: 12px;
-		color: ${({ theme }) => theme.colors.textHighlight};
-		background: ${({ theme }) => theme.colors.black};
-		box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
-		transform: translateY(-0.5rem);
-
-		h3 {
-			color: ${({ theme }) => theme.colors.primaryHover};
-		}
-		cursor: pointer;
-	}
-`;
-
-const StyledArticle = styled.article`
+const StyledHeading = styled.article`
 	display: flex;
 
 	align-items: center;
@@ -47,24 +11,52 @@ const StyledArticle = styled.article`
 	}
 `;
 
+const StyledList = styled.ul`
+	list-style-type: none;
+	padding: 0;
+	li {
+		list-style: none;
+	}
+`;
+
+const PostDetails: { title: string; date: string; link: string }[] = [
+	{
+		title: '💁🏾 A case for Learning Markdown 🔽',
+		date: 'March 2020',
+		link: '/articles/markdownguide',
+	},
+	{
+		title: '😅 A New Blog? What is this, 2006? ✍🏽',
+		date: 'March 2020',
+		link: '/articles/whyblog',
+	},
+];
+
+const PostRow = (
+	PostDetails: { title: string; date: string; link: string }[],
+): any => {
+	return PostDetails.map(row => {
+		return (
+			<li>
+				<Link href={row.link}>
+					<StyledPostRow>
+						<h3> {row.title} </h3>
+					</StyledPostRow>
+				</Link>
+			</li>
+		);
+	});
+};
+
 export default function Post() {
 	return (
 		<>
-			<StyledArticle>
+			<StyledHeading>
 				<h2>Blog Posts</h2>
 				{/* <Button main={true} link="/articles" text="View All"></Button> */}
-			</StyledArticle>
+			</StyledHeading>
 			<p>A collection of my thoughts and expeiences.</p>
-			<Link href="/articles/whyblog">
-				<StyledPostRow>
-					<h3>😅 &nbsp; A New Blog? What is this, 2006? ✍🏽 </h3>
-				</StyledPostRow>
-			</Link>
-			<Link href="/articles/markdownguide">
-				<StyledPostRow>
-					<h3>💁🏾 &nbsp; A case for Learning Markdown 🔽</h3>
-				</StyledPostRow>
-			</Link>
+			<StyledList>{PostRow(PostDetails)}</StyledList>
 		</>
 	);
 }
