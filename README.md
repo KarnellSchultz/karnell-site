@@ -12,11 +12,11 @@
 
 ## To do
 
-- [ ] add mobile styles
+- [X] add mobile styles
 - [ ] Add projects to main page
 - [ ] Dark/Light Mode
-- [ ] Remove articles /page and add articles to /home *simplify*
-- [ ] Post Markdown guide
+- [X] Remove articles /page and add articles to /home *simplify*
+- [X] Post Markdown guide
 - [ ] maybe change text color to #FFFFFF edit text opacity
 - [X] fix nav positioning - center it and set a max width
 - [X] Remove projects tab for now. Will add later when needed
