@@ -4,20 +4,19 @@
 
 ### Built with
 
-- React
-- Next.js
-- Styled-Components
-- TypeScript
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
+- [Styled-Components](https://styled-components.com/)
 - [MDX](https://mdxjs.com/)
 
 ## To do
 
-- [ ] add mobile styles
 - [ ] Add projects to main page
 - [ ] Dark/Light Mode
-- [ ] Remove articles /page and add articles to /home *simplify*
-- [ ] Post Markdown guide
-- [ ] maybe change text color to #FFFFFF edit text opacity
+- [X] add mobile styles
+- [X] Remove articles / page and add articles to /home *simplify*
+- [X] Post Markdown guide
 - [X] fix nav positioning - center it and set a max width
 - [X] Remove projects tab for now. Will add later when needed
 - [x] Add Styled-components to Nextjs
