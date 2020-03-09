@@ -27,7 +27,7 @@ const PostDetails: {
 }[] = [
   {
     id: 2,
-    title: "🥳 WWW.howImadeMySite.com 🥳",
+    title: "🥳HowImadeMySite.com",
     date: "March 2020",
     link: "/articles/howimademysite"
   },
