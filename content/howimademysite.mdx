@@ -1,0 +1,93 @@
+# How I created my personal blog website
+
+_March 2020_
+
+## Goals / Ideas
+
+- Easy to maintain site to host blogs and projects
+- A place to point people to learn more about me
+- Create a place of my own on the web
+
+## 🥞 The 🥞 Stack 🥞
+
+- Next.js
+- React/TypeScript
+- Now / Zeit🔺
+- Styled-Components 💅🏾
+- [MDX](https://mdxjs.com/)
+
+## Design Inspo aka "Designs I attempted to rip off"
+
+- [Tania Rascia](https://www.taniarascia.com/) - 🔥Blog, I've learned loads from her blog and she basically inspired me to create my own blog. I took lots of ideas from her blog to make my own.
+- [john kueh](https://johnkueh.com/) - Very slick site. Love the colors and the boldness to go dark dark. This article is even based on something I saw on his site.
+- [Styled-Components](https://styled-components.com/) - When I was learning how to use Styled-Components I realised I really wanted to get their palevioletred into my site. Although the pink on my site is not quite `palevioletred`.
+- Dark Modes Everywhere - 🖤 🖤Love Dark Mode 🖤 🖤I decided to do my site in a kind of "dark mode" only.
+
+## Designing while Coding 🎨
+
+Honestly, if I had to do it all again I'd consider taking a moment to think about what I want the final result to be. This would have saved me plenty of time when it comes to picking colors and deciding where to place components.
+
+But hey, you live and you learn.
+
+I started with Next.js. I know there are lots of people asking should they be using Next or Gatsby. I wish I could tell you some logical and technical reason _why_ I chose Next over Gatsby, but honestly I found Next first so that's what I went with. And, I love it!
+
+## Issue #1 - What the heck is CSS in JS? 😅
+
+### CSS in JS - what's that all about?
+
+I've heard that some hate it, I've heard that some love it. I was too ignorant to have an opinion. I will say I thought that the syntax is awkward for me at first. I'd seen the backticks being used in that way while playing around with GraphQL, but I was very unsure of what to make of it or how scoped CSS worked.
+
+The information I found on the NextJS docs pointed me to writing CSS in weird looking tags. I never really loved css in JS. But it helped me learn important concepts.
+
+Writing CSS like this helped me to better understand the idea of having scoped CSS. That said, I went looking for something new. That's where I started looking into this thing called [Styled-Components](https://styled-components.com/docs/basics) 💅🏼.
+
+Styled-Components had great looking docs so I decided to go with it. Also Ziet has a super helpful example of styled-components in the [Ziet Github repo](https://github.com/zeit/next.js/tree/canary/examples/with-styled-components)
+
+The hardest part about learning how to use Styled-Components was the setup with Next.js. I ran into a issue where I would lose all of my styled after each page reload. I found some great [Github issues](https://github.com/zeit/next.js/issues/4068) that lead me to adding a custom .babelrc file to my project. Which was a first for me.
+
+## Too much
+
+While coding and designing the site at the same time I tried to add all the things all at once. There were pages for Projects and Articles and a contact page. However as time when on I realized that I did not _need_ all of these pages. I realized that I needed to start small and progressively enhance the site when I could and when I needed.
+
+Therefore I ended up launching the site with just two main pages. A Home page, and an About Me page. Doing this allow my productivity to go through the roof! Doing less allowed me to do more with the pages I decided to keep.
+
+This was the best decision of the whole project. Do less.
+
+## Issue #2 - Where to host the content?
+
+I needed a place to store my blog posts. I thought I might create a graphql API and a database and all that good stuff. However, I really did not want to make this blog more complicated than it had to be. So, I started looking around for some alternatives.
+
+I'm not sure how, but I found [MDX](https://mdxjs.com/) and saw that I could just write my posts in Markdown and it let me add components directly to the Markdown document. I've become a big fan of MDX and I'm excited to see how far I can take it.
+
+I plan on hosting each of my posts in a file within my project. Maybe one day when I have much more content I'll get into a CMS. Maybe [Prismic](https://prismic.io/) / [Hasura](https://hasura.io/) / [Sanity](https://www.sanity.io/) or one of the many other services in the CMS space. But I'll save that topic for another time.
+
+So in conclusion, I'm hosting this post in [my project](https://github.com/KarnellSchultz/karnell-site/tree/master/content).
+
+## Domain name + Hosting
+
+Near the end of the project when I was finally ready to launch. I realised that I never purchased a domain name or hosted a project on a custom domain that I owned.
+
+First I had to research the domain name providers via [this awesome YouTube video](https://www.youtube.com/watch?v=8CpCgqUf94k). I ended up going with [dynadot.com](http://dynadot.com). 💥 Boom [KarnellSchultz.com](http://karnellschultz.com) was born.
+
+After getting the domain name, setting it up with Now / Ziet was a breeze. I love the automatic update via the Git integration. They also send a nice little email to you when with the status of the most recent deploy 👍🏽, love getting those emails.
+
+## What's coming in the future?
+
+In the future I want to write about what I'm learning. I plan on creating a list of topics I want to learn about and post that list on this site. When I've 'learned what there is to know' then I'll write what I've learned and post a blog. This is in keeping with the learning in public tradition.
+
+I'll also start updating my home page with a few of my projects.
+
+## Conclusion
+
+I learned so many things in this process. Way more than I could add here.
+
+If I was starting over I'd do a few things differently. Firstly I'd spend more time thinking about where my project would end up and the specific things that I'd need to have before starting. This would help speed up the development portion of the project.
+
+Things I would have sorted out beforehand:
+
+- Color Theme
+- Tech Stack
+- Layout
+- Types of pages
+
+🌍 Cheers 🌍
