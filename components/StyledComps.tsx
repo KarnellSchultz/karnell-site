@@ -102,6 +102,7 @@ const StyledBlogPost = styled.div`
   }
   li {
     font-size: 19px;
+    padding-top: 0.4rem;
   }
 
   p {
