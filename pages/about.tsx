@@ -1,4 +1,4 @@
-import AboutMe from '../content/aboutContent.mdx';
+import AboutMe from '../content/posts/aboutContent.mdx';
 import HeadTag from '../components/HeadTag';
 import { Section } from '../components/StyledComps';
 import styled from 'styled-components';

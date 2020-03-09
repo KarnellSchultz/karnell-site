@@ -1,10 +1,10 @@
-import Howimademysite from "../../content/howimademysite.mdx";
-import { StyledBlogPost } from "../../components/StyledComps";
+import Howimademysite from '../../content/posts/howimademysite.mdx';
+import { StyledBlogPost } from '../../components/StyledComps';
 
 export default function markdownGuide() {
-  return (
-    <StyledBlogPost>
-      <Howimademysite />
-    </StyledBlogPost>
-  );
+	return (
+		<StyledBlogPost>
+			<Howimademysite />
+		</StyledBlogPost>
+	);
 }

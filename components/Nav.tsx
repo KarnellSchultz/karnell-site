@@ -25,7 +25,7 @@ const StyledNav = styled.nav`
 			margin: 0;
 		}
 		.nav-contact {
-			visibility: hidden;
+			/* visibility: hidden; */
 			width: 100%;
 			display: flex;
 			justify-content: center;
@@ -40,11 +40,14 @@ const StyledNav = styled.nav`
 	align-items: column;
 	justify-content: center;
 
+	padding-right: 1.5rem;
+
 	background: ${({ theme }) => theme.colors.body};
-	width: 100%;
+	width: 865px;
 	li {
+		padding: 1rem;
+		padding-left: 0.2rem;
 		list-style: none;
-		margin-right: 0.2rem;
 	}
 	ul {
 		display: flex;
@@ -52,7 +55,7 @@ const StyledNav = styled.nav`
 	div {
 		display: flex;
 		width: 100%;
-		max-width: 865px;
+		/* max-width: 865px; */
 		background: ${({ theme }) => theme.colors.body};
 	}
 	.nav-contact {
@@ -74,12 +77,6 @@ export default function Nav() {
 					<li className="nav-about">
 						<NavButton text="About" link="/about"></NavButton>
 					</li>
-					{/* <li className="nav-articles">
-						<NavButton text="Projects" link="/pojects"></NavButton>
-					</li> */}
-					{/* <li className="nav-articles">
-						<NavButton text="Articles" link="/articles"></NavButton>
-					</li> */}
 				</ul>
 				<ul className="nav-contact">
 					<li className="contact-item">
