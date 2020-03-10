@@ -66,10 +66,9 @@ export default function Post() {
   return (
     <>
       <StyledHeading>
-        <h2>Blog Posts</h2>
-        {/* <Button main={true} link="/articles" text="View All"></Button> */}
+        <h2>Blogs</h2>
       </StyledHeading>
-      <p>A collection of my thoughts and expeiences.</p>
+      <em>A collection of my thoughts and expeiences.</em>
       <StyledList>{PostRow(PostDetails)}</StyledList>
     </>
   );
