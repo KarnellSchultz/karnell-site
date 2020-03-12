@@ -47,12 +47,6 @@ export const MainStyledButton = styled(StyledNavButton)`
 	text-decoration: none;
 	line-height: 1;
 
-	@media (max-width: 576px) {
-		padding: 0;
-		margin: 0;
-		margin-right: 0;
-	}
-
 	&:hover,
 	:active,
 	:focus {
