@@ -5,7 +5,6 @@ import { MainStyledButton } from '../components/Button';
 
 const StyledNav = styled.nav`
 	@media (max-width: 900px) {
-		/* background: red; */
 		width: 100vw;
 		display: flex;
 
