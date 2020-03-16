@@ -16,11 +16,10 @@ const StyledNavSection = styled.section`
     justify-content: space-between;
   }
   /* background: green; */
-  padding-left: 1.5rem;
+  padding: 2rem 0 2rem 1.5rem;
   display: flex;
-  width: 100%;
-
   justify-content: space-between;
+  align-items: center;
 `;
 
 export default function Nav() {

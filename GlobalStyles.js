@@ -43,7 +43,8 @@ nav section {
 
 nav a {
   color:${({ theme }) => theme.colors.text};
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 1.33rem;
   padding: 1rem 1.5rem;
   border-radius: 4px;
   letter-spacing:0px;
@@ -82,6 +83,7 @@ a:hover {
 text-decoration: underline;
 }
 li {
+  color: ${({ theme }) => theme.colors.text};
   line-height: 1.75rem;
   letter-spacing: 1.75px;
 }
