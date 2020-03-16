@@ -1,30 +1,84 @@
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 html,
 body {
-	padding: 0;
-	margin: 0;
-	background: #252525;
-	font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
-		Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  background: #252525;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
+    Arial, sans-serif;
+  transition: all 300ms ease 100ms;
 }
+
+p {
+  font-size: 1.1rem;
+}
+
+nav {
+  display: flex;
+  padding: 2rem 0;
+}
+
+nav section {
+  width: 100%;
+}
+
+nav a {
+  font-weight: 700;
+}
+nav a:first-of-type {
+  margin-left: -1.5rem;
+}
+
+nav a:hover {
+}
+
+a {
+  color: red;
+}
+
+section {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+section h1 {
+  font-size: 3rem;
+}
+
+.button {
+  display: inline-block;
+  background: palevioletred;
+  color: white;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  transition: all 30ms ease;
+}
+
+.button:hover {
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 @media screen and (max-width: 620) {
-	html {
-		width: 100vw;
-	}
+  html {
+    width: 100vw;
+  }
 }
 
 @media (max-width: 576px) {
-	body {
-		line-height: 2rem;
-	}
-	h1,
-	h2,
-	h3 {
-		line-height: 3rem;
-		font-weight: 400;
-	}
+  body {
+    line-height: 2rem;
+  }
+  h1,
+  h2,
+  h3 {
+    line-height: 3rem;
+    font-weight: 400;
+  }
 }
 
 /* 
