@@ -2,6 +2,7 @@ import "../styles.css";
 import App from "next/app";
 import { ThemeProvider } from "styled-components";
 import Layout from "../components/Layout";
+import { GlobalStyles } from "../GlobalStyles";
 const theme = {
   colors: {
     primary: "#5c73ff",
@@ -61,6 +62,7 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <ThemeProvider theme={pinkDarkTheme}>
+        <GlobalStyles />
         <Layout>
           <Component {...pageProps} />
         </Layout>
