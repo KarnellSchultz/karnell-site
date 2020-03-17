@@ -3,20 +3,16 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const StyledNavSection = styled.section`
-  @media (max-width: 900px) {
-    width: 100vw;
-    padding: 0;
+  @media (max-width: 890px) {
+    padding: 0 0 0 0;
     display: flex;
     justify-content: space-between;
   }
   @media (max-width: 567px) {
-    max-width: 100vw;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+    .links {
+    }
+    padding: 0 0 0 0;
   }
-  /* background: green; */
-  padding: 2rem 0 2rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

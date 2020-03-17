@@ -1,10 +1,9 @@
-import Mark from '../../content/posts/MarkdownArticle.mdx';
-import { StyledBlogPost } from '../../components/StyledComps';
+import Mark from "../../content/posts/MarkdownArticle.mdx";
 
 export default function markdownGuide() {
-	return (
-		<StyledBlogPost>
-			<Mark />
-		</StyledBlogPost>
-	);
+  return (
+    <section>
+      <Mark />
+    </section>
+  );
 }

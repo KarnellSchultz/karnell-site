@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
 * {
@@ -9,7 +9,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 16px;
-background: ${({ theme }) => theme.colors.body};
+  background: ${({ theme }) => theme.colors.body};
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
     Arial, sans-serif;
   transition: all 300ms ease 100ms;
@@ -18,7 +18,7 @@ section {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0rem 1.5rem;
+  padding: 0 1.5rem 5rem 1.5rem;
   letter-spacing:1.5px;
 }
 section h1 {
@@ -40,15 +40,20 @@ width:100%;
 nav section {
   width: 100%;
 }
+nav div:first-of-type {
+    /* margin-left: -1.5rem; */
+}
+
 
 nav a {
   color:${({ theme }) => theme.colors.text};
   font-weight: 400;
   font-size: 1.33rem;
-  padding: 1rem 1.5rem;
+  padding: 1.75rem 1.75rem;
   border-radius: 4px;
   letter-spacing:0px;
   transition: 10ms background ;
+
 }
 nav a:first-of-type {
   margin-left: -1.5rem;
@@ -66,7 +71,7 @@ h1, h2, h3, h4 {
 
 p {
   color: ${({ theme }) => theme.colors.text};
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing:0.1px;
 }
 em {
@@ -103,17 +108,14 @@ footer p {
 
 
 .button {
+  -webkit-appearance: none;
   display: inline-block;
   background: ${({ theme }) => theme.colors.primary};
-  -webkit-appearance: none;
   color: #FFF;
   border-radius: 4px;
-  font-weight: 450;
-  /* padding: 0.75rem 1.5rem; */
   border: none;
-
-
-
+  font-weight: 450;
+  padding: 0.75rem 1.5rem;
   transition: all 30ms ease;
 }
 
@@ -122,9 +124,14 @@ footer p {
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 620) {
-  html {
-    width: 100vw;
+@media (max-width: 890) {
+  nav {
+    padding: 0 0 0 0;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 3rem;
   }
 }
 
@@ -132,11 +139,17 @@ footer p {
   body {
     line-height: 2rem;
   }
+  section{
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+  nav {
+    padding: 2rem 0 0 0;
+  }
   h1,
   h2,
   h3 {
-    font-size: 1.4rem;
-    line-height: 1.7rem;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 }
 

@@ -1,10 +1,9 @@
-import WhyblogMarkdown from '../../content/posts/newblog.mdx';
-import { StyledBlogPost } from '../../components/StyledComps';
+import WhyblogMarkdown from "../../content/posts/newblog.mdx";
 
 export default function whyblog() {
-	return (
-		<StyledBlogPost>
-			<WhyblogMarkdown />
-		</StyledBlogPost>
-	);
+  return (
+    <section>
+      <WhyblogMarkdown />
+    </section>
+  );
 }
