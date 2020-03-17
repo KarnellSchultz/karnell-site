@@ -120,7 +120,8 @@ footer p {
 }
 
 .button:hover {
-  background: green;
+  background: ${({ theme }) => theme.colors.primaryHover};
+  color: #FFF ;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
