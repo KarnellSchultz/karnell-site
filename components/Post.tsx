@@ -1,6 +1,40 @@
-import Link from "next/link";
-import styled from "styled-components";
-import { StyledPostRow } from "../components/StyledComps";
+import Link from 'next/link';
+import styled from 'styled-components';
+
+const StyledPostRow = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 3rem;
+  letter-spacing: 0.2px;
+  border-radius: 4px;
+
+  transition: transform 300ms ease-in-out, box-shadow 400ms ease,
+    background 100ms ease;
+  background: ${({ theme }) => theme.colors.body2};
+  :hover,
+  :active,
+  :focus {
+    border-radius: 4px;
+    color: ${({ theme }) => theme.colors.primaryHover};
+    background: ${({ theme }) => theme.colors.body2Hover};
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.01rem);
+    h3 {
+      color: ${({ theme }) => theme.colors.primary};
+    }
+    cursor: pointer;
+  }
+  @media (max-width: 576px) {
+    height: 170px;
+  }
+  @media (max-width: 768px) {
+    line-height: 3rem;
+    height: 170px;
+  }
+`;
 
 const StyledHeading = styled.article`
   display: flex;
@@ -26,22 +60,22 @@ const PostDetails: {
 }[] = [
   {
     id: 2,
-    title: "🥳HowImadeMySite.com",
-    date: "March 2020",
-    link: "/articles/howimademysite"
+    title: '🥳HowImadeMySite.com',
+    date: 'March 2020',
+    link: '/articles/howimademysite',
   },
   {
     id: 1,
-    title: "😅 A New Blog? What is this, 2006? ✍🏽",
-    date: "March 2020",
-    link: "/articles/whyblog"
+    title: '😅 A New Blog? What is this, 2006? ✍🏽',
+    date: 'March 2020',
+    link: '/articles/whyblog',
   },
   {
     id: 0,
-    title: "💁🏾 A case for Learning Markdown 🔽",
-    date: "March 2020",
-    link: "/articles/markdownguide"
-  }
+    title: '💁🏾 A case for Learning Markdown 🔽',
+    date: 'March 2020',
+    link: '/articles/markdownguide',
+  },
 ];
 //They appear in the order listed top to bottom
 

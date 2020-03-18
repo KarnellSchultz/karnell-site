@@ -14,17 +14,20 @@ export const themes = {
 
   lightTheme: {
     colors: {
-      primary: '#E28DA9',
+      primary: 'palevioletred',
       primaryHover: '#EDB6C8',
+
       buttonText: '#FAFAFA',
       buttonTextHover: '#DB7093',
-      buttonBackground: '#FAFA',
-      text: '#b3b9c5',
+      buttonBackground: 'palevioletred',
+
+      text: '#454545',
       textHighlight: '#FFF',
-      headerText: '#cecece',
-      body: '#FAFAFA',
-      darkBackground: '#252525',
-      black: '#0e1111',
+      headerText: '#111',
+
+      body: '#ffffff',
+      body2: '#F5F5F5',
+      body2Hover: '#DCDCDC',
       codeBackground: '#3A3A3A',
     },
   },
@@ -32,15 +35,18 @@ export const themes = {
     colors: {
       primary: '#E28DA9',
       primaryHover: '#EDB6C8',
+
       buttonText: '#FAFAFA',
       buttonTextHover: '#DB7093',
-      buttonBackground: '#181818',
+      buttonBackground: '#E28DA9',
+
       text: '#b3b9c5',
       textHighlight: '#FFF',
       headerText: '#cecece',
+
       body: '#202020',
-      darkBackground: '#252525',
-      black: '#0e1111',
+      body2: '#252525',
+      body2Hover: '#0e1111',
       codeBackground: '#3A3A3A',
     },
   },

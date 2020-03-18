@@ -40,10 +40,6 @@ width:100%;
 nav section {
   width: 100%;
 }
-nav div:first-of-type {
-    /* margin-left: -1.5rem; */
-}
-
 
 nav a {
   color:${({ theme }) => theme.colors.text};
@@ -62,7 +58,7 @@ nav a:first-of-type {
 nav a:hover {
   color: ${({ theme }) => theme.colors.headerText};
   text-decoration:none;
-  background: #111;
+  background: ${({ theme }) => theme.colors.body2Hover};
 }
 
 h1, h2, h3, h4 {
@@ -84,6 +80,7 @@ a {
   transition: all 0.15s ease-in 50ms;
 }
 a:hover {
+  cursor: pointer;
   color : ${({ theme }) => theme.colors.primaryHover};
 text-decoration: underline;
 }
@@ -106,11 +103,10 @@ footer p {
   font-size: 0.9rem
 }
 
-
 .button {
   -webkit-appearance: none;
   display: inline-block;
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.buttonBackground};
   color: #FFF;
   border-radius: 4px;
   border: none;
@@ -120,6 +116,7 @@ footer p {
 }
 
 .button:hover {
+  cursor: pointer;
   background: ${({ theme }) => theme.colors.primaryHover};
   color: #FFF ;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
