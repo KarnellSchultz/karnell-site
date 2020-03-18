@@ -18,11 +18,7 @@ const StyledNavSection = styled.section`
   align-items: center;
 `;
 
-interface props {
-  toggleTheme: any;
-}
-
-export default function Nav({ toggleTheme }: props) {
+export default function Nav({ toggleTheme }: any) {
   return (
     <nav>
       <StyledNavSection>
@@ -33,7 +29,7 @@ export default function Nav({ toggleTheme }: props) {
           <Link href="/about">
             <a>About Me</a>
           </Link>
-          <a onClick={toggleTheme}>🚀</a>
+          <a onClick={toggleTheme}>🌞🌝 </a>
         </div>
         <div>
           <a className="button" target="_blank">

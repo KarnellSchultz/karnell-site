@@ -5,10 +5,6 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../GlobalStyles';
 import { themes } from '../Themes';
 
-interface props {
-  children: any;
-}
-
 const StyledLayout = styled.section`
   min-height: 100vh;
   min-width: 100vw;
@@ -17,8 +13,9 @@ const StyledLayout = styled.section`
   }
 `;
 
-export default function Layout({ children }: props) {
+export default function Layout({ children }: any) {
   const { pinkDarkTheme, lightTheme } = themes;
+
   const [theme, setTheme] = useState(pinkDarkTheme);
 
   const toggleTheme = () => {
