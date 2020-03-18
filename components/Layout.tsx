@@ -1,5 +1,8 @@
+import { useState } from 'react';
 import Nav from './Nav';
 import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles, themes } from '../GlobalStyles';
 
 interface props {
   children: any;
@@ -14,8 +17,12 @@ const StyledLayout = styled.section`
 `;
 
 export default function Layout({ children }: props) {
+  const { pinkDarkTheme, lightTheme } = themes;
+  const [theme, setTheme] = useState(pinkDarkTheme);
+
   return (
-    <>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <StyledLayout>
         <Nav />
         <main>{children}</main>
@@ -25,6 +32,6 @@ export default function Layout({ children }: props) {
           <p>🌍Personal blog of Karnell Schultz 🌍</p>
         </footer>
       </section>
-    </>
+    </ThemeProvider>
   );
 }
