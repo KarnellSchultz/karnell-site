@@ -2,11 +2,8 @@ import { useState } from 'react';
 import Nav from './Nav';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyles, themes } from '../GlobalStyles';
-
-interface props {
-  children: any;
-}
+import { GlobalStyles } from '../GlobalStyles';
+import { themes } from '../Themes';
 
 const StyledLayout = styled.section`
   min-height: 100vh;
@@ -16,15 +13,22 @@ const StyledLayout = styled.section`
   }
 `;
 
-export default function Layout({ children }: props) {
+export default function Layout({ children }: any) {
   const { pinkDarkTheme, lightTheme } = themes;
+
   const [theme, setTheme] = useState(pinkDarkTheme);
+
+  const toggleTheme = () => {
+    return theme === pinkDarkTheme
+      ? setTheme(lightTheme)
+      : setTheme(pinkDarkTheme);
+  };
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <StyledLayout>
-        <Nav />
+        <Nav toggleTheme={toggleTheme} />
         <main>{children}</main>
       </StyledLayout>
       <section>

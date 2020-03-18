@@ -12,7 +12,7 @@ body {
   background: ${({ theme }) => theme.colors.body};
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
     Arial, sans-serif;
-  transition: all 300ms ease 100ms;
+  transition: all 300ms ease 200ms;
 }
 section {
   max-width: 800px;
@@ -40,10 +40,6 @@ width:100%;
 nav section {
   width: 100%;
 }
-nav div:first-of-type {
-    /* margin-left: -1.5rem; */
-}
-
 
 nav a {
   color:${({ theme }) => theme.colors.text};
@@ -62,7 +58,7 @@ nav a:first-of-type {
 nav a:hover {
   color: ${({ theme }) => theme.colors.headerText};
   text-decoration:none;
-  background: #111;
+  background: ${({ theme }) => theme.colors.body2Hover};
 }
 
 h1, h2, h3, h4 {
@@ -84,6 +80,7 @@ a {
   transition: all 0.15s ease-in 50ms;
 }
 a:hover {
+  cursor: pointer;
   color : ${({ theme }) => theme.colors.primaryHover};
 text-decoration: underline;
 }
@@ -106,11 +103,10 @@ footer p {
   font-size: 0.9rem
 }
 
-
 .button {
   -webkit-appearance: none;
   display: inline-block;
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.buttonBackground};
   color: #FFF;
   border-radius: 4px;
   border: none;
@@ -120,6 +116,7 @@ footer p {
 }
 
 .button:hover {
+  cursor: pointer;
   background: ${({ theme }) => theme.colors.primaryHover};
   color: #FFF ;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
@@ -154,55 +151,3 @@ footer p {
   }
 }
 `;
-
-export const themes = {
-  darkBlue: {
-    colors: {
-      primary: '#5c73ff',
-      primaryHover: '#8899ff',
-      pink: 'papayawhip',
-      text: '#b3b9c5',
-      textHighlight: '#fafafa',
-      body: '#202020',
-      darkBackground: '#252525',
-      black: '#0e1111',
-    },
-  },
-
-  LightTheme: {
-    colors: {
-      // primary: '#E28DA9',
-      primary: '#DB7093',
-      primaryHover: '#E28DA9',
-      buttonText: '#FAFAFA',
-      buttonTextHover: '#AF5A76',
-      textHighlight: '#111',
-      body: '#fafafa',
-      background: '#FAFAFA',
-      black: '#0e1111',
-      buttonBackground: '#F0F0F0',
-      text: '#111111',
-    },
-  },
-  pinkDarkTheme: {
-    colors: {
-      primary: '#E28DA9',
-      primaryHover: '#EDB6C8',
-      buttonText: '#FAFAFA',
-      buttonTextHover: '#DB7093',
-      buttonBackground: '#181818',
-      text: '#b3b9c5',
-      textHighlight: '#FFF',
-      headerText: '#cecece',
-      body: '#202020',
-      darkBackground: '#252525',
-      black: '#0e1111',
-      codeBackground: '#3A3A3A',
-    },
-  },
-};
-
-/* 
-High-emphasis text -> #FFFFFF (87% opacity)
-Medium-emphasis text -> #FFFFFF (60% opacity)
-Disabled text -> #FFFFFF (38% opacity) */
