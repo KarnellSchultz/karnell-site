@@ -20,7 +20,7 @@ const StyledPostRow = styled.div`
     border-radius: 4px;
     color: ${({ theme }) => theme.colors.primaryHover};
     background: ${({ theme }) => theme.colors.body2Hover};
-    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
     transform: translateY(-0.01rem);
     h3 {
       color: ${({ theme }) => theme.colors.primary};
