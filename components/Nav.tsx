@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import Link from "next/link";
+import React from 'react';
+import styled from 'styled-components';
+import Link from 'next/link';
 
 const StyledNavSection = styled.section`
   @media (max-width: 890px) {
@@ -18,7 +18,11 @@ const StyledNavSection = styled.section`
   align-items: center;
 `;
 
-export default function Nav() {
+interface props {
+  toggleTheme: any;
+}
+
+export default function Nav({ toggleTheme }: props) {
   return (
     <nav>
       <StyledNavSection>
@@ -29,6 +33,7 @@ export default function Nav() {
           <Link href="/about">
             <a>About Me</a>
           </Link>
+          <a onClick={toggleTheme}>🚀</a>
         </div>
         <div>
           <a className="button" target="_blank">

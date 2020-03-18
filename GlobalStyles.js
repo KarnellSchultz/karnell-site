@@ -12,7 +12,7 @@ body {
   background: ${({ theme }) => theme.colors.body};
   font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
     Arial, sans-serif;
-  transition: all 300ms ease 100ms;
+  transition: all 300ms ease 200ms;
 }
 section {
   max-width: 800px;
@@ -169,19 +169,20 @@ export const themes = {
     },
   },
 
-  LightTheme: {
+  lightTheme: {
     colors: {
-      // primary: '#E28DA9',
-      primary: '#DB7093',
-      primaryHover: '#E28DA9',
+      primary: '#E28DA9',
+      primaryHover: '#EDB6C8',
       buttonText: '#FAFAFA',
-      buttonTextHover: '#AF5A76',
-      textHighlight: '#111',
-      body: '#fafafa',
-      background: '#FAFAFA',
+      buttonTextHover: '#DB7093',
+      buttonBackground: '#FAFA',
+      text: '#b3b9c5',
+      textHighlight: '#FFF',
+      headerText: '#cecece',
+      body: '#FAFAFA',
+      darkBackground: '#252525',
       black: '#0e1111',
-      buttonBackground: '#F0F0F0',
-      text: '#111111',
+      codeBackground: '#3A3A3A',
     },
   },
   pinkDarkTheme: {

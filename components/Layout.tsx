@@ -20,11 +20,17 @@ export default function Layout({ children }: props) {
   const { pinkDarkTheme, lightTheme } = themes;
   const [theme, setTheme] = useState(pinkDarkTheme);
 
+  const toggleTheme = () => {
+    return theme === pinkDarkTheme
+      ? setTheme(lightTheme)
+      : setTheme(pinkDarkTheme);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <StyledLayout>
-        <Nav />
+        <Nav toggleTheme={toggleTheme} />
         <main>{children}</main>
       </StyledLayout>
       <section>
