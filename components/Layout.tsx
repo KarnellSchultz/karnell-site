@@ -2,7 +2,8 @@ import { useState } from 'react';
 import Nav from './Nav';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
-import { GlobalStyles, themes } from '../GlobalStyles';
+import { GlobalStyles } from '../GlobalStyles';
+import { themes } from '../Themes';
 
 interface props {
   children: any;
