@@ -13,10 +13,6 @@ const StyledNavSection = styled.section`
     }
     padding: 0 0 0 0;
   }
-  background: green;
-  div:last-of-type {
-    /* visibility: hidden; */
-  }
   display: flex;
   justify-content: space-between;
   align-items: center;
