@@ -18,11 +18,19 @@ export default function Layout({ children }: any) {
 
   const [theme, setTheme] = useState(pinkDarkTheme);
 
+  const [darkTheme, setDarkTheme] = useState('true');
+
   const toggleTheme = () => {
     return theme === pinkDarkTheme
       ? setTheme(lightTheme)
       : setTheme(pinkDarkTheme);
   };
+  // darkMode();
+  // function darkMode() {
+  //   if (window.matchMedia('(prefers-color-scheme: dark)').media) {
+  //     console.log('🎉 Dark mode, you love it');
+  //   }
+  // }
 
   return (
     <ThemeProvider theme={theme}>
