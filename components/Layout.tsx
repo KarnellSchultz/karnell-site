@@ -20,7 +20,7 @@ export default function Layout({ children }: any) {
   const [
     darkModeLocalStorage,
     setDarkModeLocalStorage,
-  ] = useDarkModeLocalStorage('false');
+  ] = useDarkModeLocalStorage('true');
 
   useEffect(() => {
     initialThemeSetup();
