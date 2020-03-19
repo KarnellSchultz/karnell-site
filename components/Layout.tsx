@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import Nav from './Nav';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../GlobalStyles';
 import { themes } from '../Themes';
+import { useDarkModeLocalStorage } from '../components/Hooks/useDarkModeLocalStorage';
 
 const StyledLayout = styled.section`
   min-height: 100vh;
@@ -16,19 +17,39 @@ const StyledLayout = styled.section`
 export default function Layout({ children }: any) {
   const { pinkDarkTheme, lightTheme } = themes;
 
-  const [theme, setTheme] = useState(pinkDarkTheme);
+  const [
+    darkModeLocalStorage,
+    setDarkModeLocalStorage,
+  ] = useDarkModeLocalStorage('false');
+
+  useEffect(() => {
+    initialThemeSetup();
+  }, []);
 
   const toggleTheme = () => {
-    return theme === pinkDarkTheme
-      ? setTheme(lightTheme)
-      : setTheme(pinkDarkTheme);
+    darkModeLocalStorage === 'true'
+      ? setDarkModeLocalStorage('false')
+      : setDarkModeLocalStorage('true');
+  };
+
+  const initialThemeSetup = () => {
+    if (JSON.parse(window.localStorage.getItem('dark')) === true) {
+      setDarkModeLocalStorage('true');
+    } else {
+      setDarkModeLocalStorage('false');
+    }
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider
+      theme={darkModeLocalStorage == 'true' ? pinkDarkTheme : lightTheme}
+    >
       <GlobalStyles />
       <StyledLayout>
-        <Nav toggleTheme={toggleTheme} />
+        <Nav
+          darkModeLocalStorage={darkModeLocalStorage}
+          toggleTheme={toggleTheme}
+        />
         <main>{children}</main>
       </StyledLayout>
       <section>
