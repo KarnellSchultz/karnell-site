@@ -1,4 +1,4 @@
-# [KarnellSchultz.com](https://karnellschultz.com/ "personal blog of Karnell Schultz")
+# [KarnellSchultz.com](https://karnellschultz.com/ 'personal blog of Karnell Schultz')
 
 ## My personal website & blog
 
@@ -12,12 +12,12 @@
 
 ## To do
 
-- [ ] Dark/Light Mode ? 
 - [ ] Add projects to main page
-- [X] add mobile styles
-- [X] Remove articles /page and add articles to /home *simplify*
-- [X] Post Markdown guide
-- [X] fix nav positioning - center it and set a max width
-- [X] Remove projects tab for now. Will add later when needed
+- [x] Dark/Light Mode
+- [x] add mobile styles
+- [x] Remove articles /page and add articles to /home _simplify_
+- [x] Post Markdown guide
+- [x] fix nav positioning - center it and set a max width
+- [x] Remove projects tab for now. Will add later when needed
 - [x] Add Styled-components to Nextjs
 - [x] Get a domain
