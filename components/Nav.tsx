@@ -18,7 +18,12 @@ const StyledNavSection = styled.section`
   align-items: center;
 `;
 
-export default function Nav({ toggleTheme }: any) {
+interface props {
+  toggleTheme: any;
+  darkModeLocalStorage: 'true' | 'false';
+}
+
+export default function Nav({ toggleTheme, darkModeLocalStorage }: props) {
   return (
     <nav>
       <StyledNavSection>
@@ -29,7 +34,11 @@ export default function Nav({ toggleTheme }: any) {
           <Link href="/about">
             <a>About Me</a>
           </Link>
-          <a onClick={toggleTheme}>🌞🌝 </a>
+          {darkModeLocalStorage === 'true' ? (
+            <a onClick={toggleTheme}>☀️</a>
+          ) : (
+            <a onClick={toggleTheme}>🌘</a>
+          )}
         </div>
         <div>
           <a className="button" target="_blank">

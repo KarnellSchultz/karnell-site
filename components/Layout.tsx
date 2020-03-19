@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Nav from './Nav';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../GlobalStyles';
 import { themes } from '../Themes';
+import { useDarkModeLocalStorage } from '../components/Hooks/useDarkModeLocalStorage';
 
 const StyledLayout = styled.section`
   min-height: 100vh;
@@ -16,27 +17,48 @@ const StyledLayout = styled.section`
 export default function Layout({ children }: any) {
   const { pinkDarkTheme, lightTheme } = themes;
 
-  const [theme, setTheme] = useState(pinkDarkTheme);
+  const [
+    darkModeLocalStorage,
+    setDarkModeLocalStorage,
+  ] = useDarkModeLocalStorage('true');
 
-  const [darkTheme, setDarkTheme] = useState('true');
+  useEffect(() => {
+    initialThemeSetup();
+  }, [darkModeLocalStorage]);
 
   const toggleTheme = () => {
-    return theme === pinkDarkTheme
-      ? setTheme(lightTheme)
-      : setTheme(pinkDarkTheme);
+    darkModeLocalStorage === 'true'
+      ? setDarkModeLocalStorage('false')
+      : setDarkModeLocalStorage('true');
   };
-  // darkMode();
-  // function darkMode() {
-  //   if (window.matchMedia('(prefers-color-scheme: dark)').media) {
-  //     console.log('🎉 Dark mode, you love it');
-  //   }
-  // }
 
+  const initialThemeSetup = () => {
+    if (window.localStorage.length === 0) {
+      return checkDarkModeLocalStorage();
+    } else if (window.localStorage.getItem('dark') === 'true') {
+      setDarkModeLocalStorage('true');
+    } else {
+      setDarkModeLocalStorage('false');
+    }
+  };
+
+  const checkDarkModeLocalStorage = () => {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setDarkModeLocalStorage('true');
+    } else {
+      setDarkModeLocalStorage('false');
+    }
+  };
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider
+      theme={darkModeLocalStorage == 'true' ? pinkDarkTheme : lightTheme}
+    >
       <GlobalStyles />
       <StyledLayout>
-        <Nav toggleTheme={toggleTheme} />
+        <Nav
+          darkModeLocalStorage={darkModeLocalStorage}
+          toggleTheme={toggleTheme}
+        />
         <main>{children}</main>
       </StyledLayout>
       <section>
