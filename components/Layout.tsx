@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import Nav from './Nav';
 import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
@@ -20,11 +20,11 @@ export default function Layout({ children }: any) {
   const [
     darkModeLocalStorage,
     setDarkModeLocalStorage,
-  ] = useDarkModeLocalStorage('true');
+  ] = useDarkModeLocalStorage('false');
 
   useEffect(() => {
     initialThemeSetup();
-  }, [darkModeLocalStorage]);
+  }, []);
 
   const toggleTheme = () => {
     darkModeLocalStorage === 'true'
@@ -33,22 +33,13 @@ export default function Layout({ children }: any) {
   };
 
   const initialThemeSetup = () => {
-    if (window.localStorage.length === 0) {
-      return checkDarkModeLocalStorage();
-    } else if (window.localStorage.getItem('dark') === 'true') {
+    if (JSON.parse(window.localStorage.getItem('dark')) === true) {
       setDarkModeLocalStorage('true');
     } else {
       setDarkModeLocalStorage('false');
     }
   };
 
-  const checkDarkModeLocalStorage = () => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setDarkModeLocalStorage('true');
-    } else {
-      setDarkModeLocalStorage('false');
-    }
-  };
   return (
     <ThemeProvider
       theme={darkModeLocalStorage == 'true' ? pinkDarkTheme : lightTheme}
