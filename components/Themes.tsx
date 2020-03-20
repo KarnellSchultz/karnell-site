@@ -1,4 +1,34 @@
-export const themes = {
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from '../GlobalStyles';
+import {
+  DarkThemeProvider,
+  useDarkState,
+} from '../components/DarkThemeContext';
+
+function Themes({ children }) {
+  const Themer = () => {
+    const { dark } = useDarkState();
+    return dark ? (
+      <ThemeProvider theme={themes.pinkDarkTheme}>
+        <GlobalStyles />
+        {children}
+      </ThemeProvider>
+    ) : (
+      <ThemeProvider theme={themes.lightTheme}>
+        <GlobalStyles />
+        {children}
+      </ThemeProvider>
+    );
+  };
+
+  return (
+    <DarkThemeProvider>
+      <Themer />
+    </DarkThemeProvider>
+  );
+}
+
+const themes = {
   darkBlue: {
     colors: {
       primary: '#5c73ff',
@@ -52,7 +82,4 @@ export const themes = {
   },
 };
 
-/* 
-High-emphasis text -> #FFFFFF (87% opacity)
-Medium-emphasis text -> #FFFFFF (60% opacity)
-Disabled text -> #FFFFFF (38% opacity) */
+export { Themes };

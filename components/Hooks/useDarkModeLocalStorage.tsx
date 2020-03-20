@@ -6,5 +6,4 @@ function useDarkModeLocalStorage(initialValue) {
   });
   return [value, setValue];
 }
-
 export { useDarkModeLocalStorage };

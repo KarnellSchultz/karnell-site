@@ -1,11 +1,6 @@
-import { useEffect } from 'react';
 import Nav from './Nav';
 import styled from 'styled-components';
-import { ThemeProvider } from 'styled-components';
-import { GlobalStyles } from '../GlobalStyles';
-import { themes } from '../Themes';
-import { useDarkModeLocalStorage } from '../components/Hooks/useDarkModeLocalStorage';
-
+import { Themes } from './Themes';
 const StyledLayout = styled.section`
   min-height: 100vh;
   min-width: 100vw;
@@ -15,41 +10,16 @@ const StyledLayout = styled.section`
 `;
 
 export default function Layout({ children }: any) {
-  const { pinkDarkTheme, lightTheme } = themes;
-
-  const [
-    darkModeLocalStorage,
-    setDarkModeLocalStorage,
-  ] = useDarkModeLocalStorage('true');
-
-  useEffect(() => {
-    initialThemeSetup();
-  }, []);
-
-  const toggleTheme = () => {
-    darkModeLocalStorage === 'true'
-      ? setDarkModeLocalStorage('false')
-      : setDarkModeLocalStorage('true');
-  };
-
-  const initialThemeSetup = () => {
-    if (JSON.parse(window.localStorage.getItem('dark')) === true) {
-      setDarkModeLocalStorage('true');
-    } else {
-      setDarkModeLocalStorage('false');
-    }
-  };
+  // const toggleTheme = () => {
+  //   darkModeLocalStorage === 'true'
+  //     ? setDarkModeLocalStorage('false')
+  //     : setDarkModeLocalStorage('true');
+  // };
 
   return (
-    <ThemeProvider
-      theme={darkModeLocalStorage == 'true' ? pinkDarkTheme : lightTheme}
-    >
-      <GlobalStyles />
+    <Themes>
       <StyledLayout>
-        <Nav
-          darkModeLocalStorage={darkModeLocalStorage}
-          toggleTheme={toggleTheme}
-        />
+        <Nav />
         <main>{children}</main>
       </StyledLayout>
       <section>
@@ -57,6 +27,6 @@ export default function Layout({ children }: any) {
           <p>🌍Personal blog of Karnell Schultz 🌍</p>
         </footer>
       </section>
-    </ThemeProvider>
+    </Themes>
   );
 }
