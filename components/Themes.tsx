@@ -1,4 +1,43 @@
-export const themes = {
+import React, { useState, useEffect, createContext } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from '../GlobalStyles';
+import { useDarkModeLocalStorage } from '../components/Hooks/useDarkModeLocalStorage';
+
+import {
+  DarkThemeProvider,
+  useDarkState,
+  useDarkDispatch,
+} from '../components/DarkThemeContext';
+
+function Themes({ children }) {
+  const [
+    darkModeLocalStorage,
+    setDarkModeLocalStorage,
+  ] = useDarkModeLocalStorage('true');
+
+  const Themer = () => {
+    const { dark } = useDarkState();
+    return dark ? (
+      <ThemeProvider theme={themes.pinkDarkTheme}>
+        <GlobalStyles />
+        {children}
+      </ThemeProvider>
+    ) : (
+      <ThemeProvider theme={themes.lightTheme}>
+        <GlobalStyles />
+        {children}
+      </ThemeProvider>
+    );
+  };
+
+  return (
+    <DarkThemeProvider>
+      <Themer></Themer>
+    </DarkThemeProvider>
+  );
+}
+
+const themes = {
   darkBlue: {
     colors: {
       primary: '#5c73ff',
@@ -52,7 +91,4 @@ export const themes = {
   },
 };
 
-/* 
-High-emphasis text -> #FFFFFF (87% opacity)
-Medium-emphasis text -> #FFFFFF (60% opacity)
-Disabled text -> #FFFFFF (38% opacity) */
+export { Themes };
