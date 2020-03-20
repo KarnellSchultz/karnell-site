@@ -1,17 +1,11 @@
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../GlobalStyles';
-import { useDarkModeLocalStorage } from '../components/Hooks/useDarkModeLocalStorage';
 import {
   DarkThemeProvider,
   useDarkState,
 } from '../components/DarkThemeContext';
 
 function Themes({ children }) {
-  const [
-    darkModeLocalStorage,
-    setDarkModeLocalStorage,
-  ] = useDarkModeLocalStorage('true');
-
   const Themer = () => {
     const { dark } = useDarkState();
     return dark ? (

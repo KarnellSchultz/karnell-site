@@ -1,9 +1,14 @@
 import React from 'react';
 
-const DarkStateContext = React.createContext();
-const DarkStateDispatch = React.createContext();
+type Action = { type: 'dark' } | { type: 'light' };
+type Dispatch = (action: Action) => void;
+type State = { dark: boolean };
+type DarkThemeProviderProps = { children: React.ReactNode };
 
-function darkThemeReducer(state, action) {
+const DarkStateContext = React.createContext<State | undefined>(undefined);
+const DarkStateDispatch = React.createContext<Dispatch | undefined>(undefined);
+
+function darkThemeReducer(state: State, action: Action) {
   switch (action.type) {
     case 'dark': {
       return { dark: true };
@@ -12,11 +17,11 @@ function darkThemeReducer(state, action) {
       return { dark: false };
     }
     default: {
-      throw new Error(`Unhandled action Type: ${action.type}`);
+      throw new Error(`Unhandled action Type: ${action}`);
     }
   }
 }
-function DarkThemeProvider({ children }) {
+function DarkThemeProvider({ children }: DarkThemeProviderProps) {
   const [state, dispatch] = React.useReducer(darkThemeReducer, { dark: true });
   return (
     <DarkStateContext.Provider value={state}>
