@@ -1,12 +1,9 @@
-import React, { useState, useEffect, createContext } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../GlobalStyles';
 import { useDarkModeLocalStorage } from '../components/Hooks/useDarkModeLocalStorage';
-
 import {
   DarkThemeProvider,
   useDarkState,
-  useDarkDispatch,
 } from '../components/DarkThemeContext';
 
 function Themes({ children }) {
@@ -32,7 +29,7 @@ function Themes({ children }) {
 
   return (
     <DarkThemeProvider>
-      <Themer></Themer>
+      <Themer />
     </DarkThemeProvider>
   );
 }
