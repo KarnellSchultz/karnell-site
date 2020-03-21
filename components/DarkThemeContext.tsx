@@ -5,8 +5,12 @@ type Dispatch = (action: Action) => void;
 type State = { dark: boolean };
 type DarkThemeProviderProps = { children: React.ReactNode };
 
-const DarkStateContext = React.createContext<State | undefined>(undefined);
-const DarkStateDispatch = React.createContext<Dispatch | undefined>(undefined);
+const DarkStateContext = React.createContext<State | undefined>(
+  undefined
+);
+const DarkStateDispatch = React.createContext<Dispatch | undefined>(
+  undefined
+);
 
 function darkThemeReducer(state: State, action: Action) {
   switch (action.type) {
@@ -22,7 +26,9 @@ function darkThemeReducer(state: State, action: Action) {
   }
 }
 function DarkThemeProvider({ children }: DarkThemeProviderProps) {
-  const [state, dispatch] = React.useReducer(darkThemeReducer, { dark: true });
+  const [state, dispatch] = React.useReducer(darkThemeReducer, {
+    dark: true,
+  });
   return (
     <DarkStateContext.Provider value={state}>
       <DarkStateDispatch.Provider value={dispatch}>
@@ -35,7 +41,9 @@ function DarkThemeProvider({ children }: DarkThemeProviderProps) {
 function useDarkState() {
   const context = React.useContext(DarkStateContext);
   if (context === undefined) {
-    throw new Error(`useDarkState must be used within a DarkThemeProvider `);
+    throw new Error(
+      `useDarkState must be used within a DarkThemeProvider `
+    );
   }
   return context;
 }
@@ -43,7 +51,9 @@ function useDarkState() {
 function useDarkDispatch() {
   const context = React.useContext(DarkStateDispatch);
   if (context === undefined) {
-    throw new Error(`useDarkDispatch must be used within a DarkThemeProvider`);
+    throw new Error(
+      `useDarkDispatch must be used within a DarkThemeProvider`
+    );
   }
   return context;
 }

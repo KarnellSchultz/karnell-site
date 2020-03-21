@@ -80,7 +80,12 @@ const PostDetails: {
 //They appear in the order listed top to bottom
 
 const PostRow = (
-  PostDetails: { id: number; title: string; date: string; link: string }[]
+  PostDetails: {
+    id: number;
+    title: string;
+    date: string;
+    link: string;
+  }[]
 ): any => {
   return PostDetails.map(row => {
     return (

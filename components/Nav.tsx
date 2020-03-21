@@ -35,9 +35,9 @@ function ThemeToggleButton() {
   const { dark } = useDarkState();
   const dispatch = useDarkDispatch();
   return dark ? (
-    <a onClick={() => dispatch({ type: 'light' })}> ☀️ </a>
+    <a onClick={() => dispatch({ type: 'light' })}>☀️</a>
   ) : (
-    <a onClick={() => dispatch({ type: 'dark' })}> 🌘 </a>
+    <a onClick={() => dispatch({ type: 'dark' })}>🌘</a>
   );
 }
 

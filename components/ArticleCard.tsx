@@ -1,6 +1,6 @@
 export default function ArticleCard({
-  heading = "Article",
-  body = "Good info in here"
+  heading = 'Article',
+  body = 'Good info in here',
 }) {
   return (
     <article className="box">
@@ -19,8 +19,8 @@ export default function ArticleCard({
           position: relative;
           box-shadow: none;
           border-radius: 10px;
-          transition: transform 300ms ease-in-out, box-shadow 400ms ease,
-            background 100ms ease;
+          transition: transform 300ms ease-in-out,
+            box-shadow 400ms ease, background 100ms ease;
         }
 
         .box:hover,
@@ -51,7 +51,7 @@ export default function ArticleCard({
         }
 
         .breakout-button::before {
-          content: "";
+          content: '';
           display: block;
           position: absolute;
           top: 0;
