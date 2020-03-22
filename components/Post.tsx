@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { ReactChild, ReactChildren } from 'react';
 
 const StyledPostRow = styled.div`
   display: flex;
@@ -93,7 +92,7 @@ const PostRow = (
     date: string;
     link: string;
   }[]
-): any => {
+): React.ReactNode => {
   return PostDetails.map(row => {
     return (
       <li key={row.id}>

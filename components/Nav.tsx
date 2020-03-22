@@ -27,10 +27,6 @@ const StyledNavSection = styled.section`
   align-items: center;
 `;
 
-interface props {
-  toggleTheme: any;
-}
-
 function ThemeToggleButton() {
   const { dark } = useDarkState();
   const dispatch = useDarkDispatch();
