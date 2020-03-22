@@ -20,26 +20,28 @@ The `:last-of-type` selector allows you to target the last occurrence of an elem
 
 Take this example code block of an HTML nav bar:
 
-    <nav>
-      <a href='#' > Home</a>
-      <a href='#' > About </a>
-      <a href='#' > Projects </a>
-    </nav>
+```HTML
+<nav>
+  <a href='#' > Home</a>
+  <a href='#' > About </a>
+  <a href='#' > Projects </a>
+</nav>
+```
 
 In this example the `<nav/>` is the container. If we wanted to target the first element within the nav, which is the "Home" `<a/>`. We could use the `a:first-of-type` selector like this:
 
-```
+```CSS
 a:first-of-type {
-  background:#ff414e;
-  }
+  background: #ff414e;
+}
 
 a {
-  color:#FAFAFA;
+  color: #fafafa;
   background: palevioletred;
   border-radius: 5px;
   padding: 1rem;
-  margin-left:1rem;
-  text-decoration:none;
+  margin-left: 1rem;
+  text-decoration: none;
 }
 ```
 
