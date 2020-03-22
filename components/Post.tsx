@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+import { ReactChild, ReactChildren } from 'react';
 
 const StyledPostRow = styled.div`
   display: flex;
@@ -58,6 +59,12 @@ const PostDetails: {
   date: string;
   link: string;
 }[] = [
+  {
+    id: 3,
+    title: 'How to use :last-of-type 🎨',
+    date: 'March 2020',
+    link: '/articles/csslastoftype',
+  },
   {
     id: 2,
     title: '🥳HowImadeMySite.com',

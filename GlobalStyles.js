@@ -90,6 +90,11 @@ li {
   letter-spacing: 1.3px;
 }
 
+code {
+  color: ${({ theme }) => theme.colors.buttonText};
+  background: ${({ theme }) => theme.colors.codeBackground};
+}
+
 footer {
   display: flex;
   justify-content:center;
