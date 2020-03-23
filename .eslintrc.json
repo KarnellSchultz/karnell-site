@@ -1,7 +1,9 @@
 {
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["prettier"],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "rules": {
-    "prettier/prettier": ["error"]
+    "react/react-in-jsx-scope": "off"
+  },
+  "globals": {
+    "React": "writable"
   }
 }

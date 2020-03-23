@@ -1,9 +1,11 @@
 import Document, { DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { GlobalStyles } from '../GlobalStyles';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
+    // const sheet = GlobalStyles;
     const originalRenderPage = ctx.renderPage;
     try {
       ctx.renderPage = () =>
