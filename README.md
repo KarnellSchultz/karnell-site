@@ -14,6 +14,7 @@
 
 - [ ] Add projects to main page
 - [ ] Syntax highlighting for code examples
+- [ ] Fix Build Process in Zeit
 - [x] Dark/Light Mode
 - [x] add mobile styles
 - [x] Remove articles /page and add articles to /home _simplify_
