@@ -51,7 +51,10 @@ export default function Nav() {
           <ThemeToggleButton />
         </div>
         <div>
-          <a className="button" target="_blank">
+          <a
+            href="mailto:karnellschultz@gmail.com"
+            className="button"
+            target="_blank">
             Contact
           </a>
         </div>
