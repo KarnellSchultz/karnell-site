@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
 * {
   box-sizing: border-box;
 }
@@ -156,3 +156,5 @@ footer p {
   }
 }
 `;
+
+export default GlobalStyles;

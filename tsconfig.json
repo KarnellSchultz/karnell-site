@@ -16,6 +16,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "baseUrl": ".",
     "jsx": "preserve"
   },
   "exclude": [
@@ -27,6 +28,7 @@
     "**/*.tsx",
     "pages/index.tsx",
     "types/mdx.d.ts",
-    "src", "custom.d.ts"
+    "src",
+    "custom.d.ts"
   ]
 }
