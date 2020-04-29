@@ -1,3 +1,3 @@
-// eslint-disable-next-line no-undef
+/* eslint-disable no-undef */
 const withMDX = require('@next/mdx')();
-export default withMDX();
+module.exports = withMDX();

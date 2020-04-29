@@ -1,5 +1,6 @@
 import Post from '../components/Post';
 import HeadTag from '../components/HeadTag';
+import Link from 'next/link';
 
 const Home = () => (
   <>
@@ -12,7 +13,7 @@ const Home = () => (
         <a href="https://github.com/KarnellSchultz">open source</a>
         &nbsp;projects and write about my experiences in tech.
       </p>
-      <a href="/about">More about me &rarr;</a>
+      <Link href="/about">More about me &rarr;</Link>
     </section>
     <section>
       <Post />

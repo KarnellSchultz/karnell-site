@@ -54,6 +54,7 @@ export default function Nav() {
           <a
             href="mailto:karnellschultz@gmail.com"
             className="button"
+            rel="noopener noreferrer"
             target="_blank">
             Contact
           </a>
