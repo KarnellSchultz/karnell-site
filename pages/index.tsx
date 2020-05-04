@@ -11,7 +11,9 @@ const Home = () => (
       <p className="description">
         {`🤙🏾 I'm a Javascript developer interested in creating tools to
         democrotize the web. I create`}
-        <a href="https://github.com/KarnellSchultz">open source</a>
+        <a href="https://github.com/KarnellSchultz">
+          &nbsp;open source
+        </a>
         &nbsp;projects and write about my experiences in tech.
       </p>
       <Link href="/about">More about me &rarr;</Link>
