@@ -61,9 +61,11 @@ nav a:hover {
   background: ${({ theme }) => theme.colors.body2Hover};
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3{
   color: ${({ theme }) => theme.colors.headerText}
 }
+
+
 
 p {
   color: ${({ theme }) => theme.colors.text};

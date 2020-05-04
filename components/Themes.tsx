@@ -43,6 +43,7 @@ const themes = {
   },
 
   lightTheme: {
+    maxMobileSize: '576px',
     colors: {
       primary: 'palevioletred',
       primaryHover: '#EDB6C8',
@@ -62,6 +63,7 @@ const themes = {
     },
   },
   pinkDarkTheme: {
+    maxMobileSize: '576px',
     colors: {
       primary: '#E28DA9',
       primaryHover: '#EDB6C8',
