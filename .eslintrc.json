@@ -30,10 +30,6 @@
         "semi": [
             "error",
             "always"
-        ],
-        "quotes": [
-            "error",
-            "single"
         ]
     }
 }

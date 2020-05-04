@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import ProjectItem from './ProjectItem';
 
 const OpenSourceSection = styled.div`
+  @media screen and (max-width: 890px) {
+    display: flex;
+    justify-content: center;
+  }
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -46,7 +50,9 @@ const Projects = () => {
           title={'GraphQL Blog 🚀'}
           gitLink={'https://github.com/KarnellSchultz/KarmaProject'}
           link={'https://upbeat-karma.netlify.app/'}
-          blurb={`Web app using Redux, GraphQL, React, and all sorts of cool tech & themes.`}></ProjectItem>
+          blurb={
+            'Web app using Redux, GraphQL, React, and all sorts of cool tech & themes.'
+          }></ProjectItem>
         <ProjectItem
           title={'Soda React From 🥃'}
           link={'https://soda-react-form.netlify.com/'}

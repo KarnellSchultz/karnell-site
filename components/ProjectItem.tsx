@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 const OpenSourceItem = styled.div`
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 890px) {
     width: 100%;
+    max-width: 540px;
   }
   width: 49%;
   min-width: 330px;
   height: 200px;
   min-height: 150px;
+
   background: ${({ theme }) => theme.colors.primary};
   box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
