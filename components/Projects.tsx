@@ -1,19 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const StyledProjectItem = styled.div`
-  display: flex;
-  width: 90%;
-  min-width: 330px;
-  height: 160px;
-  margin: 0.5rem 0.2rem 0.2rem 0.2rem;
-  border-radius: 5px;
-
-  background: palevioletred;
-  h4 {
-    color: blue;
-  }
-`;
+import ProjectItem from './ProjectItem';
 
 const OpenSourceSection = styled.section`
   display: flex;
@@ -44,13 +31,29 @@ const Projects = () => {
       <h1>Open Source Projects</h1>
 
       <OpenSourceSection>
-        <StyledProjectItem>
-          <h4>boyyy</h4>
-          <p></p>
-        </StyledProjectItem>
-        <StyledProjectItem>Hello</StyledProjectItem>
-        <StyledProjectItem>Hello</StyledProjectItem>
-        <StyledProjectItem>Hello</StyledProjectItem>
+        <ProjectItem
+          title={'Soda React From 🥃'}
+          link={'https://soda-react-form.netlify.com/'}
+          gitLink={'https://github.com/KarnellSchultz/ReactFormWork'}
+          blurb={`A slick looking React form using hooks and React-Spring animations.`}></ProjectItem>
+
+        <ProjectItem
+          title={'Myra Tracker 🐜'}
+          gitLink={
+            'https://github.com/KarnellSchultz/MyraTrackingApp'
+          }
+          link={'https://myratracker.firebaseapp.com/login.html'}
+          blurb={`A 'Jira style' application created with Vue.js. This can be used to track the progress of projects.`}></ProjectItem>
+        <ProjectItem
+          title={'KarnellSchultz.com 🔥'}
+          link={'https://karnellschultz.com/'}
+          gitLink={'https://github.com/KarnellSchultz/karnell-site'}
+          blurb={`My Personal website & blog KarnellSchultz.com`}></ProjectItem>
+        <ProjectItem
+          title={'This Site ?🌍?'}
+          gitLink={'https://github.com/KarnellSchultz/KarmaProject'}
+          link={'#'}
+          blurb={`This site (whoa that's meta 💥) made with all sorts of cool tech`}></ProjectItem>
       </OpenSourceSection>
     </>
   );
