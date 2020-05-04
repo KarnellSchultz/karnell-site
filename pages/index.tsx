@@ -1,5 +1,6 @@
 import Post from '../components/Post';
 import HeadTag from '../components/HeadTag';
+import Projects from '../components/Projects';
 
 const Home = () => (
   <>
@@ -13,6 +14,9 @@ const Home = () => (
         &nbsp;projects and write about my experiences in tech.
       </p>
       <a href="/about">More about me &rarr;</a>
+    </section>
+    <section>
+      <Projects />
     </section>
     <section>
       <Post />
