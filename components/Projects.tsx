@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import ProjectItem from './ProjectItem';
 
-const OpenSourceSection = styled.section`
+const OpenSourceSection = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   div:first-of-type {
     background: linear-gradient(
         to right top,
@@ -25,11 +26,21 @@ const OpenSourceSection = styled.section`
   }
 `;
 
+const StyledHeading = styled.article`
+  display: flex;
+  align-items: center;
+  button {
+    margin-left: 2rem;
+  }
+`;
+
 const Projects = () => {
   return (
     <>
-      <h1>Open Source Projects</h1>
-
+      <StyledHeading>
+        <h2>Projects</h2>
+      </StyledHeading>
+      <em>A few of my favorite open source projects.</em>
       <OpenSourceSection>
         <ProjectItem
           title={'Soda React From 🥃'}

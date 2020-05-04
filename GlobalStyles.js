@@ -65,6 +65,8 @@ h1, h2, h3, h4 {
   color: ${({ theme }) => theme.colors.headerText}
 }
 
+
+
 p {
   color: ${({ theme }) => theme.colors.text};
   font-size: 1.3rem;

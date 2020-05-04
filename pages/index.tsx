@@ -1,7 +1,6 @@
 import Post from '../components/Post';
 import HeadTag from '../components/HeadTag';
 import Projects from '../components/Projects';
-
 const Home = () => (
   <>
     <HeadTag pageName="🔥 Home" />
