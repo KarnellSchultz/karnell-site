@@ -28,6 +28,15 @@ const OpenSourceSection = styled.div`
       ),
       #67b26f;
   }
+  div:nth-of-type(3n) {
+    background: rgb(255, 255, 255)
+      linear-gradient(
+        to right bottom,
+        rgb(109, 110, 114),
+        rgb(158, 160, 166)
+      )
+      repeat scroll 0% 0%;
+  }
 `;
 
 const StyledHeading = styled.article`
