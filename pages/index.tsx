@@ -16,7 +16,9 @@ const Home = () => (
         </a>
         &nbsp;projects and write about my experiences in tech.
       </p>
-      <Link href="/about">More about me &rarr;</Link>
+      <Link href="/about">
+        <a>More about me &rarr;</a>
+      </Link>
     </section>
     <section>
       <Projects />
