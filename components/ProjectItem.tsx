@@ -33,7 +33,9 @@ const OpenSourceItem = styled.div`
   :focus {
     cursor: pointer;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
-    /* text-decoration: underline; */
+    h4 {
+      text-decoration: underline;
+    }
   }
 `;
 
@@ -46,7 +48,6 @@ const StyledLink = styled.a`
 const StyledGitLink = styled(StyledLink)`
   display: flex;
   justify-content: flex-end;
-
   margin-right: 1rem;
 `;
 
