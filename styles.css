@@ -22,3 +22,18 @@ section h1 {
   font-size: 3rem;
   font-weight: 400;
 }
+section h2,
+h3,
+h4 {
+  font-size: 2rem;
+  font-weight: 350;
+}
+
+nav {
+  display: flex;
+  padding: 2rem 0;
+  width: 100%;
+}
+nav section {
+  width: 100%;
+}
