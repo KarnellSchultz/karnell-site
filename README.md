@@ -1,6 +1,8 @@
 # [KarnellSchultz.com](https://karnellschultz.com/ 'personal blog of Karnell Schultz')
 
-## My personal website & blog
+## Personal website & blog
+
+![Karnellschultz.com Gif](https://gph.is/g/Z8BQnOb)
 
 ### Built with
 
