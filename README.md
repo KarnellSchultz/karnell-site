@@ -2,7 +2,7 @@
 
 ## Personal website & blog
 
-![Karnellschultz.com Gif](https://gph.is/g/Z8BQnOb)
+![](https://media.giphy.com/media/efZZ3OnpfRH6KAcNuO/giphy.gif)
 
 ### Built with
 
