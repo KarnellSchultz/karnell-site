@@ -2,7 +2,7 @@
 
 ## Personal website & blog
 
-![](https://media.giphy.com/media/efZZ3OnpfRH6KAcNuO/giphy.gif)
+![blog gif](https://media.giphy.com/media/efZZ3OnpfRH6KAcNuO/giphy.gif)
 
 ### Built with
 
