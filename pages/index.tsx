@@ -1,12 +1,10 @@
 import Post from '../components/Post';
-import HeadTag from '../components/HeadTag';
 import Projects from '../components/Projects';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
 const Home = () => (
-  <Layout pageName={'Home'}>
-    <HeadTag pageName="🔥 Home" />
+  <Layout pageName={'🔥 Home'}>
     <section>
       <h1>Karnell Schultz</h1>
       <p className="description">
