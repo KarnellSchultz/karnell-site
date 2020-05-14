@@ -1,4 +1,4 @@
-import Howimademysite from '../../content/posts/howimademysite.mdx';
+import Howimademysite from 'content/posts/howimademysite.mdx';
 import Layout from 'components/Layout';
 
 export default function markdownGuide() {

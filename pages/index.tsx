@@ -1,7 +1,7 @@
-import Post from '../components/Post';
-import Projects from '../components/Projects';
+import Post from 'components/Post';
+import Projects from 'components/Projects';
 import Link from 'next/link';
-import Layout from '../components/Layout';
+import Layout from 'components/Layout';
 
 const Home = () => (
   <Layout pageName={'🔥 Home'}>
