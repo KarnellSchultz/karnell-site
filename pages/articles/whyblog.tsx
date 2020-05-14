@@ -1,9 +1,12 @@
 import WhyblogMarkdown from '../../content/posts/newblog.mdx';
+import Layout from 'components/Layout';
 
 export default function whyblog() {
   return (
-    <section>
-      <WhyblogMarkdown />
-    </section>
+    <Layout>
+      <section>
+        <WhyblogMarkdown />
+      </section>
+    </Layout>
   );
 }

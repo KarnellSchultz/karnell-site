@@ -2,9 +2,10 @@ import Post from '../components/Post';
 import HeadTag from '../components/HeadTag';
 import Projects from '../components/Projects';
 import Link from 'next/link';
+import Layout from '../components/Layout';
 
 const Home = () => (
-  <>
+  <Layout>
     <HeadTag pageName="🔥 Home" />
     <section>
       <h1>Karnell Schultz</h1>
@@ -26,7 +27,7 @@ const Home = () => (
     <section>
       <Post />
     </section>
-  </>
+  </Layout>
 );
 
 export default Home;

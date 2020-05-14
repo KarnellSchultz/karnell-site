@@ -1,9 +1,9 @@
-import React from 'react';
+import Layout from '../components/Layout';
 
 export default function Projects() {
   return (
-    <div>
+    <Layout>
       <h1>Coming soon. . . </h1>
-    </div>
+    </Layout>
   );
 }

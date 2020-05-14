@@ -1,9 +1,12 @@
-import Mark from "../../content/posts/MarkdownArticle.mdx";
+import Mark from '../../content/posts/MarkdownArticle.mdx';
+import Layout from 'components/Layout';
 
 export default function markdownGuide() {
   return (
-    <section>
-      <Mark />
-    </section>
+    <Layout>
+      <section>
+        <Mark />
+      </section>
+    </Layout>
   );
 }
