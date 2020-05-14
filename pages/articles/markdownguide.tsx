@@ -3,7 +3,7 @@ import Layout from 'components/Layout';
 
 export default function markdownGuide() {
   return (
-    <Layout>
+    <Layout blog pageName={'Markdown Guide'}>
       <section>
         <Mark />
       </section>

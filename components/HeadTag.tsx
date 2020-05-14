@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
 import Head from 'next/head';
 
 export default function HeadTag({ pageName = '🤷' }) {
@@ -7,6 +6,11 @@ export default function HeadTag({ pageName = '🤷' }) {
     <Head>
       <title>KarnellSchultz {pageName} </title>
       <link rel="icon" href="/favicon.ico" />
+      <meta charSet="utf-8" />
+      <meta
+        name="viewport"
+        content="initial-scale=1.0, width=device-width"
+      />
     </Head>
   );
 }

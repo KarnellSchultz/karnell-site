@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Layout from '../components/Layout';
 
 const Home = () => (
-  <Layout>
+  <Layout pageName={'Home'}>
     <HeadTag pageName="🔥 Home" />
     <section>
       <h1>Karnell Schultz</h1>

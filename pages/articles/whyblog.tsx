@@ -3,7 +3,7 @@ import Layout from 'components/Layout';
 
 export default function whyblog() {
   return (
-    <Layout>
+    <Layout blog pageName={'Why Blog? 🤷🏽‍♂️'}>
       <section>
         <WhyblogMarkdown />
       </section>

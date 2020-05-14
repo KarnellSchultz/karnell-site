@@ -4,9 +4,9 @@ import Layout from '../components/Layout';
 
 export default function About() {
   return (
-    <Layout>
+    <Layout pageName="🌍About">
       <section>
-        <HeadTag pageName="🌍About" />
+        <HeadTag />
         <AboutMe />
       </section>
     </Layout>
