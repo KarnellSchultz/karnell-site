@@ -1,10 +1,12 @@
-import AboutMe from '../content/posts/aboutContent.mdx';
-import HeadTag from '../components/HeadTag';
+import AboutMe from 'content/posts/aboutContent.mdx';
+import Layout from 'components/Layout';
+
 export default function About() {
   return (
-    <section>
-      <HeadTag pageName="🌍About" />
-      <AboutMe />
-    </section>
+    <Layout pageName="🌍 About">
+      <section>
+        <AboutMe />
+      </section>
+    </Layout>
   );
 }

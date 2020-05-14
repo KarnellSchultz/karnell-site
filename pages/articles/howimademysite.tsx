@@ -1,9 +1,12 @@
-import Howimademysite from "../../content/posts/howimademysite.mdx";
+import Howimademysite from 'content/posts/howimademysite.mdx';
+import Layout from 'components/Layout';
 
 export default function markdownGuide() {
   return (
-    <section>
-      <Howimademysite />
-    </section>
+    <Layout blog pageName={'How I Made My Site'}>
+      <section>
+        <Howimademysite />
+      </section>
+    </Layout>
   );
 }
