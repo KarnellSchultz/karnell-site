@@ -11,6 +11,14 @@ const StyledLayout = styled.section`
   main {
     margin-bottom: 4rem;
   }
+
+  /* background-image: radial-gradient(
+      rgb(215, 210, 215) 2px,
+      transparent 1px
+    ),
+    radial-gradient(rgb(215, 215, 200) 1px, transparent 1px);
+  background-position: 0px 0px, 25px 25px;
+  background-size: 50px 50px; */
 `;
 
 interface props {
