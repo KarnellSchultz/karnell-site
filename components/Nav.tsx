@@ -30,8 +30,7 @@ const StyledNavSection = styled.section`
 
 function ThemeToggleButton() {
   useEffect(() => {
-    let localStorageDarkModeSetting = localStorage.getItem('dark');
-    if (localStorageDarkModeSetting == 'true') {
+    if (localStorage.getItem('dark') == 'true') {
       dispatch({ type: 'dark' });
     } else {
       dispatch({ type: 'light' });
