@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import { useDarkState, useDarkDispatch } from './DarkThemeContext';
+import { useEffect } from 'react';
 
 const StyledNavSection = styled.section`
   @media (max-width: 890px) {
@@ -28,6 +29,15 @@ const StyledNavSection = styled.section`
 `;
 
 function ThemeToggleButton() {
+  useEffect(() => {
+    let localStorageDarkModeSetting = localStorage.getItem('dark');
+    if (localStorageDarkModeSetting == 'true') {
+      dispatch({ type: 'dark' });
+    } else {
+      dispatch({ type: 'light' });
+    }
+  }, []);
+
   const { dark } = useDarkState();
   const dispatch = useDarkDispatch();
   return dark ? (

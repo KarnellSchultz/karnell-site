@@ -9,12 +9,12 @@ function Themes({ children }: any) {
   const Themer = () => {
     const { dark } = useDarkState();
     return dark ? (
-      <ThemeProvider theme={themes.lightTheme}>
+      <ThemeProvider theme={themes.pinkDarkTheme}>
         <GlobalStyles />
         {children}
       </ThemeProvider>
     ) : (
-      <ThemeProvider theme={themes.pinkDarkTheme}>
+      <ThemeProvider theme={themes.lightTheme}>
         <GlobalStyles />
         {children}
       </ThemeProvider>

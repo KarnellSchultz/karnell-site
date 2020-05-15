@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react';
-function useDarkModeLocalStorage(initialValue: 'true' | 'false') {
+
+function useDarkModeLocalStorage(initialValue?: 'true' | 'false') {
   const [value, setValue] = useState(initialValue);
   useEffect(() => {
-    localStorage.setItem('dark', value);
+    let userLocalDarkValue = localStorage.getItem('dark');
+    console.log({ userLocalDarkValue });
+    localStorage.setItem('dark', userLocalDarkValue);
   });
+
   return [value, setValue];
 }
 export { useDarkModeLocalStorage };

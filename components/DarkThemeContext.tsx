@@ -15,9 +15,11 @@ const DarkStateDispatch = React.createContext<Dispatch | undefined>(
 function darkThemeReducer(state: State, action: Action) {
   switch (action.type) {
     case 'dark': {
+      localStorage.setItem('dark', 'true');
       return { dark: true };
     }
     case 'light': {
+      localStorage.setItem('dark', 'false');
       return { dark: false };
     }
     default: {
@@ -27,7 +29,7 @@ function darkThemeReducer(state: State, action: Action) {
 }
 function DarkThemeProvider({ children }: DarkThemeProviderProps) {
   const [state, dispatch] = React.useReducer(darkThemeReducer, {
-    dark: true,
+    dark: false,
   });
   return (
     <DarkStateContext.Provider value={state}>
