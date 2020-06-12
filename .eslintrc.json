@@ -26,10 +26,6 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "react/react-in-jsx-scope": "off",
-        "semi": [
-            "error",
-            "always"
-        ]
+        "react/react-in-jsx-scope": "off"
     }
 }
