@@ -49,6 +49,10 @@ const StyledGitLink = styled(StyledLink)`
   display: flex;
   justify-content: flex-end;
   margin: -1rem 1rem;
+  transition: color 0.2s ease-out;
+  :hover {
+    color: var(--body-main);
+  }
 `;
 
 interface props {
