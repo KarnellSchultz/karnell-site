@@ -48,7 +48,7 @@ const StyledLink = styled.a`
 const StyledGitLink = styled(StyledLink)`
   display: flex;
   justify-content: flex-end;
-  margin-right: 1rem;
+  margin: -1rem 1rem;
 `;
 
 interface props {
@@ -70,8 +70,8 @@ function ProjectItem({
         <StyledLink href={link}>
           <h4>{title}</h4>
           <p>{blurb.substring(0, 100)}</p>
+          <StyledGitLink href={gitLink}>View on GitHub</StyledGitLink>
         </StyledLink>
-        <StyledGitLink href={gitLink}>View on GitHub</StyledGitLink>
       </OpenSourceItem>
     </>
   );
