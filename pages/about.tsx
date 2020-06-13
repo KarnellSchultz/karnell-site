@@ -1,4 +1,4 @@
-import AboutMe from 'content/posts/aboutContent.mdx';
+import AboutMe from '../content/posts/aboutContent';
 import Layout from 'components/Layout';
 
 export default function About() {
