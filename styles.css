@@ -182,7 +182,7 @@ a {
   border-radius: 4px;
   padding: 1px 2px;
 }
-p a:hover {
+a:hover {
   cursor: pointer;
   background: var(--link-background-hover);
   border-radius: 4px;
@@ -197,7 +197,7 @@ li {
 
 code {
   color: var(--button-text);
-  background: var(--grey0);
+  background: var(--grey6);
 }
 
 footer {
