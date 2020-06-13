@@ -182,7 +182,7 @@ a {
   border-radius: 4px;
   padding: 1px 2px;
 }
-a:hover {
+p a:hover {
   cursor: pointer;
   background: var(--link-background-hover);
   border-radius: 4px;
@@ -193,6 +193,10 @@ li {
   color: var(--text-main);
   line-height: 1.75rem;
   letter-spacing: 1.3px;
+}
+li a:hover {
+  background: var(--link-background-hover);
+  color: var(--text-hover);
 }
 
 code {
