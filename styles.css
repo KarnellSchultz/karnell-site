@@ -177,6 +177,10 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
+p::selection {
+  background: var(--green3);
+  color: var(--text-main);
+}
 em {
   color: var(--text-main);
 }
