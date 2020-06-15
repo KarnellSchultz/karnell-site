@@ -1,3 +1,6 @@
-// eslint-disable-next-line no-undef
-const withMDX = require('@next/mdx')();
-export default withMDX();
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+});
+module.exports = withMDX({
+  pageExtensions: ['js', 'jsx', 'mdx'],
+});
