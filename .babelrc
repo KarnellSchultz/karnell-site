@@ -1,6 +1,8 @@
 {
   "presets": [
-    "next/babel"
+    "next/babel",
+    "@babel/env",
+    "@babel/react"
   ],
   "plugins": [
     [

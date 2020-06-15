@@ -12,7 +12,7 @@ const OpenSourceSection = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  div:first-of-type {
+  div::nth-of-type(1) {
     background: linear-gradient(
         to right top,
         rgb(219, 112, 147),
@@ -20,15 +20,12 @@ const OpenSourceSection = styled.div`
       )
       rgb(255, 255, 255);
   }
-  div:last-of-type {
-    background: linear-gradient(
-        230.34deg,
-        #4ca2cd 4.08%,
-        rgba(255, 255, 255, 0) 96.63%
-      ),
-      #67b26f;
+  div:nth-of-type(2) {
+    background: rgb(255, 255, 255)
+      linear-gradient(to right bottom, #add100, #7b920a) repeat scroll
+      0% 0%;
   }
-  div:nth-of-type(3n) {
+  div:nth-of-type(3) {
     background: rgb(255, 255, 255)
       linear-gradient(
         to right bottom,
@@ -36,6 +33,14 @@ const OpenSourceSection = styled.div`
         rgb(158, 160, 166)
       )
       repeat scroll 0% 0%;
+  }
+  div:nth-of-type(4) {
+    background: linear-gradient(
+        230.34deg,
+        #4ca2cd 4.08%,
+        rgba(255, 255, 255, 0) 96.63%
+      ),
+      #67b26f;
   }
 `;
 

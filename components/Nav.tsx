@@ -30,19 +30,34 @@ const StyledNavSection = styled.section`
 
 function ThemeToggleButton() {
   useEffect(() => {
-    if (localStorage.getItem('dark') == 'true') {
-      dispatch({ type: 'dark' });
+    if (dark.toString() == localStorage.getItem('dark')) {
+      return;
     } else {
-      dispatch({ type: 'light' });
+      setDarkMode();
     }
   }, []);
+
+  function setDarkMode() {
+    if (localStorage.getItem('dark') === 'true') {
+      return dispatch({ type: 'dark' });
+    } else if (localStorage.getItem('dark') === 'false') {
+      console.log(dark);
+      return dispatch({ type: 'light' });
+    }
+
+    return;
+  }
 
   const { dark } = useDarkState();
   const dispatch = useDarkDispatch();
   return dark ? (
-    <a onClick={() => dispatch({ type: 'light' })}>☀️</a>
+    <a className="nav-a" onClick={() => dispatch({ type: 'light' })}>
+      ☀️
+    </a>
   ) : (
-    <a onClick={() => dispatch({ type: 'dark' })}>🌘</a>
+    <a className="nav-a" onClick={() => dispatch({ type: 'dark' })}>
+      🌘
+    </a>
   );
 }
 
@@ -52,10 +67,10 @@ export default function Nav() {
       <StyledNavSection>
         <div className="links">
           <Link href="/">
-            <a>Home</a>
+            <a className="nav-a">Home</a>
           </Link>
           <Link href="/about">
-            <a>About Me</a>
+            <a className="nav-a">About Me</a>
           </Link>
           <ThemeToggleButton />
         </div>

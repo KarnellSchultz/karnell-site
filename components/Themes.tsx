@@ -1,5 +1,4 @@
 import { ThemeProvider } from 'styled-components';
-import GlobalStyles from '../GlobalStyles';
 import {
   DarkThemeProvider,
   useDarkState,
@@ -10,13 +9,11 @@ function Themes({ children }: any) {
     const { dark } = useDarkState();
     return dark ? (
       <ThemeProvider theme={themes.pinkDarkTheme}>
-        <GlobalStyles />
-        {children}
+        <body className={`dark-theme`}>{children}</body>
       </ThemeProvider>
     ) : (
       <ThemeProvider theme={themes.lightTheme}>
-        <GlobalStyles />
-        {children}
+        <body className={`light-theme`}>{children}</body>
       </ThemeProvider>
     );
   };
