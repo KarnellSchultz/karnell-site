@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 const StyledNavSection = styled.section`
   @media (max-width: 890px) {
-    padding: 0 0 0 0;
+    padding: 0;
     display: flex;
     justify-content: space-between;
   }
@@ -21,7 +21,7 @@ const StyledNavSection = styled.section`
     }
     .links {
     }
-    padding: 0 0 0 0;
+    padding: 0;
   }
   display: flex;
   justify-content: space-between;

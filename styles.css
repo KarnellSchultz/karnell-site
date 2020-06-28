@@ -111,7 +111,6 @@ h4 {
 }
 
 nav {
-  display: flex;
   padding: 2rem 0;
   width: 100%;
 }
@@ -149,6 +148,7 @@ nav section {
   transition: 10ms background;
 }
 .links .nav-a:hover {
+  cursor: pointer;
   color: var(--nav-text);
   background: var(--nav-button-background-hover);
   text-decoration: none;
