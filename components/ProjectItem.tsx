@@ -2,30 +2,29 @@ import styled from 'styled-components';
 
 const OpenSourceItem = styled.div`
   @media screen and (max-width: 890px) {
-    width: 100%;
-    max-width: 540px;
+    flex-basis: 100%;
+    min-height: 220px;
+    max-height: 250px;
   }
-  width: 49%;
-  min-width: 330px;
-  height: 200px;
-  min-height: 150px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-basis: 49%;
 
   background: ${({ theme }) => theme.colors.primary};
   box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  margin: 0.8rem 0.1rem;
+  margin: 0.5rem 0;
   transition: all 300ms ease;
-  padding: 1rem 1rem;
+  padding: 0.3rem 0.3rem;
   h4 {
     font-size: 1.3rem;
     font-weight: 400;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin: 0.1em 0;
     color: ${({ theme }) => theme.colors.body};
   }
   p {
     color: ${({ theme }) => theme.colors.body};
-    height: 40%;
   }
 
   :hover,
@@ -40,6 +39,10 @@ const OpenSourceItem = styled.div`
 `;
 
 const StyledLink = styled.a`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
   color: inherit;
   :hover {
     text-decoration: none;
@@ -48,7 +51,8 @@ const StyledLink = styled.a`
 const StyledGitLink = styled(StyledLink)`
   display: flex;
   justify-content: flex-end;
-  margin: -1rem 1rem;
+  align-items: flex-end;
+  flex-basis: 95%;
   transition: color 0.2s ease-out;
   :hover {
     color: var(--body-main);
@@ -74,8 +78,8 @@ function ProjectItem({
         <StyledLink href={link}>
           <h4>{title}</h4>
           <p>{blurb.substring(0, 100)}</p>
-          <StyledGitLink href={gitLink}>View on GitHub</StyledGitLink>
         </StyledLink>
+        <StyledGitLink href={gitLink}>View on GitHub</StyledGitLink>
       </OpenSourceItem>
     </>
   );
