@@ -4,14 +4,16 @@ import ProjectItem from './ProjectItem';
 
 const OpenSourceSection = styled.div`
   @media screen and (max-width: 890px) {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-content: start;
+    gap: 0.5rem;
   }
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  align-content: start;
+  gap: 0.75rem;
   div::nth-of-type(1) {
     background: linear-gradient(
         to right top,
