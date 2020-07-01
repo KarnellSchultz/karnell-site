@@ -2,21 +2,27 @@ import styled from 'styled-components';
 
 const OpenSourceItem = styled.div`
   @media screen and (max-width: 890px) {
-    flex-basis: 100%;
-    min-height: 220px;
-    max-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    min-width: 100%;
+    min-height: 180px;
+    padding: 1em;
   }
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  flex-basis: 49%;
+  width: 49%;
+  min-height: 210px;
+  padding: 1.2em;
 
   background: ${({ theme }) => theme.colors.primary};
   box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   margin: 0.5rem 0;
   transition: all 300ms ease;
-  padding: 0.3rem 0.3rem;
+
   h4 {
     font-size: 1.3rem;
     font-weight: 400;
@@ -24,6 +30,7 @@ const OpenSourceItem = styled.div`
     color: ${({ theme }) => theme.colors.body};
   }
   p {
+    font-size: 1em;
     color: ${({ theme }) => theme.colors.body};
   }
 
@@ -39,20 +46,15 @@ const OpenSourceItem = styled.div`
 `;
 
 const StyledLink = styled.a`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
   color: inherit;
   :hover {
     text-decoration: none;
   }
 `;
 const StyledGitLink = styled(StyledLink)`
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-basis: 95%;
+  align-self: flex-end;
+  min-width: 100%;
+
   transition: color 0.2s ease-out;
   :hover {
     color: var(--body-main);
