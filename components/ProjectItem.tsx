@@ -29,7 +29,7 @@ const OpenSourceItem = styled.div`
     color: ${({ theme }) => theme.colors.body};
   }
   p {
-    font-size: 1em;
+    font-size: 1.2em;
     color: ${({ theme }) => theme.colors.body};
   }
 
