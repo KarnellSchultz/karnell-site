@@ -10,8 +10,10 @@ const StyledNavSection = styled.section`
     justify-content: space-between;
   }
   @media (max-width: 567px) {
+    display: flex;
+    justify-content: flex-start;
     a:first-of-type {
-      padding: 1rem 0.5rem 1rem 1.5rem;
+      padding-left: 1.5em;
     }
     a {
       padding: 1rem 1rem 1rem 1rem;
@@ -19,9 +21,12 @@ const StyledNavSection = styled.section`
     a.button {
       padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     }
-    .links {
+    .nav-a {
+      padding: 0.7em 1em;
     }
-    padding: 0;
+    .contact-button {
+      display: none;
+    }
   }
   display: flex;
   justify-content: space-between;
@@ -77,7 +82,7 @@ export default function Nav() {
         <div>
           <a
             href="mailto:karnellschultz@gmail.com"
-            className="button"
+            className="button contact-button"
             rel="noopener noreferrer"
             target="_blank">
             Contact
