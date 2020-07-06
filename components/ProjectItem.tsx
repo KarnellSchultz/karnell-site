@@ -8,12 +8,13 @@ const OpenSourceItem = styled.div`
     align-items: flex-start;
 
     min-width: 100%;
+    min-height: 236px;
     padding: 1em;
   }
   display: flex;
   flex-wrap: wrap;
 
-  min-height: 210px;
+  min-height: 216px;
   padding: 1.2em;
 
   background: ${({ theme }) => theme.colors.primary};
