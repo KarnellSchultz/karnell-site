@@ -58,6 +58,13 @@ const PostDetails: {
   date: string;
   link: string;
 }[] = [
+  //They appear in the order listed top to bottom
+  {
+    id: 4,
+    title: 'Flexbox Zombies: Review',
+    date: 'August 2020',
+    link: '/articles/flexboxzombiesreview',
+  },
   {
     id: 3,
     title: 'How to use :last-of-type 🎨',
@@ -83,7 +90,6 @@ const PostDetails: {
     link: '/articles/markdownguide',
   },
 ];
-//They appear in the order listed top to bottom
 
 const PostRow = (
   PostDetails: {
@@ -93,7 +99,7 @@ const PostRow = (
     link: string;
   }[]
 ): React.ReactNode => {
-  return PostDetails.map(row => {
+  return PostDetails.map((row) => {
     return (
       <li key={row.id}>
         <Link href={row.link}>
