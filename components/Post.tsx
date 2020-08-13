@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import { PostDetails } from './PostDetails';
+import { PostDetails } from '../content/posts/PostDetails';
 
 const StyledPostRow = styled.div`
   display: flex;

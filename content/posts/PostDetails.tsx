@@ -8,7 +8,7 @@ export const PostDetails: {
 
   {
     id: 5,
-    title: 'How I Became a Self Taught Developer',
+    title: 'How I Became a Self Taught Developer 👨🏽‍💻',
     date: new Date('August 13 2020').toDateString(),
     link: '/articles/howibecameadeveloper',
   },
