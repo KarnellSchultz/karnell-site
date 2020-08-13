@@ -39,7 +39,9 @@ function Layout({ children, pageName = '🔥', blog = false }: props) {
           {blog && (
             <section>
               <p>
-                <Link href="/"> ⬅️ Back Home </Link>
+                <Link href="/">
+                  <a>⬅️ Back Home</a>
+                </Link>
               </p>
             </section>
           )}
