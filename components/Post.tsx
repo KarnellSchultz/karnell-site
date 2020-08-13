@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import styled from 'styled-components';
+import Link from 'next/link';
+import { PostDetails } from '../content/posts/PostDetails';
 
 const StyledPostRow = styled.div`
   display: flex;
@@ -51,45 +52,6 @@ const StyledList = styled.ul`
     list-style: none;
   }
 `;
-
-const PostDetails: {
-  id: number;
-  title: string;
-  date: string;
-  link: string;
-}[] = [
-  //They appear in the order listed top to bottom
-  {
-    id: 4,
-    title: 'Flexbox Zombies: Review',
-    date: 'August 2020',
-    link: '/articles/flexboxzombiesreview',
-  },
-  {
-    id: 3,
-    title: 'How to use :last-of-type 🎨',
-    date: 'March 2020',
-    link: '/articles/csslastoftype',
-  },
-  {
-    id: 2,
-    title: '🥳HowImadeMySite.com',
-    date: 'March 2020',
-    link: '/articles/howimademysite',
-  },
-  {
-    id: 1,
-    title: '😅 A New Blog? What is this, 2006? ✍🏽',
-    date: 'March 2020',
-    link: '/articles/whyblog',
-  },
-  {
-    id: 0,
-    title: '💁🏾 A case for Learning Markdown 🔽',
-    date: 'March 2020',
-    link: '/articles/markdownguide',
-  },
-];
 
 const PostRow = (
   PostDetails: {
