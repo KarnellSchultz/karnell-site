@@ -138,7 +138,7 @@ nav section {
 .brand-a {
   color: var(--text-main);
   background: var(--nav-button-background);
-  font-weight: 445;
+  font-weight: 400;
   font-size: 1.35rem;
   white-space: nowrap;
   padding: 1.75rem 1.75rem;
@@ -149,7 +149,7 @@ nav section {
 .brand-a:hover {
   cursor: pointer;
   color: var(--nav-text);
-  /* background: var(--nav-button-background-hover); */
+  background: var(--nav-button-background-hover);
   text-decoration: none;
 }
 
