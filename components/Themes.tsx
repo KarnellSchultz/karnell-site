@@ -8,10 +8,14 @@ function Themes({ children }: any) {
   const Themer = () => {
     const { dark } = useDarkState();
     return (
-      <ThemeProvider theme={themes.pinkDarkTheme}>
-        <body className={dark ? `dark-theme` : 'light-theme'}>
+      <ThemeProvider
+        theme={dark ? themes.pinkDarkTheme : themes.lightTheme}>
+        <div
+          className={
+            dark ? `dark-theme theme-body` : 'light-theme theme-body'
+          }>
           {children}
-        </body>
+        </div>
       </ThemeProvider>
     );
   };
