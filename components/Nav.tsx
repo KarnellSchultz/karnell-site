@@ -4,6 +4,9 @@ import { useDarkState, useDarkDispatch } from './DarkThemeContext';
 import { useEffect } from 'react';
 
 const StyledNavSection = styled.section`
+  display: flex;
+  justify-content: space-between;
+
   @media (max-width: 890px) {
     padding: 0;
     display: flex;
@@ -28,9 +31,6 @@ const StyledNavSection = styled.section`
       display: none;
     }
   }
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
 
 function ThemeToggleButton() {
@@ -79,15 +79,7 @@ export default function Nav() {
           </Link>
           <ThemeToggleButton />
         </div>
-        <div>
-          <a
-            href="mailto:karnellschultz@gmail.com"
-            className="button contact-button"
-            rel="noopener noreferrer"
-            target="_blank">
-            Contact
-          </a>
-        </div>
+        <div className="button">{`🌍`}</div>
       </StyledNavSection>
     </nav>
   );
