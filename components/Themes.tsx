@@ -7,13 +7,15 @@ import {
 function Themes({ children }: any) {
   const Themer = () => {
     const { dark } = useDarkState();
-    return dark ? (
-      <ThemeProvider theme={themes.pinkDarkTheme}>
-        <body className={`dark-theme`}>{children}</body>
-      </ThemeProvider>
-    ) : (
-      <ThemeProvider theme={themes.lightTheme}>
-        <body className={`light-theme`}>{children}</body>
+    return (
+      <ThemeProvider
+        theme={dark ? themes.pinkDarkTheme : themes.lightTheme}>
+        <div
+          className={
+            dark ? `dark-theme theme-body` : 'light-theme theme-body'
+          }>
+          {children}
+        </div>
       </ThemeProvider>
     );
   };

@@ -86,11 +86,13 @@ body {
   padding: 0;
   margin: 0;
   font-size: 1rem;
-  background: var(--body-main);
-  color: var(--text-main);
   font-family: Helvetica Neue, Inter, -apple-system,
     BlinkMacSystemFont, Helvetica, Arial, sans-serif;
-  transition: background 400ms ease-in;
+}
+.theme-body {
+  background: var(--body-main);
+  color: var(--text-main);
+  transition: background 150ms ease-in;
 }
 section {
   max-width: 800px;
@@ -111,11 +113,44 @@ h4 {
 }
 
 nav {
-  padding: 2rem 0;
   width: 100%;
+  padding-top: 2rem;
 }
 nav section {
   width: 100%;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-start;
+}
+.nav-items {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+}
+.brand {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -0.2rem;
+}
+.brand-a {
+  color: var(--text-main);
+  background: var(--nav-button-background);
+  font-weight: 400;
+  font-size: 1.35rem;
+  white-space: nowrap;
+  padding: 1.75rem 1.75rem;
+  border-radius: 4px;
+  letter-spacing: 0.1px;
+  transition: 10ms background;
+}
+.brand-a:hover {
+  cursor: pointer;
+  color: var(--nav-text);
+  background: var(--nav-button-background-hover);
+  text-decoration: none;
 }
 
 .button {
@@ -137,7 +172,7 @@ nav section {
   /* box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); */
 }
 
-.links .nav-a {
+.nav-a {
   color: var(--text-main);
   background: var(--nav-button-background);
   font-weight: 400;
@@ -145,9 +180,10 @@ nav section {
   padding: 1.75rem 1.75rem;
   border-radius: 4px;
   letter-spacing: 0px;
+  border: none;
   transition: 10ms background;
 }
-.links .nav-a:hover {
+.nav-a:hover {
   cursor: pointer;
   color: var(--nav-text);
   background: var(--nav-button-background-hover);
@@ -217,7 +253,7 @@ code {
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-style: italic;
 }
@@ -229,10 +265,6 @@ footer p {
 }
 
 @media (max-width: 890) {
-  nav {
-    padding: 0 0 0 0;
-  }
-
   h3 {
     font-size: 2rem;
     line-height: 3rem;
@@ -243,12 +275,16 @@ footer p {
   body {
     line-height: 2rem;
   }
-  section {
-    padding: 1rem 0.5rem 1rem 0.5rem;
-  }
   nav {
-    padding: 2rem 0 0 0;
+    padding: 0;
   }
+  .nav-a {
+    padding: 1.75rem 1.5rem;
+  }
+  section {
+    padding: 0.3rem 0.5rem;
+  }
+
   h1,
   h2,
   h3 {

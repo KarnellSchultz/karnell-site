@@ -1,37 +1,6 @@
-import styled from 'styled-components';
 import Link from 'next/link';
 import { useDarkState, useDarkDispatch } from './DarkThemeContext';
 import { useEffect } from 'react';
-
-const StyledNavSection = styled.section`
-  @media (max-width: 890px) {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  @media (max-width: 567px) {
-    display: flex;
-    justify-content: flex-start;
-    a:first-of-type {
-      padding-left: 1.5em;
-    }
-    a {
-      padding: 1rem 1rem 1rem 1rem;
-    }
-    a.button {
-      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-    }
-    .nav-a {
-      padding: 0.7em 1em;
-    }
-    .contact-button {
-      display: none;
-    }
-  }
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
 
 function ThemeToggleButton() {
   useEffect(() => {
@@ -49,19 +18,17 @@ function ThemeToggleButton() {
       console.log(dark);
       return dispatch({ type: 'light' });
     }
-
-    return;
   }
 
   const { dark } = useDarkState();
   const dispatch = useDarkDispatch();
   return dark ? (
     <a className="nav-a" onClick={() => dispatch({ type: 'light' })}>
-      ☀️
+      {`🌖`}
     </a>
   ) : (
     <a className="nav-a" onClick={() => dispatch({ type: 'dark' })}>
-      🌘
+      {`🌘`}
     </a>
   );
 }
@@ -69,26 +36,24 @@ function ThemeToggleButton() {
 export default function Nav() {
   return (
     <nav>
-      <StyledNavSection>
-        <div className="links">
+      <section className="links">
+        <div className="brand">
           <Link href="/">
-            <a className="nav-a">Home</a>
+            <a className="brand-a">{`Home`}</a>
           </Link>
+        </div>
+
+        <div className="nav-items">
+          <Link href="/blog">
+            <a className="nav-a">Blog</a>
+          </Link>
+
           <Link href="/about">
-            <a className="nav-a">About Me</a>
+            <a className="nav-a">About</a>
           </Link>
           <ThemeToggleButton />
         </div>
-        <div>
-          <a
-            href="mailto:karnellschultz@gmail.com"
-            className="button contact-button"
-            rel="noopener noreferrer"
-            target="_blank">
-            Contact
-          </a>
-        </div>
-      </StyledNavSection>
+      </section>
     </nav>
   );
 }

@@ -37,13 +37,9 @@ function Layout({ children, pageName = '🔥', blog = false }: props) {
           <Nav />
           <main>{children}</main>
           {blog && (
-            <section>
-              <p>
-                <Link href="/">
-                  <a>⬅️ Back Home</a>
-                </Link>
-              </p>
-            </section>
+            <footer>
+              <h4>🌍 Thanks for reading 🌍</h4>
+            </footer>
           )}
         </StyledLayout>
         <Footer />
