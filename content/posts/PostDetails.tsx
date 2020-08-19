@@ -7,6 +7,12 @@ export const PostDetails: {
   //They appear in the order listed top to bottom
 
   {
+    id: 6,
+    title: 'How To Create a Gethub Profile README',
+    date: new Date('August 19 2020').toDateString(),
+    link: '/blog/howtocrategithubreadme',
+  },
+  {
     id: 5,
     title: 'How I Became a Self Taught Developer 👨🏽‍💻',
     date: new Date('August 13 2020').toDateString(),
