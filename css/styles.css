@@ -180,6 +180,7 @@ nav section {
   padding: 1.75rem 1.75rem;
   border-radius: 4px;
   letter-spacing: 0px;
+  border: none;
   transition: 10ms background;
 }
 .nav-a:hover {
@@ -252,7 +253,7 @@ code {
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-style: italic;
 }
