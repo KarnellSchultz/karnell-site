@@ -2,7 +2,6 @@ import Nav from './Nav';
 import styled from 'styled-components';
 import { Themes } from './Themes';
 import Footer from './Footer';
-import Link from 'next/link';
 import Head from 'next/head';
 
 const StyledLayout = styled.section`

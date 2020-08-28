@@ -9,6 +9,12 @@ export default function Footer() {
             Home
           </button>
         </Link>
+        <Link href="/blog">
+          <button className="footer-a" type="button">
+            Blog
+          </button>
+        </Link>
+
         <a href="https://github.com/KarnellSchultz/karnell-site">
           <button className="footer-a" type="button">
             GitHub
