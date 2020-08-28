@@ -5,22 +5,28 @@ export default function Footer() {
     <section>
       <footer>
         <Link href="/">
-          <button className="nav-a" type="button">
+          <button className="footer-a" type="button">
             Home
           </button>
         </Link>
+        <Link href="about">
+          <button className="footer-a" type="button">
+            GitHub
+          </button>
+        </Link>
         <Link href="/blog">
-          <button className="nav-a" type="button">
+          <button className="footer-a" type="button">
             Blog
           </button>
         </Link>
+
         <a target="blank" href="http://eepurl.com/ha-MTn">
-          <button className="nav-a" type="button">
+          <button className="footer-a" type="button">
             Email Newsletter
           </button>
         </a>
         <Link href="about">
-          <button className="nav-a" type="button">
+          <button className="footer-a" type="button">
             About
           </button>
         </Link>
