@@ -32,17 +32,17 @@ export default function Footer() {
       <footer>
         <a href="https://vercel.com/">
           <button className="footer-a" type="button">
-            <BsFillTriangleFill />
+            <BsFillTriangleFill size={32} />
           </button>
         </a>
         <a href="https://nextjs.org/">
           <button className="footer-a" type="button">
-            <SiNextDotJs />
+            <SiNextDotJs size={32} />
           </button>
         </a>
         <a href="https://github.com/KarnellSchultz/karnell-site">
           <button className="footer-a" type="button">
-            <AiFillGithub />
+            <AiFillGithub size={32} />
           </button>
         </a>
       </footer>
