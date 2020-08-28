@@ -37,7 +37,7 @@ function Layout({ children, pageName = '🔥', blog = false }: props) {
           <main>{children}</main>
           {blog && (
             <footer>
-              <h4>🌍 Thanks for reading 🌍</h4>
+              <h5>🌍Thanks for Reading🌍</h5>
             </footer>
           )}
         </StyledLayout>
