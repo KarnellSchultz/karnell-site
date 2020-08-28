@@ -9,17 +9,17 @@ export default function Footer() {
             Home
           </button>
         </Link>
-        <Link href="about">
-          <button className="footer-a" type="button">
-            GitHub
-          </button>
-        </Link>
         <Link href="/blog">
           <button className="footer-a" type="button">
             Blog
           </button>
         </Link>
 
+        <a href="https://github.com/KarnellSchultz/karnell-site">
+          <button className="footer-a" type="button">
+            GitHub
+          </button>
+        </a>
         <a target="blank" href="http://eepurl.com/ha-MTn">
           <button className="footer-a" type="button">
             Email Newsletter
