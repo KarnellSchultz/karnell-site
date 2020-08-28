@@ -273,13 +273,13 @@ code {
 
 footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   font-style: italic;
 }
 section footer {
-  padding: 2rem 0 4rem 0;
+  padding: 2rem 0 2rem 0;
 }
 footer p {
   font-size: 0.9rem;
