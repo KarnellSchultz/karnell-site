@@ -8,7 +8,7 @@ const Home = () => (
     <section>
       <h1>Karnell Schultz</h1>
       <p className="description">
-        {`🤙🏾 I'm a Javascript developer interested in creating tools to
+        {`🤙🏾 I'm a web developer interested in creating tools to
         democrotize the web. I create `}
         <a href="https://github.com/KarnellSchultz">
           {`open source`}
