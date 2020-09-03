@@ -194,6 +194,9 @@ nav section {
   background: var(--nav-button-background-hover);
   text-decoration: none;
 }
+.nav-a:focus {
+  outline: none;
+}
 
 nav a:first-of-type {
   margin-left: -1.5rem;
