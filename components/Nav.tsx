@@ -23,13 +23,17 @@ function ThemeToggleButton() {
   const { dark } = useDarkState();
   const dispatch = useDarkDispatch();
   return dark ? (
-    <a className="nav-a" onClick={() => dispatch({ type: 'light' })}>
+    <button
+      className="nav-a"
+      onClick={() => dispatch({ type: 'light' })}>
       {`🌖`}
-    </a>
+    </button>
   ) : (
-    <a className="nav-a" onClick={() => dispatch({ type: 'dark' })}>
+    <button
+      className="nav-a"
+      onClick={() => dispatch({ type: 'dark' })}>
       {`🌘`}
-    </a>
+    </button>
   );
 }
 
