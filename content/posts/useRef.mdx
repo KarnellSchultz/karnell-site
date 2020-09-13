@@ -1,0 +1,346 @@
+# How to useRef
+
+## Introduction
+
+This is intended to be a guide on useRef. I hope to show you first,
+how to use useRef and some of the basic functionality. Then show you
+some examples of when useRef comes in handy when building React
+applications.
+
+When learning React, useRef was a hook that I never found to be of
+much use. I noticed it the
+[React docs](https://reactjs.org/docs/getting-started.html), but was
+not really sure why or how to use it. Until one day I was doing a
+technical interview (for the job I have now) where I was live coding a
+form while two senior developers watched. I created a form input and
+used the useState hook to capture the state of the input field, which
+was an _okay_ solution. However the interviewers then asked me why I
+did not use the useRef hook, and if I could refactor my code to use,
+useRef 😅 .
+
+Luckily for me I was able to quickly
+[read the React docs](https://reactjs.org/docs/hooks-reference.html#useref)
+and figure out how to implement useRef. But hopefully you'll read this
+guide and avoid all of that stress.
+
+## What is useRef?
+
+useRef is a React hook that gives you direct access to DOM elements.
+
+> Essentially, useRef is like a “box” that can hold a mutable value in
+> its .current property.
+
+In this 📦 "box"📦 updates to its contents will _not_ notify react
+when the value changes. Meaning the changes to the refs value do _not_
+cause re-renders. This is what makes useRef special.
+
+## Sounds good, when do I useRef?
+
+The most common use case for useRef is when wanting to find out the
+dimensions of specific HTML elements.
+
+For example if you're looking to animate a transition, you'd likely
+want to know how big the width and height of the element you're
+animating. Or the more common use case of wanting to get the value of
+a `<input/>` element.
+
+## Using useRef
+
+The most basic way to use useRef would be to import it, then create a
+ref and attach it to a HTML element. In the following example we've
+created a ref, and attached it to a `<input>` element.
+
+Note:
+
+The useEffect is only there to `console.log` the value of the
+`inputRef` value. its only there for demonstration purposes and so we
+have something to look at in the log. Want to learn more about
+useEffect?
+[Check out this duper deep dive 🏊🏽‍♂️](https://overreacted.io/a-complete-guide-to-useeffect/)
+or this [quick dive 🩲](https://reactjs.org/docs/hooks-effect.html)
+
+::IMAGE HERE::
+
+```jsx
+import React, { useRef, useEffect } from 'react';
+
+export default function RefExample() {
+  useEffect(() => {
+    console.log(inputRef);
+  }, []);
+  const inputRef = useRef();
+  return <input ref={inputRef} />;
+}
+```
+
+The console should show this:
+
+`{current: input}`
+
+Here we have access to the input element. Meaning if we wanted to we
+could add text like a username or email address into an input element
+when the page loads. To do that we'd need to add the following to our
+useEffect:
+
+```jsx
+import React, { useRef, useEffect } from 'react';
+
+export default function App() {
+  useEffect(() => {
+    inputRef.current.value = 'email@address.com';
+  }, []);
+
+  const inputRef = useRef();
+  return (
+    <div className="App">
+      <input ref={inputRef} />
+    </div>
+  );
+}
+```
+
+Or we could focus the input element on page load so that users don't
+have to click on it to begin entering information. To do that we could
+add `inputRef.current.focus()` to the useEffect.
+
+useRef can be used with any element. It's not limited to `<input/>`'s
+in any way.
+
+## useRef to size elements
+
+Another time useRef comes in handy is when you're looking to compute
+the size of an element. This is useful when creating css transitions,
+or animations of any type really.
+
+For this example we're going to bring in useState to keep track of the
+size of the element, then use that state to be displayed on screen.
+
+```jsx
+import React, { useRef, useEffect, useState } from 'react';
+
+export default function App() {
+  const [height, setHeight] = useState(0);
+
+  const measuredRef = useRef();
+  useEffect(() => {
+    if (measuredRef.current) {
+      let node = measuredRef.current.getBoundingClientRect().height;
+      console.log(node);
+      setHeight(node);
+    }
+  }, [measuredRef]);
+
+  return (
+    <>
+      <h1 ref={measuredRef}>Hello, world</h1>
+      <h2>The above header is {Math.round(height)}px tall</h2>
+    </>
+  );
+}
+```
+
+⚠️ There is a problem here ⚠️
+
+While this code will display the height of the `measuredRef` on the
+initial render. Since useRef does not 'notify' react on change, when
+the element size changes, the state does not update. Which makes this
+pretty useless for animations or any of that fun stuff.
+
+The following example make this issue much more clear. Try it out to
+see for yourself.
+
+```jsx
+import React, { useRef, useEffect, useState } from 'react';
+
+export default function App() {
+  const [height, setHeight] = useState(0);
+
+  const measuredRef = useRef();
+  useEffect(() => {
+    if (measuredRef.current) {
+      let node = measuredRef.current.getBoundingClientRect().width;
+      console.log(node);
+      setHeight(node);
+    }
+  }, [measuredRef]);
+
+  return (
+    <>
+      <h1
+        onClick={() =>
+          (measuredRef.current.innerHTML = 'MUCH LONGER TEXT HERE')
+        }
+        ref={measuredRef}
+        style={{ display: 'inline-block' }}>
+        Hello, world
+      </h1>
+      <h2>The above header is {Math.round(height)}px tall</h2>
+    </>
+  );
+}
+```
+
+The solution react gives us is to this issue is useCallback. (Directly
+from the react docs) This example shows how you can pass a useCallback
+function into a ref to get the height of an element, then pass that
+into state.
+
+```jsx
+import React, { useCallback, useState } from 'react';
+
+export default function App() {
+  const [height, setHeight] = useState(0);
+
+  const measuredRef = useCallback((node) => {
+    if (node !== null) {
+      setHeight(node.getBoundingClientRect().height);
+    }
+  }, []);
+
+  return (
+    <>
+      <h1 ref={measuredRef}>Hello, world</h1>
+      <h2>The above header is {Math.round(height)}px tall</h2>
+    </>
+  );
+}
+```
+
+## useRef or useState?
+
+In the case of getting user input from `<input/>` field I used to
+always reach for the useState hook. For example:
+
+```jsx
+import React, { useState } from 'react';
+
+export default function App() {
+  const [firstName, setFirstName] = useState();
+  return (
+    <>
+      <input
+        value={firstName}
+        onChange={(e) => {
+          setFirstName(e.target.value);
+        }}
+        placeholder="input"
+      />
+    </>
+  );
+}
+```
+
+This use is _okay_ but has a few drawbacks that I'd like to talk
+about. The first and most important is that it's a little _too_
+complicated in my opinion. Having to set the input value and having to
+create the function to handle the onChange event. While in this
+example it's not super duper complicated, it's just more complicated
+then it needs to be.
+
+The 2nd issue here is that calling setState (in this case
+setFirstName()) each time a character is entered causes react to
+re-render the component. While again it's not the end of the world,
+and in most situations that's _fine,_ it can be done better.
+
+```jsx
+import React, { useRef } from 'react';
+
+export default function App() {
+  const inputRef = useRef();
+  return (
+    <>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}>
+        <input ref={inputRef} placeholder="input" />
+      </form>
+    </>
+  );
+}
+```
+
+In this example we have the(in my opinion) much more simple
+implementation of the useRef hook. With this we've fixed the
+re-rendering issue. However, this does not have a way to access the
+value of the input field 🧐 .
+
+Finally, we bring back our good old friend useState to help us out
+there.
+
+```jsx
+import React, { useRef, useState } from 'react';
+import './styles.css';
+
+export default function App() {
+  const [firstName, setFirstName] = useState();
+  const inputRef = useRef();
+  return (
+    <div className="App">
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          setFirstName(inputRef.current.value);
+          console.log(firstName);
+        }}>
+        <input ref={inputRef} placeholder="input" />
+      </form>
+    </div>
+  );
+}
+```
+
+In this last example we bring back useState to help us store the
+firstName value in local State when the submit event happens. This
+solution prevents the constant re-rendering of the useState only
+solution, while also giving you handy access to the input value in
+State.
+
+Finally one last example that uses everything in the toolbox. For me
+this is the best way to implement an input. However, it's also the
+most complicated.
+
+```jsx
+import React, {
+  useRef,
+  useState,
+  useCallback,
+  useEffect,
+} from 'react';
+
+export default function App() {
+  const [firstName, setFirstName] = useState();
+  const inputRef = useRef();
+
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      setFirstName(inputRef.current.value);
+    },
+    [inputRef]
+  );
+
+  useEffect(() => {
+    console.log(firstName);
+  }, [firstName]);
+
+  return (
+    <>
+      <form onSubmit={handleSubmit}>
+        <input ref={inputRef} placeholder="input" />
+      </form>
+    </>
+  );
+}
+```
+
+[CodeSandbox Link](https://codesandbox.io/s/loving-voice-j163e?file=/src/App.js:0-581)
+
+## Conclusion
+
+This input example is interesting to me because of how many ways you
+could implement an input field. Each way has its tradeoffs and there
+are different lessons to be learned from using each implementation. In
+all honestly there are no wrong ways of creating any application, as
+long as it works and you understand the tradeoffs you're making when
+making your applications.

@@ -1,5 +1,10 @@
-import Nav from './Nav';
+import { useEffect } from 'react';
 import styled from 'styled-components';
+import Prism from 'prismjs';
+import 'prismjs/components/prism-jsx.min';
+import 'prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js';
+
+import Nav from './Nav';
 import { Themes } from './Themes';
 import Footer from './Footer';
 import Head from 'next/head';
@@ -20,6 +25,9 @@ interface props {
 }
 
 function Layout({ children, pageName = '🔥', blog = false }: props) {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
   return (
     <>
       <Head>
