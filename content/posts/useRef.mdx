@@ -27,8 +27,8 @@ guide and avoid all of that stress.
 
 useRef is a React hook that gives you direct access to DOM elements.
 
-> Essentially, useRef is like a “box” that can hold a mutable value in
-> its .current property.
+> **Note:** Essentially, useRef is like a “box” that can hold a
+> mutable value in its .current property.
 
 In this 📦 "box"📦 updates to its contents will _not_ notify react
 when the value changes. Meaning the changes to the refs value do _not_
@@ -50,16 +50,12 @@ The most basic way to use useRef would be to import it, then create a
 ref and attach it to a HTML element. In the following example we've
 created a ref, and attached it to a `<input>` element.
 
-Note:
-
-The useEffect is only there to `console.log` the value of the
-`inputRef` value. its only there for demonstration purposes and so we
-have something to look at in the log. Want to learn more about
-useEffect?
-[Check out this duper deep dive 🏊🏽‍♂️](https://overreacted.io/a-complete-guide-to-useeffect/)
-or this [quick dive 🩲](https://reactjs.org/docs/hooks-effect.html)
-
-::IMAGE HERE::
+> **Note:** The useEffect is only there to `console.log` the value of
+> the `inputRef` value. its only there for demonstration purposes and
+> so we have something to look at in the log. Want to learn more about
+> useEffect?
+> [Check out this duper deep dive 🏊🏽‍♂️](https://overreacted.io/a-complete-guide-to-useeffect/)
+> or this [quick dive 🩲](https://reactjs.org/docs/hooks-effect.html)
 
 ```jsx
 import React, { useRef, useEffect } from 'react';
