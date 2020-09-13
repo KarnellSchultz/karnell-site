@@ -23,7 +23,7 @@ export default function Footer() {
             Email Newsletter
           </button>
         </a>
-        <Link href="about">
+        <Link href="/about">
           <button className="footer-a" type="button">
             About
           </button>
