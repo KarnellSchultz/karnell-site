@@ -54,4 +54,4 @@ function Layout({ children, pageName = '🔥', blog = false }: props) {
     </>
   );
 }
-export default Layout;
+export { Layout };

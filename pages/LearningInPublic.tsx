@@ -1,4 +1,4 @@
-import Layout from 'components/Layout';
+import { Layout } from 'components/Layout';
 import LearningInPublicDoc from 'content/posts/LearningInPublicDoc.mdx';
 
 export default function LearningInPublic() {

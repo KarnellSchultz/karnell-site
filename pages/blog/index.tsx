@@ -1,5 +1,5 @@
 import { Post } from 'components/post';
-import Layout from 'components/Layout';
+import { Layout } from 'components/Layout';
 
 export default function articles() {
   return (

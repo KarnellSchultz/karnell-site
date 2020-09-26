@@ -1,5 +1,5 @@
 import Mark from 'content/posts/MarkdownArticle.mdx';
-import Layout from 'components/Layout';
+import { Layout } from 'components/Layout';
 
 export default function markdownGuide() {
   return (

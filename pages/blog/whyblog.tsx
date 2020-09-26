@@ -1,5 +1,5 @@
 import WhyblogMarkdown from 'content/posts/newblog.mdx';
-import Layout from 'components/Layout';
+import { Layout } from 'components/Layout';
 
 export default function whyblog() {
   return (

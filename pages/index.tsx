@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Projects } from 'components/Projects';
-import Layout from 'components/Layout';
+import { Layout } from 'components/Layout';
 import { Post } from 'components/post';
 
 const Home = () => (

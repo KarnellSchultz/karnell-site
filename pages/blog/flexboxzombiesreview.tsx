@@ -1,5 +1,5 @@
 import FlexboxZombiesReview from 'content/posts/flexboxZombiesReview.mdx';
-import Layout from 'components/Layout';
+import { Layout } from 'components/Layout';
 
 export default function flexboxzombiesreview() {
   return (

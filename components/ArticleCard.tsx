@@ -3,7 +3,7 @@ type ArtileCardType = {
   body: string;
 };
 
-export default function ArticleCard({
+export function ArticleCard({
   heading = 'Article',
   body = 'Good info in here',
 }: ArtileCardType) {

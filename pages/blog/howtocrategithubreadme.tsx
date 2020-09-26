@@ -1,4 +1,4 @@
-import Layout from 'components/Layout';
+import { Layout } from 'components/Layout';
 import HowToCreateGithubREADME from 'content/posts/howtogithubprofilereadme.mdx';
 
 export default function howtocrategithubreadme() {

@@ -1,4 +1,4 @@
-import Layout from 'components/Layout';
+import { Layout } from 'components/Layout';
 import { Footer } from 'components/footer';
 
 export default function Custom404() {
