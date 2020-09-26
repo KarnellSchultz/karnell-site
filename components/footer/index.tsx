@@ -3,7 +3,7 @@ import { AiFillGithub } from 'react-icons/ai';
 import { SiNextDotJs } from 'react-icons/si';
 import { BsFillTriangleFill } from 'react-icons/bs';
 
-export default function Footer() {
+function Footer() {
   return (
     <section>
       <footer>
@@ -49,3 +49,4 @@ export default function Footer() {
     </section>
   );
 }
+export { Footer };

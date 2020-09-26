@@ -37,7 +37,7 @@ function ThemeToggleButton() {
   );
 }
 
-export default function Nav() {
+function Nav() {
   return (
     <nav>
       <section className="links">
@@ -61,3 +61,4 @@ export default function Nav() {
     </nav>
   );
 }
+export { Nav };

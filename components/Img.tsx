@@ -14,4 +14,4 @@ function Img({
     </section>
   );
 }
-export default Img;
+export { Img };

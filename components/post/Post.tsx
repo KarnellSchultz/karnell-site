@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import { PostDetails } from '../content/posts/PostDetails';
+import { PostDetails } from '../../content/posts/PostDetails';
 
 const StyledPostRow = styled.div`
   display: flex;
@@ -74,7 +74,7 @@ const PostRow = (
   });
 };
 
-export default function Post() {
+function Post() {
   return (
     <>
       <StyledHeading>
@@ -85,3 +85,4 @@ export default function Post() {
     </>
   );
 }
+export { Post };

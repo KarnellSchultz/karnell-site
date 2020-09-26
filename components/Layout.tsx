@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-jsx.min';
 import 'prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js';
-
-import Nav from './Nav';
-import { Themes } from './Themes';
-import Footer from './Footer';
 import Head from 'next/head';
+
+import { Nav } from './Nav';
+import { Themes } from './Themes';
+import { Footer } from './footer';
 
 const StyledLayout = styled.section`
   min-height: 100vh;

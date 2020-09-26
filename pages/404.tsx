@@ -1,5 +1,5 @@
 import Layout from 'components/Layout';
-import Footer from 'components/Footer';
+import { Footer } from 'components/footer';
 
 export default function Custom404() {
   return (

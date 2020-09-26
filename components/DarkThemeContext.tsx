@@ -1,6 +1,7 @@
 import React from 'react';
 
 type Action = { type: 'dark' } | { type: 'light' };
+// eslint-disable-next-line no-unused-vars
 type Dispatch = (action: Action) => void;
 type State = { dark: boolean };
 type DarkThemeProviderProps = { children: React.ReactNode };

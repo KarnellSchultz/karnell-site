@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import ProjectItem from './ProjectItem';
+
+import { ProjectItem } from './ProjectItem';
 
 const OpenSourceSection = styled.div`
   @media screen and (max-width: 890px) {
@@ -91,4 +92,4 @@ const Projects = () => {
     </>
   );
 };
-export default Projects;
+export { Projects };

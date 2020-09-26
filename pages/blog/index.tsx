@@ -1,5 +1,4 @@
-import Post from 'components/Post';
-import ArticleCard from 'components/ArticleCard';
+import { Post } from 'components/post';
 import Layout from 'components/Layout';
 
 export default function articles() {

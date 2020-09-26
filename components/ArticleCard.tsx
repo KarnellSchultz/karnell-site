@@ -1,12 +1,17 @@
+type ArtileCardType = {
+  heading: string;
+  body: string;
+};
+
 export default function ArticleCard({
   heading = 'Article',
   body = 'Good info in here',
-}) {
+}: ArtileCardType) {
   return (
     <article className="box">
       <h1>{heading}</h1>
       <p>{body}</p>
-      <p>Stuff here that's cool and stuff</p>
+      <p>{`Stuff here that's cool and stuff`}</p>
       <button className="breakout-button" type="button">
         Check out 👋
       </button>

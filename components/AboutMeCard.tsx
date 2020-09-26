@@ -41,7 +41,7 @@ const AboutCard = styled.div`
   }
 `;
 
-export default function AboutMeCard() {
+function AboutMeCard() {
   return (
     <>
       <AboutCard>
@@ -54,3 +54,4 @@ export default function AboutMeCard() {
     </>
   );
 }
+export { AboutMeCard };

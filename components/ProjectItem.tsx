@@ -87,4 +87,4 @@ function ProjectItem({
   );
 }
 
-export default ProjectItem;
+export { ProjectItem };
