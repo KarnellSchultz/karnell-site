@@ -7,6 +7,12 @@ export const PostDetails: {
   //They appear in the order listed top to bottom
 
   {
+    id: 8,
+    title: 'Hardest Part of My First 3 Months as a Developer',
+    date: new Date('November 15 2020').toDateString(),
+    link: '/blog/firstThreeMonths',
+  },
+  {
     id: 7,
     title: 'How To useRef',
     date: new Date('September 13 2020').toDateString(),
