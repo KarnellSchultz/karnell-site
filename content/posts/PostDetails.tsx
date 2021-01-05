@@ -8,7 +8,7 @@ export const PostDetails: {
 
   {
     id: 9,
-    title: 'Review 2020',
+    title: '2020 into 2021',
     date: new Date('January 5 2021').toDateString(),
     link: '/blog/review2020',
   },
