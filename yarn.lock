@@ -1739,10 +1739,10 @@ eslint-config-airbnb@18.2.1:
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-eslint-config-nextjs@1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/eslint-config-nextjs/-/eslint-config-nextjs-1.0.6.tgz#21c4498494a770e1b23fa3777153cd807f8a3c71"
-  integrity sha512-dVLdh6Ep9xkFHys+HBirBBf2CbPsdO3Ew7kXAd5URbWQVPa4uvzj4cOEX4pzu0EH7oLdxX5z7i4wxmu5AOM2Mg==
+eslint-config-nextjs@1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/eslint-config-nextjs/-/eslint-config-nextjs-1.0.7.tgz#21ea00b5062927130cd041eadd7d77ce341ebeda"
+  integrity sha512-ysuRtBxXRKAuXubS9BJWvvZ6Y2HzjgazHSixWSRjUMDtku18oMI9K7XdRAL8gKWwS6yiY1pH9Wxum0b0B3TgNw==
 
 eslint-config-prettier@8.3.0:
   version "8.3.0"
