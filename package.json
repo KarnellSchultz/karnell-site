@@ -10,7 +10,7 @@
   "dependencies": {
     "chokidar": "3.4.3",
     "eslint-config-nextjs": "1.0.6",
-    "eslint-config-prettier": "6.15.0",
+    "eslint-config-prettier": "8.3.0",
     "eslint-plugin-html": "6.1.1",
     "eslint-plugin-prettier": "3.1.4",
     "minimist": "1.2.5",
