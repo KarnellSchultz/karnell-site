@@ -4,7 +4,7 @@ import { Layout } from 'components/Layout';
 import { Post } from 'components/post';
 
 const Home = () => (
-  <Layout pageName={'🔥 Home'}>
+  <Layout pageName={'Home'}>
     <section>
       <h1>Karnell Schultz</h1>
       <p className="description">

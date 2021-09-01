@@ -31,7 +31,7 @@ function Layout({ children, pageName = '🔥', blog = false }: props) {
   return (
     <>
       <Head>
-        <title>KarnellSchultz - {pageName} </title>
+        <title>{pageName} - KarnellSchultz </title>
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="utf-8" />
         <meta
