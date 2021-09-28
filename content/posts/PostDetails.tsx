@@ -1,9 +1,11 @@
-export const PostDetails: {
+export type PostDetailsType = {
   id: number;
   title: string;
   date: string;
   link: string;
-}[] = [
+}[];
+
+export const PostDetails: PostDetailsType = [
   //They appear in the order listed top to bottom
 
   {

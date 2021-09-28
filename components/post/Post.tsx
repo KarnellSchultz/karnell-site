@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import { PostDetails } from '../../content/posts/PostDetails';
+import {
+  PostDetails,
+  PostDetailsType,
+} from '../../content/posts/PostDetails';
 
 const StyledPostRow = styled.div`
   display: flex;
@@ -53,15 +56,8 @@ const StyledList = styled.ul`
   }
 `;
 
-const PostRow = (
-  PostDetails: {
-    id: number;
-    title: string;
-    date: string;
-    link: string;
-  }[]
-): React.ReactNode => {
-  return PostDetails.map((row) => {
+const PostRow = (postDetails: PostDetailsType): React.ReactNode => {
+  return postDetails.map((row) => {
     return (
       <li key={row.id}>
         <Link href={row.link}>
