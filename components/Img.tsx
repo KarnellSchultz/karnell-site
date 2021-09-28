@@ -1,16 +1,18 @@
-interface props {
+import Image from 'next/image';
+
+interface ImgProps {
   link: string;
   alt: string;
 }
 function Img({
   link = 'content/images/githubReadme.png',
   alt,
-}: props) {
+}: ImgProps) {
   console.log(link);
 
   return (
     <section>
-      <img src={link} alt={alt} width={300} />
+      <Image src={link} alt={alt} width={300} />
     </section>
   );
 }

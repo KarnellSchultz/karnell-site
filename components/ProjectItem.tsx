@@ -61,19 +61,19 @@ const StyledGitLink = styled(StyledLink)`
   }
 `;
 
-interface props {
+type ProjectItemProps = {
   title: string;
   blurb: string;
   link: string;
   gitLink: string;
-}
+};
 
 function ProjectItem({
   title,
   blurb,
   link = '#',
   gitLink = '#',
-}: props) {
+}: ProjectItemProps) {
   return (
     <>
       <OpenSourceItem>
