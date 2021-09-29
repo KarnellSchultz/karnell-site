@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {
   PostDetails,
   PostDetailsType,
-} from '../../content/posts/PostDetails';
+} from '../../content/posts/PostsData';
 
 const StyledPostRow = styled.div`
   display: flex;
@@ -60,7 +60,7 @@ const PostRow = (postDetails: PostDetailsType): React.ReactNode => {
   return postDetails.map((row) => {
     return (
       <li key={row.id}>
-        <Link href={row.link}>
+        <Link href={`blog/${row.slug}`}>
           <StyledPostRow>
             <h3> {row.title} </h3>
           </StyledPostRow>
