@@ -2,7 +2,7 @@ export type PostDetailsType = {
   id: number;
   title: string;
   date: string;
-  link: string;
+  slug: string;
 }[];
 
 export const PostDetails: PostDetailsType = [
@@ -12,60 +12,60 @@ export const PostDetails: PostDetailsType = [
     id: 9,
     title: '2020 into 2021',
     date: new Date('January 5 2021').toDateString(),
-    link: '/blog/review2020',
+    slug: 'review2020',
   },
   {
     id: 8,
     title: 'Hardest Part of My First 3 Months as a Developer',
     date: new Date('November 15 2020').toDateString(),
-    link: '/blog/firstThreeMonths',
+    slug: 'firstThreeMonths',
   },
   {
     id: 7,
     title: 'How To useRef',
     date: new Date('September 13 2020').toDateString(),
-    link: '/blog/howtouseref',
+    slug: 'howtouseref',
   },
   {
     id: 6,
     title: 'How To Create a Gethub Profile README',
     date: new Date('August 19 2020').toDateString(),
-    link: '/blog/howtocrategithubreadme',
+    slug: 'howtocrategithubreadme',
   },
   {
     id: 5,
     title: 'How I Became a Self Taught Developer 👨🏽‍💻',
     date: new Date('August 13 2020').toDateString(),
-    link: '/blog/howibecameadeveloper',
+    slug: 'howibecameadeveloper',
   },
   {
     id: 4,
     title: 'Flexbox Zombies: Review',
     date: new Date('August 2020').toDateString(),
-    link: '/blog/flexboxzombiesreview',
+    slug: 'flexboxzombiesreview',
   },
   {
     id: 3,
     title: 'How to use :last-of-type 🎨',
     date: 'March 2020',
-    link: '/blog/csslastoftype',
+    slug: 'csslastoftype',
   },
   {
     id: 2,
     title: '🥳HowImadeMySite.com',
     date: 'March 2020',
-    link: '/blog/howimademysite',
+    slug: 'howimademysite',
   },
   {
     id: 1,
     title: '😅 A New Blog? What is this, 2006? ✍🏽',
     date: 'March 2020',
-    link: '/blog/whyblog',
+    slug: 'whyblog',
   },
   {
     id: 0,
     title: '💁🏾 A case for Learning Markdown 🔽',
     date: 'March 2020',
-    link: '/blog/markdownguide',
+    slug: 'markdownguide',
   },
 ];
