@@ -64,17 +64,17 @@ const Projects = () => {
       <em>A few of my favorite open source projects.</em>
       <OpenSourceSection>
         <ProjectItem
+          title={'TypeTypeType 🚤'}
+          link={'https://typetypetype.vercel.app/'}
+          gitLink={'https://github.com/KarnellSchultz/typetypetype'}
+          blurb={`An application to test your typing speed.`}></ProjectItem>
+        <ProjectItem
           title={'GraphQL Blog 🚀'}
           gitLink={'https://github.com/KarnellSchultz/KarmaProject'}
           link={'https://upbeat-karma.netlify.app/'}
           blurb={
             'Web app using Redux, GraphQL, React, and all sorts of cool tech & themes.'
           }></ProjectItem>
-        <ProjectItem
-          title={'Soda React From 🥃'}
-          link={'https://soda-react-form.netlify.com/'}
-          gitLink={'https://github.com/KarnellSchultz/ReactFormWork'}
-          blurb={`A slick looking React form using hooks and React-Spring animations.`}></ProjectItem>
 
         <ProjectItem
           title={'Myra Tracker 🐜'}
