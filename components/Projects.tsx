@@ -69,11 +69,11 @@ const Projects = () => {
           gitLink={'https://github.com/KarnellSchultz/typetypetype'}
           blurb={`An application to test your typing speed.`}></ProjectItem>
         <ProjectItem
-          title={'GraphQL Blog 🚀'}
-          gitLink={'https://github.com/KarnellSchultz/KarmaProject'}
-          link={'https://upbeat-karma.netlify.app/'}
+          title={'Berlin Weather ⛅️'}
+          gitLink={'https://github.com/KarnellSchultz/berlin-weather-next'}
+          link={'https://berlin-weather-next.vercel.app/'}
           blurb={
-            'Web app using Redux, GraphQL, React, and all sorts of cool tech & themes.'
+            'Good old weather app'
           }></ProjectItem>
 
         <ProjectItem
