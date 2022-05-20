@@ -36,6 +36,25 @@ const NavButton = styled.button`
   }
 `;
 
+const StyledNav = styled.nav`
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  padding-left: 1rem;
+
+  section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+`;
+
+const NavItem = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+`;
+
 function ThemeToggleButton() {
   useEffect(() => {
     if (dark.toString() == localStorage.getItem('dark')) {
@@ -69,15 +88,15 @@ function ThemeToggleButton() {
 
 function Nav() {
   return (
-    <nav>
-      <section className="links">
+    <StyledNav>
+      <section>
         <div className="brand">
           <Link href="/">
             <NavButton>Home</NavButton>
           </Link>
         </div>
 
-        <div className="nav-items">
+        <NavItem>
           <Link href="/blog">
             <NavButton>Blog</NavButton>
           </Link>
@@ -86,9 +105,9 @@ function Nav() {
             <NavButton>About</NavButton>
           </Link>
           <ThemeToggleButton />
-        </div>
+        </NavItem>
       </section>
-    </nav>
+    </StyledNav>
   );
 }
 export { Nav };
