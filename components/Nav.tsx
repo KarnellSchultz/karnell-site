@@ -32,7 +32,7 @@ const NavButton = styled.button`
   }
 
   :first-of-type {
-    margin-left: -1.5rem;
+    margin-left: -1rem;
   }
 `;
 
