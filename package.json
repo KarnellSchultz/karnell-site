@@ -13,7 +13,7 @@
     "eslint-config-nextjs": "1.0.7",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-html": "6.2.0",
-    "eslint-plugin-prettier": "4.1.0",
+    "eslint-plugin-prettier": "4.2.1",
     "minimist": "1.2.6",
     "next": "12.2.0",
     "prettier": "2.7.1",
