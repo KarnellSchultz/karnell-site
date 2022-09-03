@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import { Projects } from 'components/Projects';
-import { Post } from 'components/post';
+import Link from 'next/link'
+import { Projects } from 'components/Projects'
+import { Post } from 'components/post'
 
 const Home = () => {
   return (
@@ -28,7 +28,7 @@ const Home = () => {
         <Post />
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

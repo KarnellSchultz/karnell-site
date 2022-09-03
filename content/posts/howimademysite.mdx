@@ -1,3 +1,9 @@
+import {Layout} from 'components/Layout'
+
+export const meta = {
+author: 'Rich Haines'
+}
+
 <heading>
 
 # How I created my personal blog website
@@ -159,3 +165,5 @@ Things I would have sorted out beforehand:
 - Tech Stack
 - Layout
 - Types of pages
+
+export default ({ children }) => <Layout meta={meta}>{children}</Layout>

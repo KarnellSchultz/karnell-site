@@ -5,12 +5,31 @@ import '../css/prsim.css';
 import { Layout } from 'components/Layout';
 import { useRouter } from 'next/router';
 
+const getCapitalizedTitleFromSlug = (slug: string): string => {
+  if (slug === '') return 'Home';
+
+  return slug
+    .split('/')
+    .pop()
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .split(' ')
+    .map(
+      (word) =>
+        word[0].toLocaleUpperCase() + word.substring(1, word.length)
+    )
+    .join(' ');
+};
+
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  console.log({ router });
+  const title = router.pathname === '/' ? 'home' : router.pathname;
+
+  const formattedTitle = getCapitalizedTitleFromSlug(title);
+
+  console.log('PAGEPROPS', pageProps);
 
   return (
-    <Layout>
+    <Layout pageName={formattedTitle}>
       <Component {...pageProps} />
     </Layout>
   );

@@ -1,6 +1,6 @@
 import UseRef from 'content/posts/useRef.mdx';
 
-export default function howTouseRef() {
+export default function howToUseRef() {
   return (
     <section>
       <UseRef />

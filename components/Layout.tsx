@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
-import styled from 'styled-components';
-import Prism from 'prismjs';
-import 'prismjs/components/prism-jsx.min';
-import 'prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js';
-import Head from 'next/head';
+import { useEffect } from 'react'
+import styled from 'styled-components'
+import Prism from 'prismjs'
+import 'prismjs/components/prism-jsx.min'
+import 'prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js'
+import Head from 'next/head'
 
-import { Nav } from './Nav';
-import { Themes } from './Themes';
-import { Footer } from './footer';
+import { Nav } from './Nav'
+import { Themes } from './Themes'
+import { Footer } from './footer'
 
 const StyledLayout = styled.section`
   min-height: 100vh;
@@ -15,23 +15,26 @@ const StyledLayout = styled.section`
   main {
     margin-bottom: 4rem;
   }
-`;
+`
 
 interface LayoutProps {
-  children: React.ReactNode;
-  pageName?: string;
-  home?: boolean;
-  blog?: boolean;
+  children: React.ReactNode
+  pageName?: string
+  home?: boolean
+  blog?: boolean
+  meta?: any
 }
 
 function Layout({
   children,
   pageName,
   blog = false,
+  meta,
 }: LayoutProps) {
   useEffect(() => {
-    Prism.highlightAll();
-  }, []);
+    Prism.highlightAll()
+  }, [])
+  console.log('LAYOUR', meta)
   return (
     <>
       <Head>
@@ -56,6 +59,6 @@ function Layout({
         <Footer />
       </Themes>
     </>
-  );
+  )
 }
-export { Layout };
+export { Layout }

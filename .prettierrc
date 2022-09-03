@@ -2,8 +2,9 @@
   "trailingComma": "es5",
   "tabWidth": 2,
   "printWidth": 70,
-  "proseWrap":"always",
-  "semi": true,
+  "proseWrap": "always",
+  "semi": false,
   "singleQuote": true,
-  "jsxBracketSameLine": true
+  "jsxBracketSameLine": true,
+  "arrowParens": "always"
 }
