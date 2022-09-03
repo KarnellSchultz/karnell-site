@@ -26,7 +26,7 @@ interface LayoutProps {
 
 function Layout({
   children,
-  pageName = '🔥',
+  pageName,
   blog = false,
 }: LayoutProps) {
   useEffect(() => {

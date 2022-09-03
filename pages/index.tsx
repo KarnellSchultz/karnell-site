@@ -1,12 +1,8 @@
 import Link from 'next/link';
 import { Projects } from 'components/Projects';
 import { Post } from 'components/post';
-import { useRouter } from 'next/router';
 
 const Home = () => {
-  const router = useRouter();
-  console.log({ router });
-
   return (
     <>
       <section>
