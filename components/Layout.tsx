@@ -17,14 +17,18 @@ const StyledLayout = styled.section`
   }
 `;
 
-interface props {
-  children: any;
-  pageName: string;
+interface LayoutProps {
+  children: React.ReactNode;
+  pageName?: string;
   home?: boolean;
   blog?: boolean;
 }
 
-function Layout({ children, pageName = '🔥', blog = false }: props) {
+function Layout({
+  children,
+  pageName = '🔥',
+  blog = false,
+}: LayoutProps) {
   useEffect(() => {
     Prism.highlightAll();
   }, []);

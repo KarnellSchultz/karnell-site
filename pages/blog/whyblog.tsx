@@ -1,12 +1,9 @@
-import WhyblogMarkdown from 'content/posts/newblog.mdx';
-import { Layout } from 'components/Layout';
+import WhyBlogMarkdown from 'content/posts/newblog.mdx';
 
-export default function whyblog() {
+export default function whyBlog() {
   return (
-    <Layout blog pageName={'Why Blog? 🤷🏽‍♂️'}>
-      <section>
-        <WhyblogMarkdown />
-      </section>
-    </Layout>
+    <section>
+      <WhyBlogMarkdown />
+    </section>
   );
 }

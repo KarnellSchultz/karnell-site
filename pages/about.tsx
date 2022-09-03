@@ -1,12 +1,13 @@
 import AboutMe from 'content/posts/AboutMeContent.mdx';
-import { Layout } from 'components/Layout';
+import { useRouter } from 'next/router';
 
 export default function About() {
+  const router = useRouter();
+  console.log({ router });
+
   return (
-    <Layout pageName="About">
-      <section>
-        <AboutMe />
-      </section>
-    </Layout>
+    <section>
+      <AboutMe />
+    </section>
   );
 }

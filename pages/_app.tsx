@@ -1,13 +1,13 @@
-import App from 'next/app';
+import { AppProps } from 'next/app';
 import '../css/normalize.css';
 import '../css/styles.css';
 import '../css/prsim.css';
+import { Layout } from 'components/Layout';
 
-class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props;
-    return <Component {...pageProps} />;
-  }
+export default function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
-
-export default MyApp;

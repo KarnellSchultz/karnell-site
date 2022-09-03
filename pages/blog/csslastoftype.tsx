@@ -1,12 +1,9 @@
-import LastofType from 'content/posts/csslastoftype.mdx';
-import { Layout } from 'components/Layout';
+import LastOfType from 'content/posts/csslastoftype.mdx';
 
-export default function csslastoftype() {
+export default function cssLasOofType() {
   return (
-    <Layout blog pageName={'CSS: last-of-type'}>
-      <section>
-        <LastofType />
-      </section>
-    </Layout>
+    <section>
+      <LastOfType />
+    </section>
   );
 }
