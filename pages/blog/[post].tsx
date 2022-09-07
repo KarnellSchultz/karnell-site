@@ -4,7 +4,10 @@ import { useRouter } from 'next/router'
 // Generates `/posts/1` and `/posts/2`
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [{ params: { post: 'review2021' } }, { params: { post: '2' } }],
+    paths: [
+      { params: { post: 'review2021' } },
+      { params: { post: '2' } },
+    ],
     fallback: false, // can also be true or 'blocking'
   }
 }

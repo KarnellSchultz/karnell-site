@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import Image from 'next/image'
+import styled from 'styled-components'
 
 const AboutCard = styled.div`
   /* position: absolute; */
@@ -39,19 +40,19 @@ const AboutCard = styled.div`
     border-radius: 15px;
     border: none;
   }
-`;
+`
 
 function AboutMeCard() {
   return (
     <>
       <AboutCard>
-        <img
+        <Image
           src="https://avatars2.githubusercontent.com/u/50870173?s=460&v=4"
           alt="photo of karnell"
         />
         <a className="button" href=""></a>
       </AboutCard>
     </>
-  );
+  )
 }
-export { AboutMeCard };
+export { AboutMeCard }

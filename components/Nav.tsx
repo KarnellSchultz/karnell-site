@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { useDarkState, useDarkDispatch } from './DarkThemeContext';
-import { useEffect } from 'react';
-import styled from 'styled-components';
+import Link from 'next/link'
+import { useDarkState, useDarkDispatch } from './DarkThemeContext'
+import { useEffect } from 'react'
+import styled from 'styled-components'
 
 const NavButton = styled.button`
   color: var(--text-main);
@@ -34,7 +34,7 @@ const NavButton = styled.button`
   :first-of-type {
     margin-left: -1rem;
   }
-`;
+`
 
 const StyledNav = styled.nav`
   width: 100%;
@@ -47,33 +47,29 @@ const StyledNav = styled.nav`
     display: flex;
     justify-content: flex-start;
   }
-`;
+`
 
 const NavItem = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 70%;
-`;
+`
 
 function ThemeToggleButton() {
+  const { dark } = useDarkState()
+  const dispatch = useDarkDispatch()
+
   useEffect(() => {
     if (dark.toString() == localStorage.getItem('dark')) {
-      return;
+      return
     } else {
-      setDarkMode();
+      if (localStorage.getItem('dark') === 'true') {
+        dispatch({ type: 'dark' })
+      } else if (localStorage.getItem('dark') === 'false') {
+        dispatch({ type: 'light' })
+      }
     }
-  }, []);
-
-  function setDarkMode() {
-    if (localStorage.getItem('dark') === 'true') {
-      return dispatch({ type: 'dark' });
-    } else if (localStorage.getItem('dark') === 'false') {
-      return dispatch({ type: 'light' });
-    }
-  }
-
-  const { dark } = useDarkState();
-  const dispatch = useDarkDispatch();
+  }, [dark, dispatch])
 
   return dark ? (
     <NavButton onClick={() => dispatch({ type: 'light' })}>
@@ -83,7 +79,7 @@ function ThemeToggleButton() {
     <NavButton onClick={() => dispatch({ type: 'dark' })}>
       {`🌘`}
     </NavButton>
-  );
+  )
 }
 
 function Nav() {
@@ -108,6 +104,6 @@ function Nav() {
         </NavItem>
       </section>
     </StyledNav>
-  );
+  )
 }
-export { Nav };
+export { Nav }
