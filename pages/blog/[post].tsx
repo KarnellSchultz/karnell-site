@@ -86,30 +86,32 @@ export const PostDetails: PostDetailsType = [
 ]
 
 // Generates `/posts/1` and `/posts/2`
-export const getStaticPaths: GetStaticPaths = async (props) => {
-  const posts = PostDetails.map((post) => {
-    return { params: { post: post.slug } }
-  })
-  console.log('POSTS🍒', posts)
+// export const getStaticPaths: GetStaticPaths = async (props) => {
+//   const posts = PostDetails.map((post) => {
+//     return { params: { post: post.slug } }
+//   })
+//   console.log('POSTS🍒', posts)
 
-  return {
-    paths: posts,
-    // paths: [
-    //   { params: { post: 'review2021' } },
-    //   // posts,
-    // ],
-    fallback: false, // can also be true or 'blocking'
-  }
-}
+//   return {
+//     paths: posts,
+//     // paths: [
+//     //   { params: { post: 'review2021' } },
+//     //   // posts,
+//     // ],
+//     fallback: false, // can also be true or 'blocking'
+//   }
+// }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  console.log('CONTEXT', context)
-
-  return {
-    // Passed to the page component as props
-    props: {},
-  }
-}
+// export const getStaticProps: GetStaticProps = async (context) => {
+//   console.log('CONTEXT', context)
+//   const { params } = context
+//   const res = await fetch(`http://localhost:3000/posts/${params.post}`)
+//   const post = await res.json()
+//   return {
+//     // Passed to the page component as props
+//     props: { post },
+//   }
+// }
 
 const Post = (props) => {
   const router = useRouter()
