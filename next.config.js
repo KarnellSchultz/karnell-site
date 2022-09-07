@@ -15,8 +15,9 @@ const nextConfig = {
     styledComponents: true,
   },
 }
-module.exports = nextConfig
+// module.exports = nextConfig
 module.exports = withMDX({
   // Append the default value with md extensions
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  ...nextConfig,
 })
