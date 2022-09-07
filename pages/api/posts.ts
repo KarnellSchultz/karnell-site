@@ -1,16 +1,13 @@
-import { GetStaticProps, GetStaticPaths } from 'next'
-import { useRouter } from 'next/router'
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-export type PostDetailsType = {
+type PostData = {
   id: number
   title: string
   date: string
   slug: string
 }[]
 
-export const PostDetails: PostDetailsType = [
-  //They appear in the order listed top to bottom
-
+const postData = [
   {
     id: 11,
     title: 'Projects I made for Job Interviews',
@@ -85,39 +82,9 @@ export const PostDetails: PostDetailsType = [
   },
 ]
 
-// Generates `/posts/1` and `/posts/2`
-export const getStaticPaths: GetStaticPaths = async (props) => {
-  const posts = PostDetails.map((post) => {
-    return { params: { post: post.slug } }
-  })
-  console.log('POSTS🍒', posts)
-
-  return {
-    paths: posts,
-    // paths: [
-    //   { params: { post: 'review2021' } },
-    //   // posts,
-    // ],
-    fallback: false, // can also be true or 'blocking'
-  }
+export default function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<PostData>
+) {
+  res.status(200).json(postData)
 }
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  console.log('CONTEXT', context)
-
-  return {
-    // Passed to the page component as props
-    props: {},
-  }
-}
-
-const Post = (props) => {
-  const router = useRouter()
-  const { post } = router.query
-  console.log({ router })
-  console.log({ props })
-
-  return <p>Post: {post}</p>
-}
-
-export default Post

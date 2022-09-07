@@ -76,7 +76,7 @@ function Post() {
       <StyledHeading>
         <h2>Blogs</h2>
       </StyledHeading>
-      <em>A collection of my learnings and expeiences in tech.</em>
+      <em>A collection of my learnings and experiences in tech.</em>
       <StyledList>{PostRow(PostDetails)}</StyledList>
     </>
   );

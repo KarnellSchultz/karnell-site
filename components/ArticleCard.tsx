@@ -1,4 +1,4 @@
-type ArtileCardType = {
+type ArticleCardType = {
   heading: string;
   body: string;
 };
@@ -6,7 +6,7 @@ type ArtileCardType = {
 export function ArticleCard({
   heading = 'Article',
   body = 'Good info in here',
-}: ArtileCardType) {
+}: ArticleCardType) {
   return (
     <article className="box">
       <h1>{heading}</h1>
