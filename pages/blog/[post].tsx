@@ -1,7 +1,4 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
-import { useRouter } from 'next/router'
-
-import { PostDetails, PostDetailsType } from 'blogPostData'
 
 import CssLastOfType from 'content/posts/CssLastOfType.mdx'
 import FirstThreeMonths from 'content/posts/FirstThreeMonths.mdx'
