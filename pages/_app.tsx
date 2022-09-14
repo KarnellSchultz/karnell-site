@@ -1,12 +1,12 @@
-import { AppProps } from 'next/app';
-import '../css/normalize.css';
-import '../css/styles.css';
-import '../css/prsim.css';
-import { Layout } from 'components/Layout';
-import { useRouter } from 'next/router';
+import { AppProps } from 'next/app'
+import '../css/normalize.css'
+import '../css/styles.css'
+import '../css/prsim.css'
+import { Layout } from 'components/Layout'
+import { useRouter } from 'next/router'
 
 const getCapitalizedTitleFromSlug = (slug: string): string => {
-  if (slug === '') return 'Home';
+  if (slug === '') return 'Home'
 
   return slug
     .split('/')
@@ -17,20 +17,21 @@ const getCapitalizedTitleFromSlug = (slug: string): string => {
       (word) =>
         word[0].toLocaleUpperCase() + word.substring(1, word.length)
     )
-    .join(' ');
-};
+    .join(' ')
+    .split('-')
+    .map((word) => (word === '-' ? ' ' : word))
+    .join(' ')
+}
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-  const title = router.pathname === '/' ? 'home' : router.pathname;
+  const router = useRouter()
+  const title = router.pathname === '/' ? 'home' : router.asPath
 
-  const formattedTitle = getCapitalizedTitleFromSlug(title);
-
-  console.log('PAGEPROPS', pageProps);
+  const formattedTitle = getCapitalizedTitleFromSlug(title)
 
   return (
     <Layout pageName={formattedTitle}>
       <Component {...pageProps} />
     </Layout>
-  );
+  )
 }

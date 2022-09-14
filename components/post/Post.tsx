@@ -1,9 +1,6 @@
-import styled from 'styled-components';
-import Link from 'next/link';
-import {
-  PostDetails,
-  PostDetailsType,
-} from '../../content/posts/PostsData';
+import styled from 'styled-components'
+import Link from 'next/link'
+import { PostDetails, PostDetailsType } from 'blogPostData'
 
 const StyledPostRow = styled.div`
   display: flex;
@@ -38,7 +35,7 @@ const StyledPostRow = styled.div`
     line-height: 3rem;
     height: 170px;
   }
-`;
+`
 
 const StyledHeading = styled.article`
   display: flex;
@@ -46,7 +43,7 @@ const StyledHeading = styled.article`
   button {
     margin-left: 2rem;
   }
-`;
+`
 
 const StyledList = styled.ul`
   list-style-type: none;
@@ -54,9 +51,9 @@ const StyledList = styled.ul`
   li {
     list-style: none;
   }
-`;
+`
 
-const PostRow = (postDetails: PostDetailsType): React.ReactNode => {
+const PostRow = (postDetails: PostDetailsType) => {
   return postDetails.map((row) => {
     return (
       <li key={row.id}>
@@ -66,9 +63,9 @@ const PostRow = (postDetails: PostDetailsType): React.ReactNode => {
           </StyledPostRow>
         </Link>
       </li>
-    );
-  });
-};
+    )
+  })
+}
 
 function Post() {
   return (
@@ -79,6 +76,6 @@ function Post() {
       <em>A collection of my learnings and experiences in tech.</em>
       <StyledList>{PostRow(PostDetails)}</StyledList>
     </>
-  );
+  )
 }
-export { Post };
+export { Post }

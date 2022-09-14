@@ -1,9 +1,9 @@
-import { Post } from 'components/post';
+import { Post } from 'components/post'
 
 export default function articles() {
   return (
     <section>
-      <Post></Post>
+      <Post />
     </section>
-  );
+  )
 }

@@ -21,7 +21,6 @@ const OpenSourceItem = styled.div`
   box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   margin: 0.5rem 0;
-  transition: all 300ms ease;
 
   h4 {
     font-size: 1.3rem;

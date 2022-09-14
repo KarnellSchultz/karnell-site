@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
-import { ProjectItem } from './ProjectItem';
+import { ProjectItem } from './ProjectItem'
 
 const OpenSourceSection = styled.div`
   @media screen and (max-width: 890px) {
@@ -45,7 +45,7 @@ const OpenSourceSection = styled.div`
       ),
       #67b26f;
   }
-`;
+`
 
 const StyledHeading = styled.article`
   display: flex;
@@ -53,7 +53,7 @@ const StyledHeading = styled.article`
   button {
     margin-left: 2rem;
   }
-`;
+`
 
 const Projects = () => {
   return (
@@ -70,11 +70,11 @@ const Projects = () => {
           blurb={`An application to test your typing speed.`}></ProjectItem>
         <ProjectItem
           title={'Berlin Weather ⛅️'}
-          gitLink={'https://github.com/KarnellSchultz/berlin-weather-next'}
+          gitLink={
+            'https://github.com/KarnellSchultz/berlin-weather-next'
+          }
           link={'https://berlin-weather-next.vercel.app/'}
-          blurb={
-            'Good old weather app'
-          }></ProjectItem>
+          blurb={'Good old weather app'}></ProjectItem>
 
         <ProjectItem
           title={'Myra Tracker 🐜'}
@@ -90,6 +90,6 @@ const Projects = () => {
           blurb={`My Personal website & blog 🤙🏾`}></ProjectItem>
       </OpenSourceSection>
     </>
-  );
-};
-export { Projects };
+  )
+}
+export { Projects }

@@ -25,20 +25,27 @@ interface LayoutProps {
   meta?: any
 }
 
+const usePrism = () =>
+  useEffect(() => {
+    Prism.highlightAll()
+  }, [])
+
 function Layout({
   children,
   pageName,
   blog = false,
   meta,
 }: LayoutProps) {
-  useEffect(() => {
-    Prism.highlightAll()
-  }, [])
-  console.log('LAYOUR', meta)
+  // useEffect(() => {
+  //   Prism.highlightAll()
+  // }, [])
+
+  usePrism()
+
   return (
     <>
       <Head>
-        <title>{pageName} - KarnellSchultz </title>
+        <title>{`${pageName}- KarnellSchultz `}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="utf-8" />
         <meta
