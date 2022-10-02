@@ -78,7 +78,7 @@ const Projects = () => {
           gitLink={
             'https://github.com/KarnellSchultz/berlin-weather-next'
           }
-          link={'https://berlin-weather-next.vercel.app/'}
+          link={'https://berlin-weather.nellzus.se/'}
           blurb={'Good old weather app'}></ProjectItem>
 
         <ProjectItem
