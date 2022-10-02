@@ -1,8 +1,8 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 import CssLastOfType from 'content/posts/css-last-of-type.mdx'
-// import FirstThreeMonths from '../../content/posts/FirstThreeMonths.mdx'
-// import FlexboxZombiesReview from '../../content/posts/FlexboxZombiesReview.mdx'
+import FirstThreeMonths from '../../content/posts/first-three-months.mdx'
+import FlexboxZombiesReview from '../../content/posts/flexbox-zombies-review.mdx'
 // import HowIBecame from '../../content/posts/HowIBecameADeveloper.mdx'
 // import HowIMadeMySite from '../../content/posts/HowIMadeMySite.mdx'
 // import HowToCreateGithubREADME from '../../content/posts/HowToMakeAGithubReadme.mdx'
@@ -15,8 +15,8 @@ import CssLastOfType from 'content/posts/css-last-of-type.mdx'
 
 const Posts = {
   'css-last-of-type': CssLastOfType,
-  //   'first-three-months': FirstThreeMonths,
-  //   'flexbox-zombies-review': FlexboxZombiesReview,
+  'first-three-months': FirstThreeMonths,
+  'flexbox-zombies-review': FlexboxZombiesReview,
   //   'how-i-became-a-developer': HowIBecame,
   //   'how-i-made-my-site': HowIMadeMySite,
   //   'how-to-create-a-github-readme': HowToCreateGithubREADME,
