@@ -64,6 +64,11 @@ const Projects = () => {
       <em>A few of my favorite open source projects.</em>
       <OpenSourceSection>
         <ProjectItem
+          title={'Capitals-Magellan 🧭'}
+          link={'https://capitals.nellzus.se/'}
+          gitLink={'https://github.com/KarnellSchultz/capitals'}
+          blurb={`A game to guess the worlds capitals`}></ProjectItem>
+        <ProjectItem
           title={'TypeTypeType 🚤'}
           link={'https://typetypetype.vercel.app/'}
           gitLink={'https://github.com/KarnellSchultz/typetypetype'}
@@ -83,11 +88,6 @@ const Projects = () => {
           }
           link={'https://myratracker.firebaseapp.com/login.html'}
           blurb={`A 'Jira style' application created with Vue.js. This can be used to track the progress of projects.`}></ProjectItem>
-        <ProjectItem
-          title={'KarnellSchultz.com 🔥'}
-          link={'https://karnellschultz.com/'}
-          gitLink={'https://github.com/KarnellSchultz/karnell-site'}
-          blurb={`My Personal website & blog 🤙🏾`}></ProjectItem>
       </OpenSourceSection>
     </>
   )
