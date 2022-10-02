@@ -34,8 +34,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { post: slugKey },
   }))
 
-  console.log(posts)
-
   return {
     paths: posts,
     fallback: false, // can also be true or 'blocking'
