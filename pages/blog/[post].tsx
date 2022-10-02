@@ -1,6 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 
-import CssLastOfType from '../../content/posts/CssLastOfType.mdx'
+import CssLastOfType from 'content/posts/CssLastOfType.mdx'
 // import FirstThreeMonths from '../../content/posts/FirstThreeMonths.mdx'
 // import FlexboxZombiesReview from '../../content/posts/FlexboxZombiesReview.mdx'
 // import HowIBecame from '../../content/posts/HowIBecameADeveloper.mdx'
