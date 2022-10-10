@@ -33,7 +33,7 @@
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
     "@types/jest": "29.1.2",
-    "@types/node": "16.11.64",
+    "@types/node": "16.11.65",
     "@types/prismjs": "1.26.0",
     "@types/react": "17.0.50",
     "@types/react-dom": "18.0.6",
