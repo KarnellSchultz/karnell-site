@@ -7,9 +7,10 @@ const PostRow = (postDetails: PostDetailsType) => {
       <li key={row.id}>
         <Link href={`blog/${row.slug}`}>
           <div
-            className="flex justify-center items-center text-center mt-4 leading-6 rounded-sm transition-all
-          hover:rounded-sm shadow-md transform ">
-            <h3> {row.title} </h3>
+            className="cursor-pointer
+          hover:underline
+          ">
+            <p> {row.title} </p>
           </div>
         </Link>
       </li>
@@ -21,9 +22,10 @@ function Post() {
   return (
     <>
       <article className="flex items-center">
-        <h2>Blogs</h2>
+        <h3>Blogs</h3>
       </article>
       <em>A collection of my learnings and experiences in tech.</em>
+      <div className="border-b" />
       <ul className="list-none p-0">{PostRow(PostDetails)}</ul>
     </>
   )
