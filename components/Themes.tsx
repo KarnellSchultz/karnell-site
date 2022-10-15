@@ -1,12 +1,13 @@
-import { ThemeProvider } from 'styled-components';
+// @ts-ignore`
+import { ThemeProvider } from 'styled-components'
 import {
   DarkThemeProvider,
   useDarkState,
-} from '../components/DarkThemeContext';
+} from '../components/DarkThemeContext'
 
 function Themes({ children }: any) {
   const Themer = () => {
-    const { dark } = useDarkState();
+    const { dark } = useDarkState()
     return (
       <>
         <ThemeProvider
@@ -21,14 +22,14 @@ function Themes({ children }: any) {
           </div>
         </ThemeProvider>
       </>
-    );
-  };
+    )
+  }
 
   return (
     <DarkThemeProvider>
       <Themer />
     </DarkThemeProvider>
-  );
+  )
 }
 
 const themes = {
@@ -85,6 +86,6 @@ const themes = {
       codeBackground: '#3A3A3A',
     },
   },
-};
+}
 
-export { Themes };
+export { Themes }
