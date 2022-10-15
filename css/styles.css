@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --grey0: #ffffff;
   --grey1: #f5f5f5;
@@ -141,7 +145,6 @@ h5 {
   background: var(--nav-button-background-hover);
   text-decoration: none;
 }
-
 
 h1,
 h2,
