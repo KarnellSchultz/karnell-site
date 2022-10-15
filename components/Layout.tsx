@@ -5,7 +5,6 @@ import 'prismjs/components/prism-jsx.min'
 import 'prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js'
 
 import { Nav } from './Nav'
-import { Themes } from './Themes'
 import { Footer } from './footer'
 
 interface LayoutProps {
@@ -43,18 +42,16 @@ function Layout({
           content="initial-scale=1.0, width=device-width"
         />
       </Head>
-      <Themes>
-        <section className="h-full w-full">
-          <Nav />
-          <main className="mb-16">{children}</main>
-          {blog && (
-            <footer>
-              <h5>🌍Thanks for Reading🌍</h5>
-            </footer>
-          )}
-        </section>
-        <Footer />
-      </Themes>
+      <section className="h-full w-full">
+        <Nav />
+        <main className="mb-16">{children}</main>
+        {blog && (
+          <footer>
+            <h5>🌍Thanks for Reading🌍</h5>
+          </footer>
+        )}
+      </section>
+      <Footer />
     </>
   )
 }
