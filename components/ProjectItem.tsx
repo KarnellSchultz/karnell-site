@@ -18,7 +18,7 @@ function ProjectItem({
     <>
       <div
         className="bg-slate-100
-        bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-gray-100 to-gray-300
+        bg-gradient-to-tr from-gray-100 to-zinc-200
         my-4 p-4 border flex flex-col
          justify-between
         ">
