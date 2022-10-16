@@ -18,7 +18,7 @@ function ProjectItem({
     <>
       <div
         className="bg-slate-100
-        my-4 p-4 border-2 flex flex-col
+        my-4 p-4 border flex flex-col
          justify-between
         ">
         <div>
@@ -33,7 +33,7 @@ function ProjectItem({
         </div>
         <div className="pt-4">
           <a
-            className=" bg-zinc-300 p-2 inline-flex justify-center items-center border-2 
+            className=" bg-zinc-300 p-2 inline-flex justify-center items-center border
             mr-2 hover:bg-zinc-400"
             href={gitLink}
             target="_blank"
@@ -42,7 +42,7 @@ function ProjectItem({
             <FaExternalLinkAlt />
           </a>
           <a
-            className=" bg-zinc-300 p-2 inline-flex justify-center items-center border"
+            className=" bg-zinc-300 hover:bg-zinc-400 p-2 inline-flex justify-center items-center border"
             href={link}
             target="_blank"
             rel="noreferrer">
