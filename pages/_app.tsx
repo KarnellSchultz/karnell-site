@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 
 import { Layout } from 'components/Layout'
 
-import '../css/normalize.css'
 import '../css/prsim.css'
 import '../css/styles.css'
 

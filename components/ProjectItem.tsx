@@ -23,14 +23,10 @@ function ProjectItem({
          justify-between
         ">
         <div>
-          <a
-            className="prose-xlg prose-gray hover:underline "
-            href={link}>
+          <a className=" text-lg p-0 hover:underline " href={link}>
             <p>{title}</p>
           </a>
-          <p className="prose-sm text-zinc-700">
-            {blurb.substring(0, 100)}
-          </p>
+          <p className=" text-zinc-700">{blurb.substring(0, 100)}</p>
         </div>
         <div className="pt-4">
           <a

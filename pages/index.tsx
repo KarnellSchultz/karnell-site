@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Projects } from 'components/Projects'
 import { Post } from 'components/post'
+import { StyledLink } from 'components/Link'
 
 const Home = () => {
   return (
@@ -11,15 +12,15 @@ const Home = () => {
         <p className="description">
           {`I'm a web developer interested in creating tools to
         democratize the web. I create `}
-          <a href="https://github.com/KarnellSchultz">
+          <a
+            className="pink-link"
+            href="https://github.com/KarnellSchultz">
             {`open source`}
           </a>
           {` projects and write about my experiences in tech. `}
         </p>
-        <Link href="/about">
-          <p>
-            <a className="cursor-pointer">More about me &rarr;</a>
-          </p>
+        <Link href={'/about'} passHref>
+          <p className="pink-link">More about me &rarr;</p>
         </Link>
       </section>
       <section>
