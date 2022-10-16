@@ -19,15 +19,15 @@ function ProjectItem({
       <div
         className="bg-slate-100
         my-4 p-4 border-2 flex flex-col
-        h-52 justify-between
+         justify-between
         ">
         <div>
           <a href={link}>
-            <p className="text-xlg font-semibold hover:underline py-4">
+            <p className="prose-xlg prose-gray hover:underline">
               {title}
             </p>
           </a>
-          <p className="text-sm text-zinc-700">
+          <p className="prose-sm text-zinc-700">
             {blurb.substring(0, 100)}
           </p>
         </div>
@@ -42,8 +42,8 @@ function ProjectItem({
             <FaExternalLinkAlt />
           </a>
           <a
-            className=" bg-zinc-400 p-2 inline-flex justify-center items-center border"
-            href={gitLink}
+            className=" bg-zinc-300 p-2 inline-flex justify-center items-center border"
+            href={link}
             target="_blank"
             rel="noreferrer">
             <div className="mr-1">Demo</div>

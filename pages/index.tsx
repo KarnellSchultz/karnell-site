@@ -7,8 +7,9 @@ const Home = () => {
     <>
       <section>
         <h1>Karnell Schultz</h1>
+        <br />
         <p className="description">
-          {`🤙🏾 I'm a web developer interested in creating tools to
+          {`I'm a web developer interested in creating tools to
         democratize the web. I create `}
           <a href="https://github.com/KarnellSchultz">
             {`open source`}
@@ -17,7 +18,7 @@ const Home = () => {
         </p>
         <Link href="/about">
           <p>
-            <a>More about me &rarr;</a>
+            <a className="cursor-pointer">More about me &rarr;</a>
           </p>
         </Link>
       </section>

@@ -10,7 +10,7 @@ const PostRow = (postDetails: PostDetailsType) => {
           <div
             className="cursor-pointer
           hover:underline">
-            <p> {row.title} </p>
+            <p>{row.title}</p>
           </div>
         </Link>
       </li>
@@ -20,14 +20,15 @@ const PostRow = (postDetails: PostDetailsType) => {
 
 function Post() {
   return (
-    <>
-      <article className="flex items-center">
+    <section>
+      <br />
+      <div className="flex items-center">
         <h3>Blogs</h3>
-      </article>
+      </div>
       <em>A collection of my learnings and experiences in tech.</em>
       <div className="border-b" />
-      <ul className="list-none p-0">{PostRow(PostDetails)}</ul>
-    </>
+      <ul className="list-none">{PostRow(PostDetails)}</ul>
+    </section>
   )
 }
 export { Post }

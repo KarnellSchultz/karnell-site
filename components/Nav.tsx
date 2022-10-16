@@ -5,7 +5,7 @@ function Nav() {
       <section className="w-full flex justify-between">
         <div className="brand">
           <Link href="/">
-            <button className="text-xl p-3 hover:bg-zinc-300 rounded-sm">
+            <button className="text-lg p-3 hover:bg-zinc-300 rounded-sm">
               Home
             </button>
           </Link>
@@ -13,13 +13,12 @@ function Nav() {
 
         <div className="flex justify-end w-3/4">
           <Link href="/blog">
-            <button className="text-xl p-3 hover:bg-zinc-300 rounded-sm">
+            <button className=" text-lg p-3 hover:bg-zinc-300 rounded-sm">
               Blog
             </button>
           </Link>
-
           <Link href="/about">
-            <button className="text-xl p-3 hover:bg-zinc-300 rounded-sm">
+            <button className="text-lg p-3 hover:bg-zinc-300 rounded-sm">
               About
             </button>
           </Link>

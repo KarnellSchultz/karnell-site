@@ -30,6 +30,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "12.2.5",
     "@next/mdx": "^12.3.1",
+    "@tailwindcss/typography": "^0.5.7",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
     "@types/jest": "29.1.2",

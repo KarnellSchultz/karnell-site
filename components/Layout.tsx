@@ -42,7 +42,8 @@ function Layout({
           content="initial-scale=1.0, width=device-width"
         />
       </Head>
-      <section className="h-full max-w-2xl flex flex-col items-center m-auto px-4
+      <section
+        className="prose h-full max-w-2xl flex flex-col items-center m-auto px-4
        tracking-wider
        ">
         <Nav />
@@ -52,7 +53,7 @@ function Layout({
             <h5>🌍Thanks for Reading🌍</h5>
           </footer>
         )}
-      <Footer />
+        <Footer />
       </section>
     </>
   )
