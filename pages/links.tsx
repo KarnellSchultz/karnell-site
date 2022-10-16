@@ -1,19 +1,6 @@
-import styled from 'styled-components';
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  li {
-    list-style: none;
-  }
-`;
-
 export default function About() {
   return (
-    <Container>
+    <div className="flex flex-col justify-center items-center">
       <h1>My links</h1>
       <ul>
         <li>
@@ -28,6 +15,6 @@ export default function About() {
           </a>
         </li>
       </ul>
-    </Container>
-  );
+    </div>
+  )
 }

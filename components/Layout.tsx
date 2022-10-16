@@ -1,21 +1,11 @@
 import { useEffect } from 'react'
-import styled from 'styled-components'
+import Head from 'next/head'
 import Prism from 'prismjs'
 import 'prismjs/components/prism-jsx.min'
 import 'prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js'
-import Head from 'next/head'
 
 import { Nav } from './Nav'
-import { Themes } from './Themes'
 import { Footer } from './footer'
-
-const StyledLayout = styled.section`
-  min-height: 100vh;
-  min-width: 100vw;
-  main {
-    margin-bottom: 4rem;
-  }
-`
 
 interface LayoutProps {
   children: React.ReactNode
@@ -25,10 +15,10 @@ interface LayoutProps {
   meta?: any
 }
 
-const usePrism = () =>
-  useEffect(() => {
-    Prism.highlightAll()
-  }, [])
+// const usePrism = () =>
+//   useEffect(() => {
+//     Prism.highlightAll()
+//   }, [])
 
 function Layout({
   children,
@@ -36,11 +26,10 @@ function Layout({
   blog = false,
   meta,
 }: LayoutProps) {
-  // useEffect(() => {
-  //   Prism.highlightAll()
-  // }, [])
-
-  usePrism()
+  // usePrism()
+  useEffect(() => {
+    Prism.highlightAll()
+  }, [])
 
   return (
     <>
@@ -53,18 +42,19 @@ function Layout({
           content="initial-scale=1.0, width=device-width"
         />
       </Head>
-      <Themes>
-        <StyledLayout>
-          <Nav />
-          <main>{children}</main>
-          {blog && (
-            <footer>
-              <h5>🌍Thanks for Reading🌍</h5>
-            </footer>
-          )}
-        </StyledLayout>
+      <section
+        className="prose h-full max-w-2xl flex flex-col items-center m-auto px-4
+       tracking-wider
+       ">
+        <Nav />
+        <main className="mb-16">{children}</main>
+        {blog && (
+          <footer>
+            <h5>🌍Thanks for Reading🌍</h5>
+          </footer>
+        )}
         <Footer />
-      </Themes>
+      </section>
     </>
   )
 }

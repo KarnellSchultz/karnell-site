@@ -1,9 +1,10 @@
 import { AppProps } from 'next/app'
-import '../css/normalize.css'
-import '../css/styles.css'
-import '../css/prsim.css'
-import { Layout } from 'components/Layout'
 import { useRouter } from 'next/router'
+
+import { Layout } from 'components/Layout'
+
+import '../css/prsim.css'
+import '../css/styles.css'
 
 const getCapitalizedTitleFromSlug = (slug: string): string => {
   if (slug === '') return 'Home'

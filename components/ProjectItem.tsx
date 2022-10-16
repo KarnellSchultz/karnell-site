@@ -1,71 +1,11 @@
-import styled from 'styled-components';
-
-const OpenSourceItem = styled.div`
-  @media screen and (max-width: 890px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-
-    min-width: 100%;
-    min-height: 236px;
-    padding: 1em;
-  }
-  display: flex;
-  flex-wrap: wrap;
-
-  min-height: 216px;
-  padding: 1.2em;
-
-  background: ${({ theme }) => theme.colors.primary};
-  box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
-  margin: 0.5rem 0;
-
-  h4 {
-    font-size: 1.3rem;
-    font-weight: 400;
-    margin: 0.1em 0;
-    color: ${({ theme }) => theme.colors.body};
-  }
-  p {
-    font-size: 1.2em;
-    color: ${({ theme }) => theme.colors.body};
-  }
-
-  :hover,
-  :active,
-  :focus {
-    cursor: pointer;
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
-    h4 {
-      text-decoration: underline;
-    }
-  }
-`;
-
-const StyledLink = styled.a`
-  color: inherit;
-  :hover {
-    text-decoration: none;
-  }
-`;
-const StyledGitLink = styled(StyledLink)`
-  align-self: flex-end;
-  min-width: 100%;
-
-  transition: color 0.2s ease-out;
-  :hover {
-    color: var(--body-main);
-  }
-`;
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 type ProjectItemProps = {
-  title: string;
-  blurb: string;
-  link: string;
-  gitLink: string;
-};
+  title: string
+  blurb: string
+  link: string
+  gitLink: string
+}
 
 function ProjectItem({
   title,
@@ -73,17 +13,43 @@ function ProjectItem({
   link = '#',
   gitLink = '#',
 }: ProjectItemProps) {
+  // bg-gradient-to-r from-pink-400 to-pink-600
   return (
     <>
-      <OpenSourceItem>
-        <StyledLink href={link}>
-          <h4>{title}</h4>
-          <p>{blurb.substring(0, 100)}</p>
-        </StyledLink>
-        <StyledGitLink href={gitLink}>View on GitHub</StyledGitLink>
-      </OpenSourceItem>
+      <div
+        className="bg-slate-100
+        bg-gradient-to-tr from-gray-100 to-zinc-200
+        my-4 p-4 border flex flex-col
+         justify-between
+        ">
+        <div>
+          <a className=" text-lg p-0 hover:underline " href={link}>
+            <p>{title}</p>
+          </a>
+          <p className=" text-zinc-700">{blurb.substring(0, 100)}</p>
+        </div>
+        <div className="pt-4">
+          <a
+            className=" bg-zinc-300 p-2 inline-flex justify-center items-center border
+            mr-2 hover:bg-zinc-400"
+            href={gitLink}
+            target="_blank"
+            rel="noreferrer">
+            <div className="mr-1">Source</div>
+            <FaExternalLinkAlt />
+          </a>
+          <a
+            className=" bg-zinc-300 hover:bg-zinc-400 p-2 inline-flex justify-center items-center border"
+            href={link}
+            target="_blank"
+            rel="noreferrer">
+            <div className="mr-1">Demo</div>
+            <FaExternalLinkAlt />
+          </a>
+        </div>
+      </div>
     </>
-  );
+  )
 }
 
-export { ProjectItem };
+export { ProjectItem }
