@@ -7,7 +7,7 @@ const Projects = () => {
         <h2>Projects</h2>
       </div>
       <em>A few of my favorite open source projects.</em>
-      <div className="grid sm:grid-cols-2 sm:gap-4">
+      <div className="grid sm:grid-cols-2 row- sm:gap-4">
         <div>
           <ProjectItem
             title={'Capitals-Magellan 🧭'}

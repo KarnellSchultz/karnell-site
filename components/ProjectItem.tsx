@@ -13,20 +13,21 @@ function ProjectItem({
   link = '#',
   gitLink = '#',
 }: ProjectItemProps) {
-  // bg-gradient-to-r from-pink-400 to-pink-600
   return (
     <>
       <div
         className="bg-slate-100
         bg-gradient-to-tr from-gray-100 to-zinc-200
-        my-4 p-4 border flex flex-col
-         justify-between
+        my-4 p-4 border flex flex-col justify-between
+        h-44
         ">
         <div>
-          <a className=" text-lg p-0 hover:underline " href={link}>
-            <p>{title}</p>
+          <a className="" href={link}>
+            {title}
           </a>
-          <p className=" text-zinc-700">{blurb.substring(0, 100)}</p>
+          <div className=" text-zinc-700">
+            {blurb.substring(0, 100)}
+          </div>
         </div>
         <div className="pt-4">
           <a
