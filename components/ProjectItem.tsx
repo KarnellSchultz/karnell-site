@@ -18,14 +18,15 @@ function ProjectItem({
     <>
       <div
         className="bg-slate-100
+        bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))] from-gray-100 to-gray-300
         my-4 p-4 border flex flex-col
          justify-between
         ">
         <div>
-          <a href={link}>
-            <p className="prose-xlg prose-gray hover:underline">
-              {title}
-            </p>
+          <a
+            className="prose-xlg prose-gray hover:underline "
+            href={link}>
+            <p>{title}</p>
           </a>
           <p className="prose-sm text-zinc-700">
             {blurb.substring(0, 100)}
