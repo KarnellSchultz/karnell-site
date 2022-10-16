@@ -599,7 +599,7 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@mdx-js/loader@2.1.5":
+"@mdx-js/loader@^2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@mdx-js/loader/-/loader-2.1.5.tgz#4e764c65333530fd786dfe4f36e918dfeac0200b"
   integrity sha512-oXjfTa/iAcMmW8DdQ+hQFodPCLqw5VKT2yoZkLwrZfPVVpUgKrI+5/ZePYq328xxtAUStZmR3ed0PWJrwd5Pkg==
@@ -630,6 +630,14 @@
     unist-util-visit "^4.0.0"
     vfile "^5.0.0"
 
+"@mdx-js/react@^2.1.5":
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-2.1.5.tgz#8225a867dae6f845ae5b0ec15bb454c23be3f576"
+  integrity sha512-3Az1I6SAWA9R38rYjz5rXBrGKeZhq96CSSyQtqY+maPj8stBsoUH5pNcmIixuGkufYsh8F5+ka2CVPo2fycWZw==
+  dependencies:
+    "@types/mdx" "^2.0.0"
+    "@types/react" ">=16"
+
 "@next/env@12.3.1":
   version "12.3.1"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-12.3.1.tgz#18266bd92de3b4aa4037b1927aa59e6f11879260"
@@ -642,10 +650,10 @@
   dependencies:
     glob "7.1.7"
 
-"@next/mdx@12.2.5":
-  version "12.2.5"
-  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-12.2.5.tgz#f88743cad222c53bf1648ce15d22e9a49a4c5bc4"
-  integrity sha512-b4gDNNvlt1Icf9D+nMzc66Tn1ei4lYRUFjwjWdCgdQFCo2ahKl+/f4R/g958KGzZMFmmXBJ7JIfzeAqgPv7TsA==
+"@next/mdx@^12.3.1":
+  version "12.3.1"
+  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-12.3.1.tgz#7951f27e3fb178319adfcb68b8e6365dbae5c36e"
+  integrity sha512-b7G3CsAwyD/8Eo6uDjCCqNwEi68LTyo/JYPC0N2Yu3yl/iveMDCi03ME+9JsnFPr3DcjmGSKc1ioiYM4dJUkTg==
 
 "@next/swc-android-arm-eabi@12.3.1":
   version "12.3.1"
@@ -966,7 +974,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@18.0.21":
+"@types/react@*", "@types/react@18.0.21", "@types/react@>=16":
   version "18.0.21"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.0.21.tgz#b8209e9626bb00a34c76f55482697edd2b43cc67"
   integrity sha512-7QUCOxvFgnD5Jk8ZKlUAhVcRj7GuJRjnjjiY/IUBWKgOlnvDvTMLD4RTF7NPyVmbRhNrbomZiOepg7M/2Kj1mA==

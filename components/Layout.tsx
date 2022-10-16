@@ -42,7 +42,9 @@ function Layout({
           content="initial-scale=1.0, width=device-width"
         />
       </Head>
-      <section className="h-full w-full">
+      <section className="h-full max-w-2xl flex flex-col items-center m-auto px-4
+       tracking-wider
+       ">
         <Nav />
         <main className="mb-16">{children}</main>
         {blog && (
@@ -50,8 +52,8 @@ function Layout({
             <h5>🌍Thanks for Reading🌍</h5>
           </footer>
         )}
-      </section>
       <Footer />
+      </section>
     </>
   )
 }

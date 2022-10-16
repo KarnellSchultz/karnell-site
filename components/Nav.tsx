@@ -2,7 +2,7 @@ import Link from 'next/link'
 function Nav() {
   return (
     <nav className="w-full pt-8 pb-20 px-1">
-      <section className="w-full flex justify-start">
+      <section className="w-full flex justify-between">
         <div className="brand">
           <Link href="/">
             <button className="text-xl p-3 hover:bg-zinc-300 rounded-sm">

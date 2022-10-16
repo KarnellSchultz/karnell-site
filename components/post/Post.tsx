@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import { PostDetails, PostDetailsType } from 'blogPostData'
 
 const PostRow = (postDetails: PostDetailsType) => {
@@ -8,8 +9,7 @@ const PostRow = (postDetails: PostDetailsType) => {
         <Link href={`blog/${row.slug}`}>
           <div
             className="cursor-pointer
-          hover:underline
-          ">
+          hover:underline">
             <p> {row.title} </p>
           </div>
         </Link>

@@ -1,48 +1,4 @@
-// const OpenSourceItem = styled.div`
-//   @media screen and (max-width: 890px) {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-around;
-//     align-items: flex-start;
-
-//     min-width: 100%;
-//     min-height: 236px;
-//     padding: 1em;
-//   }
-//   display: flex;
-//   flex-wrap: wrap;
-
-//   min-height: 216px;
-//   padding: 1.2em;
-
-//   background: ${({ theme }) => theme.colors.primary};
-//   box-shadow: 0 0 0 0.1px rgba(0, 0, 0, 0.4);
-//   border-radius: 5px;
-//   margin: 0.5rem 0;
-
-//   h4 {
-//     font-size: 1.3rem;
-//     font-weight: 400;
-//     margin: 0.1em 0;
-//     color: ${({ theme }) => theme.colors.body};
-//   }
-//   p {
-//     font-size: 1.2em;
-//     color: ${({ theme }) => theme.colors.body};
-//   }
-
-//   :hover,
-//   :active,
-//   :focus {
-//     cursor: pointer;
-//     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
-//     h4 {
-//       text-decoration: underline;
-//     }
-//   }
-// `
-
-
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 type ProjectItemProps = {
   title: string
@@ -57,18 +13,43 @@ function ProjectItem({
   link = '#',
   gitLink = '#',
 }: ProjectItemProps) {
+  // bg-gradient-to-r from-pink-400 to-pink-600
   return (
     <>
-      <div className="flex flex-wrap justify-around self-start ">
-        <a href={link} className="">
-          <h4>{title}</h4>
-          <p>{blurb.substring(0, 100)}</p>
-        </a>
-        <a
-          className="flex self-end w-full translate-x-1 hover:bg-lime-200"
-          href={gitLink}>
-          View on GitHub
-        </a>
+      <div
+        className="bg-slate-100
+        my-4 p-4 border-2 flex flex-col
+        h-52 justify-between
+        ">
+        <div>
+          <a href={link}>
+            <p className="text-xlg font-semibold hover:underline py-4">
+              {title}
+            </p>
+          </a>
+          <p className="text-sm text-zinc-700">
+            {blurb.substring(0, 100)}
+          </p>
+        </div>
+        <div className="pt-4">
+          <a
+            className=" bg-zinc-300 p-2 inline-flex justify-center items-center border-2 
+            mr-2 hover:bg-zinc-400"
+            href={gitLink}
+            target="_blank"
+            rel="noreferrer">
+            <div className="mr-1">Source</div>
+            <FaExternalLinkAlt />
+          </a>
+          <a
+            className=" bg-zinc-400 p-2 inline-flex justify-center items-center border"
+            href={gitLink}
+            target="_blank"
+            rel="noreferrer">
+            <div className="mr-1">Demo</div>
+            <FaExternalLinkAlt />
+          </a>
+        </div>
       </div>
     </>
   )
