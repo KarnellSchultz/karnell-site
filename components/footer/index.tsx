@@ -9,14 +9,14 @@ function Footer() {
       <div className="pt-4">
         <Link href="/">
           <button
-            className="  px-4 transition-all hover:bg-zinc-300"
+            className="  p-2 mx-2 transition-all hover:bg-zinc-300"
             type="button">
             Home
           </button>
         </Link>
         <Link href="/blog">
           <button
-            className="  px-4 transition-all hover:bg-zinc-300"
+            className="  p-2 mx-2 transition-all hover:bg-zinc-300"
             type="button">
             Blog
           </button>
@@ -24,7 +24,7 @@ function Footer() {
 
         <Link href="/about">
           <button
-            className="  px-4 transition-all hover:bg-zinc-300"
+            className="  p-2 mx-2 transition-all hover:bg-zinc-300"
             type="button">
             About
           </button>
@@ -33,21 +33,21 @@ function Footer() {
       <div className="py-4">
         <a href="https://vercel.com/">
           <button
-            className=" px-4 transition-all hover:bg-zinc-300"
+            className=" p-2 mx-2 transition-all hover:bg-zinc-300"
             type="button">
             <BsFillTriangleFill size={32} />
           </button>
         </a>
         <a href="https://nextjs.org/">
           <button
-            className=" px-4 transition-all hover:bg-zinc-300"
+            className=" p-2 mx-2 transition-all hover:bg-zinc-300"
             type="button">
             <SiNextDotJs size={32} />
           </button>
         </a>
         <a href="https://github.com/KarnellSchultz/karnell-site">
           <button
-            className=" px-4 transition-all hover:bg-zinc-300"
+            className=" p-2 mx-2 transition-all hover:bg-zinc-300"
             type="button">
             <AiFillGithub size={32} />
           </button>
