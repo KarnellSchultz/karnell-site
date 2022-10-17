@@ -5,7 +5,7 @@ import { BsFillTriangleFill } from 'react-icons/bs'
 
 function Footer() {
   return (
-    <footer className="w-full flex flex-col items-center justify-center">
+    <footer className="w-full flex flex-col items-center justify-center border-t-2">
       <div className="pt-4">
         <Link href="/">
           <button
@@ -30,27 +30,21 @@ function Footer() {
           </button>
         </Link>
       </div>
-      <div className="py-4">
-        <a href="https://vercel.com/">
-          <button
-            className=" p-2 mx-2 transition-all hover:bg-zinc-300"
-            type="button">
-            <BsFillTriangleFill size={32} />
-          </button>
+      <div className="py-4 flex ">
+        <a
+          href="https://vercel.com/"
+          className=" p-2  hover:bg-zinc-300 hover:text-black">
+          <BsFillTriangleFill size={32} />
         </a>
-        <a href="https://nextjs.org/">
-          <button
-            className=" p-2 mx-2 transition-all hover:bg-zinc-300"
-            type="button">
-            <SiNextDotJs size={32} />
-          </button>
+        <a
+          href="https://nextjs.org/"
+          className=" p-2  hover:bg-zinc-300 hover:text-black">
+          <SiNextDotJs size={32} />
         </a>
-        <a href="https://github.com/KarnellSchultz/karnell-site">
-          <button
-            className=" p-2 mx-2 transition-all hover:bg-zinc-300"
-            type="button">
-            <AiFillGithub size={32} />
-          </button>
+        <a
+          href="https://github.com/KarnellSchultz/karnell-site"
+          className=" p-2  hover:bg-zinc-300 hover:text-black">
+          <AiFillGithub size={32} />
         </a>
       </div>
     </footer>
