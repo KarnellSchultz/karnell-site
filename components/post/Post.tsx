@@ -6,7 +6,7 @@ const PostRow = (postDetails: PostDetailsType) => {
   return postDetails.map((row) => {
     return (
       <li key={row.id}>
-        <Link href={`blog/${row.slug}`}>
+        <Link href={`blog/${row.slug}`} legacyBehavior>
           <div
             className="cursor-pointer
           hover:underline">
@@ -14,8 +14,8 @@ const PostRow = (postDetails: PostDetailsType) => {
           </div>
         </Link>
       </li>
-    )
-  })
+    );
+  });
 }
 
 function Post() {

@@ -4,7 +4,7 @@ function Nav() {
     <nav className="w-full pt-8 pb-20 px-1">
       <section className="w-full flex justify-between">
         <div className="brand">
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <button className="text-lg p-3 hover:bg-zinc-300 rounded-sm">
               Home
             </button>
@@ -12,12 +12,12 @@ function Nav() {
         </div>
 
         <div className="flex justify-end w-3/4">
-          <Link href="/blog">
+          <Link href="/blog" legacyBehavior>
             <button className=" text-lg p-3 hover:bg-zinc-300 rounded-sm">
               Blog
             </button>
           </Link>
-          <Link href="/about">
+          <Link href="/about" legacyBehavior>
             <button className="text-lg p-3 hover:bg-zinc-300 rounded-sm">
               About
             </button>
@@ -25,6 +25,6 @@ function Nav() {
         </div>
       </section>
     </nav>
-  )
+  );
 }
 export { Nav }

@@ -7,14 +7,14 @@ function Footer() {
   return (
     <footer className="w-full flex flex-col items-center justify-center border-t-2">
       <div className="pt-4">
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <button
             className="  p-2 mx-2 transition-all hover:bg-zinc-300"
             type="button">
             Home
           </button>
         </Link>
-        <Link href="/blog">
+        <Link href="/blog" legacyBehavior>
           <button
             className="  p-2 mx-2 transition-all hover:bg-zinc-300"
             type="button">
@@ -22,7 +22,7 @@ function Footer() {
           </button>
         </Link>
 
-        <Link href="/about">
+        <Link href="/about" legacyBehavior>
           <button
             className="  p-2 mx-2 transition-all hover:bg-zinc-300"
             type="button">
@@ -48,6 +48,6 @@ function Footer() {
         </a>
       </div>
     </footer>
-  )
+  );
 }
 export { Footer }

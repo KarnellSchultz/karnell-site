@@ -1,19 +1,10 @@
 /* eslint-disable no-undef */
 const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-    // If you use `MDXProvider`, uncomment the following line.
-    // providerImportSource: "@mdx-js/react",
-  },
+  extension: /\.mdx?$/
 })
 
 const nextConfig = {
   reactStrictMode: true,
-  compiler: {
-    styledComponents: true,
-  },
   experimental: { appDir: true },
 }
 // module.exports = nextConfig

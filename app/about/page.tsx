@@ -1,4 +1,6 @@
-import AboutMe from 'content/posts/AboutMeContent.mdx';
+'use client'
+
+import AboutMe from '../../content/posts/AboutMeContent.mdx';
 
 export default function About() {
   return (

@@ -2,6 +2,8 @@ import Head from 'next/head'
 // import Prism from 'prismjs'
 // import 'prismjs/components/prism-jsx.min'
 // import 'prismjs/plugins/unescaped-markup/prism-unescaped-markup.min.js'
+import '../css/styles.css'
+import '../css/prsim.css'
 
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/footer'
@@ -16,14 +18,13 @@ interface LayoutProps {
 
 export default function Layout({
   children,
-  pageName,
   blog = false,
   meta,
 }: LayoutProps) {
   return (
     <html>
       <Head>
-        <title>{`${pageName}- KarnellSchultz `}</title>
+        <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="utf-8" />
         <meta

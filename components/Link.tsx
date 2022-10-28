@@ -8,8 +8,9 @@ export const StyledLink = ({ children, href = '#' }) => {
   p-0.5 rounded-sm
   transition-all
   "
-      href={href}>
+      href={href}
+      legacyBehavior>
       {children}
     </Link>
-  )
+  );
 }
