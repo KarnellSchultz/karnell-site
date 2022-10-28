@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -14,19 +18,29 @@
     "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
-      "@/posts/*": ["content/posts/*"]
+      "@/posts/*": [
+        "content/posts/*"
+      ]
     },
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "exclude": ["node_modules"],
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/index.tsx",
+    "app/page.tsx",
     "types/mdx.d.ts",
     "src",
-    "custom.d.ts"
+    "custom.d.ts",
+    ".next/types/**/*.ts"
   ]
 }

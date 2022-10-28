@@ -14,6 +14,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  experimental: { appDir: true },
 }
 // module.exports = nextConfig
 module.exports = withMDX({

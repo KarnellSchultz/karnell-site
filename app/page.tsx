@@ -1,9 +1,8 @@
-import Link from 'next/link'
 import { Projects } from 'components/Projects'
 import { Post } from 'components/post'
 import { StyledLink } from 'components/Link'
 
-const Home = () => {
+export default function Home() {
   return (
     <>
       <section>
@@ -12,16 +11,14 @@ const Home = () => {
         <p className="description">
           {`I'm a web developer interested in creating tools to
         democratize the web. I create `}
-          <a
-            className="pink-link"
-            href="https://github.com/KarnellSchultz">
+          <StyledLink href="https://github.com/KarnellSchultz">
             {`open source`}
-          </a>
+          </StyledLink>
           {` projects and write about my experiences in tech. `}
         </p>
-        <Link href={'/about'} passHref>
+        <StyledLink href={'/about'}>
           <p className="pink-link">More about me &rarr;</p>
-        </Link>
+        </StyledLink>
       </section>
       <section>
         <Projects />
@@ -32,5 +29,3 @@ const Home = () => {
     </>
   )
 }
-
-export default Home

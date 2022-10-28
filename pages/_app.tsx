@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 
-import { Layout } from 'components/Layout'
+import { Layout } from 'app/layout'
 
 import '../css/prsim.css'
 import '../css/styles.css'
