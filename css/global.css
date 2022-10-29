@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
+* {
   box-sizing: border-box;
 }
 
@@ -23,4 +23,4 @@
   transition-all
   inline;
   }
-} */
+}

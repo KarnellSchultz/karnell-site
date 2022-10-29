@@ -1,7 +1,7 @@
 import Link from 'next/link'
 function Nav() {
   return (
-    <nav className="w-full pt-8 pb-20 px-1">
+    <nav className="w-full pt-2 pb-10 bor">
       <section className="w-full flex justify-between">
         <div className="brand">
           <Link href="/" legacyBehavior>
