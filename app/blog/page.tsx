@@ -1,8 +1,6 @@
 import { Post } from 'components/post'
 
-export default function articles({ params }: { params: string }) {
-  console.log(params)
-
+export default function articles() {
   return (
     <section>
       <Post />
