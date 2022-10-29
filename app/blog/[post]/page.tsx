@@ -1,5 +1,8 @@
 'use client'
 
+import Prism from 'prismjs'
+import '../../../css/prism.css'
+
 import CssLastOfType from '../../../content/posts/css-last-of-type.mdx'
 import FirstThreeMonths from '../../../content/posts/first-three-months.mdx'
 import FlexboxZombiesReview from '../../../content/posts/flexbox-zombies-review.mdx'
@@ -12,6 +15,7 @@ import ProjectsForJobs from '../../../content/posts/projects-i-made-for-jobs.mdx
 import WhyBlogMarkdown from '../../../content/posts/why-a-new-blog.mdx'
 import Review2020 from '../../../content/posts/review-2020.mdx'
 import Review2021 from '../../../content/posts/review-2021.mdx'
+import { useEffect } from 'react'
 
 const Posts = {
   'css-last-of-type': CssLastOfType,
@@ -34,6 +38,11 @@ export default function Post({
   params: { post: string }
 }) {
   const Component = Posts[params.post]
+
+  // Try to get this out of here and move to server
+  useEffect(() => {
+    Prism.highlightAll()
+  }, [])
 
   return (
     <section>
