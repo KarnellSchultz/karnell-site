@@ -4,7 +4,7 @@
 
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import Blogs from '../pages/blog/index'
+import Blogs from '../app/blog/page'
 
 describe('Home', () => {
   it('renders a blog page heading', () => {
