@@ -6,11 +6,12 @@
 
 ### Built with
 
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
 - [Next.js](https://nextjs.org/)
-- [Styled-Components](https://styled-components.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind](https://tailwindcss.com/)
+- [React](https://reactjs.org/)
 - [MDX](https://mdxjs.com/)
+- ~~[Styled-Components](https://styled-components.com/)~~
 
 ## To do
 
