@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from 'next/link'
 
 export const StyledLink = ({ children, href = '#' }) => {
   return (
@@ -12,5 +12,5 @@ export const StyledLink = ({ children, href = '#' }) => {
       legacyBehavior>
       {children}
     </Link>
-  );
+  )
 }

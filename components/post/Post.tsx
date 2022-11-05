@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { PostDetails, PostDetailsType } from 'blogPostData'
+import { PostDetails, PostDetailsType } from 'content/blogPostData'
 
 const PostRow = (postDetails: PostDetailsType) => {
   return postDetails.map((row) => {

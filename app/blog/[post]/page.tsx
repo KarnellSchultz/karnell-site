@@ -1,21 +1,22 @@
 'use client'
 
+import { useEffect } from 'react'
 import Prism from 'prismjs'
 import '../../../css/prism.css'
 
-import CssLastOfType from '../../../content/posts/css-last-of-type.mdx'
-import FirstThreeMonths from '../../../content/posts/first-three-months.mdx'
-import FlexboxZombiesReview from '../../../content/posts/flexbox-zombies-review.mdx'
-import HowIBecame from '../../../content/posts/how-i-became-a-developer.mdx'
-import HowIMadeMySite from '../../../content/posts/how-i-made-my-site.mdx'
-import HowToCreateGithubREADME from '../../../content/posts/how-to-create-a-github-readme.mdx'
-import UseRef from '../../../content/posts/how-to-use-ref.mdx'
-import WhyUseMarkdown from '../../../content/posts/why-learn-markdown.mdx'
-import ProjectsForJobs from '../../../content/posts/projects-i-made-for-jobs.mdx'
-import WhyBlogMarkdown from '../../../content/posts/why-a-new-blog.mdx'
-import Review2020 from '../../../content/posts/review-2020.mdx'
-import Review2021 from '../../../content/posts/review-2021.mdx'
-import { useEffect } from 'react'
+import CssLastOfType from '../../../content/css-last-of-type.mdx'
+import FirstThreeMonths from '../../../content/first-three-months.mdx'
+import FlexboxZombiesReview from '../../../content/flexbox-zombies-review.mdx'
+import HowIBecame from '../../../content/how-i-became-a-developer.mdx'
+import HowIMadeMySite from '../../../content/how-i-made-my-site.mdx'
+import HowToCreateGithubREADME from '../../../content/how-to-create-a-github-readme.mdx'
+import UseRef from '../../../content/how-to-use-ref.mdx'
+import WhyUseMarkdown from '../../../content/why-learn-markdown.mdx'
+import ProjectsForJobs from '../../../content/projects-i-made-for-jobs.mdx'
+import WhyBlogMarkdown from '../../../content/why-a-new-blog.mdx'
+import Review2020 from '../../../content/review-2020.mdx'
+import Review2021 from '../../../content/review-2021.mdx'
+import MigrationToTailwindCss from '../../../content/migration-to-tailwindcss.mdx'
 
 const Posts = {
   'css-last-of-type': CssLastOfType,
@@ -30,6 +31,7 @@ const Posts = {
   'why-a-new-blog': WhyBlogMarkdown,
   'review-2020': Review2020,
   'review-2021': Review2021,
+  'migration-to-tailwindcss': MigrationToTailwindCss,
 }
 
 export default function Post({
@@ -38,7 +40,6 @@ export default function Post({
   params: { post: string }
 }) {
   const Component = Posts[params.post]
-
   // Try to get this out of here and move to server
   useEffect(() => {
     Prism.highlightAll()
@@ -49,4 +50,10 @@ export default function Post({
       <Component />
     </section>
   )
+}
+
+export async function generateStaticParams() {
+  return Object.keys(Posts).map((slug) => ({
+    slug,
+  }))
 }
