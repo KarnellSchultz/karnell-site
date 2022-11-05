@@ -20,7 +20,7 @@
     "eslint-plugin-html": "7.1.0",
     "eslint-plugin-prettier": "4.2.1",
     "minimist": "1.2.7",
-    "next": "^13.0.0",
+    "next": "^13.0.2",
     "prettier": "2.7.1",
     "prismjs": "^1.29.0",
     "react": "18.2.0",
