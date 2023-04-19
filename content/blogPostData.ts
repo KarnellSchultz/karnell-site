@@ -3,9 +3,9 @@ export type PostDetailsType = {
   title: string
   date: string
   slug: string
-}[]
+}
 
-export const PostDetails: PostDetailsType = [
+export const PostDetails: PostDetailsType[] = [
   //They appear in the order listed top to bottom
 
   {
