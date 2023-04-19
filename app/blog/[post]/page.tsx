@@ -45,12 +45,10 @@ export default function Post({
     Prism.highlightAll()
   }, [])
 
-  return (
-    <section>
-      <Component />
-    </section>
-  )
+  return <Component />
 }
+
+export const dynamicParams = false
 
 export async function generateStaticParams() {
   return Object.keys(Posts).map((slug) => ({
