@@ -24,7 +24,7 @@ function Post() {
               </div>
             </li>
           )
-        })
+        }
       </ul>
     </section>
   )
