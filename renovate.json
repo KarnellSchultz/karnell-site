@@ -2,20 +2,22 @@
   "extends": [
     "config:base"
   ],
+  "schedule": [
+    "after 10pm every weekday",
+    "before 5am every weekday",
+    "every weekend"
+  ],
+  "prCreation": "not-pending",
+  "stabilityDays": 2,
+  "labels": [
+    "deps"
+  ],
   "packageRules": [
     {
       "matchUpdateTypes": [
         "major",
         "minor",
-        "patch",
-        "pin",
-        "digest"
-      ],
-      "automerge": true
-    },
-    {
-      "matchDepTypes": [
-        "devDependencies"
+        "patch"
       ],
       "automerge": true
     }
