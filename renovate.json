@@ -3,12 +3,10 @@
     "config:base"
   ],
   "schedule": [
-    "after 10pm every weekday",
-    "before 5am every weekday",
-    "every weekend"
+    "on tuesday and saturday"
   ],
   "prCreation": "not-pending",
-  "stabilityDays": 2,
+  "stabilityDays": 5,
   "labels": [
     "deps"
   ],
