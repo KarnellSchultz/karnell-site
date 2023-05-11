@@ -50,8 +50,6 @@ export default function Post({
   return <Component />
 }
 
-export const dynamicParams = false
-
 export async function generateStaticParams() {
   return Object.keys(Posts).map((slug) => ({
     slug,
