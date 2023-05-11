@@ -9,6 +9,12 @@ export const PostDetails: PostDetailsType[] = [
   //They appear in the order listed top to bottom
 
   {
+    id: 13,
+    title: '2022 into 2023',
+    date: new Date('May 12 2023').toDateString(),
+    slug: 'review-2022',
+  },
+  {
     id: 12,
     title: 'Migration to Tailwind',
     date: new Date('November 4 2022').toDateString(),

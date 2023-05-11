@@ -16,6 +16,7 @@ import ProjectsForJobs from '../../../content/projects-i-made-for-jobs.mdx'
 import WhyBlogMarkdown from '../../../content/why-a-new-blog.mdx'
 import Review2020 from '../../../content/review-2020.mdx'
 import Review2021 from '../../../content/review-2021.mdx'
+import Review2022 from '../../../content/review-2022.mdx'
 import MigrationToTailwindCss from '../../../content/migration-to-tailwindcss.mdx'
 
 const Posts = {
@@ -31,6 +32,7 @@ const Posts = {
   'why-a-new-blog': WhyBlogMarkdown,
   'review-2020': Review2020,
   'review-2021': Review2021,
+  'review-2022': Review2022,
   'migration-to-tailwindcss': MigrationToTailwindCss,
 }
 
