@@ -41,7 +41,7 @@
     "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "6.3.0",
     "@typescript-eslint/parser": "6.3.0",
-    "autoprefixer": "10.4.14",
+    "autoprefixer": "10.4.15",
     "@babel/eslint-parser": "7.22.10",
     "concurrently": "^8.0.0",
     "eslint": "8.46.0",
