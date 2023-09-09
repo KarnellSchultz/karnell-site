@@ -42,7 +42,7 @@
     "@typescript-eslint/eslint-plugin": "6.5.0",
     "@typescript-eslint/parser": "6.5.0",
     "autoprefixer": "10.4.15",
-    "@babel/eslint-parser": "7.22.11",
+    "@babel/eslint-parser": "7.22.15",
     "concurrently": "^8.0.0",
     "eslint": "8.48.0",
     "eslint-config-airbnb": "19.0.4",
