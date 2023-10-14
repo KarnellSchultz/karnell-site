@@ -44,7 +44,7 @@
     "autoprefixer": "10.4.16",
     "@babel/eslint-parser": "7.22.15",
     "concurrently": "^8.0.0",
-    "eslint": "8.50.0",
+    "eslint": "8.51.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-next": "13.4.19",
     "eslint-plugin-import": "2.28.1",
