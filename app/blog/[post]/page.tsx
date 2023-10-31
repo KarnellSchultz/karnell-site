@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import '../../../css/prism.css'
 
 import cssLastOfType from '../../../content/css-last-of-type.mdx'
@@ -14,6 +15,7 @@ import review2020 from '../../../content/review-2020.mdx'
 import review2021 from '../../../content/review-2021.mdx'
 import review2022 from '../../../content/review-2022.mdx'
 import migrationToTailwindcss from '../../../content/migration-to-tailwindcss.mdx'
+
 
 const Posts = {
   'css-last-of-type': cssLastOfType,
@@ -36,6 +38,19 @@ export async function generateStaticParams() {
   return Object.keys(Posts).map((slug) => ({
     post: slug,
   }))
+}
+
+type Props = {
+  params: { post: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export async function generateMetadata({
+  params,
+}: Props): Promise<Metadata> {
+  return {
+    title: `${params.post} - Karnell Schultz`,
+  }
 }
 
 export default function Page({
