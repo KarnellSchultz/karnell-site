@@ -20,7 +20,8 @@ function ProjectItem({
         bg-gradient-to-tr from-gray-100 to-zinc-200
         my-4 p-4 border flex flex-col justify-between
         h-44
-        ">
+        "
+      >
         <div>
           <a className="" href={link}>
             {title}
@@ -35,7 +36,8 @@ function ProjectItem({
             mr-2 hover:bg-zinc-400"
             href={gitLink}
             target="_blank"
-            rel="noreferrer">
+            rel="noreferrer"
+          >
             <div className="mr-1">Source</div>
             <FaExternalLinkAlt />
           </a>
@@ -43,7 +45,8 @@ function ProjectItem({
             className=" bg-zinc-300 hover:bg-zinc-400 p-2 inline-flex justify-center items-center border"
             href={link}
             target="_blank"
-            rel="noreferrer">
+            rel="noreferrer"
+          >
             <div className="mr-1">Demo</div>
             <FaExternalLinkAlt />
           </a>

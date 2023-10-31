@@ -685,7 +685,7 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@mdx-js/loader@3.0.0":
+"@mdx-js/loader@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@mdx-js/loader/-/loader-3.0.0.tgz#87ccefb0cd9d37be2aecf939be0a8d3f364eec84"
   integrity sha512-9kLv83YtgxpoXVYHaf0ygx1dmhCffo0MQCv6KtNG67jy/JlBK/2Q0dSWfuuyStP3jnZKABHfbjv8zsiT1buu6A==
@@ -722,7 +722,7 @@
     unist-util-visit "^5.0.0"
     vfile "^6.0.0"
 
-"@mdx-js/react@3.0.0":
+"@mdx-js/react@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-3.0.0.tgz#eaccaa8d6a7736b19080aff5a70448a7ba692271"
   integrity sha512-nDctevR9KyYFyV+m+/+S4cpzCWHqj+iHDHq3QrsWezcC+B17uZdIWgCguESUkwFhM3n/56KxWVE3V6EokrmONQ==
@@ -741,10 +741,10 @@
   dependencies:
     glob "7.1.7"
 
-"@next/mdx@13.5.6":
-  version "13.5.6"
-  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-13.5.6.tgz#c70c96b2f7078c312bb18a29979476b74708d382"
-  integrity sha512-2AMyCrz1SxSWNUpADyLz3RbPbq0GHrchbO7Msvg7IsH8MrTw3VYaZSI1KNa6JzZIoykwtNVSEL+uBmPZi106Jw==
+"@next/mdx@^14.0.1":
+  version "14.0.1"
+  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-14.0.1.tgz#c5c639324582a1338fd85382b3d0c21d4bb1af5d"
+  integrity sha512-9hikFxx1XQOReOp5SBO1o3fGs1Z1GT1flKm1wrjFOwOTNI0M4x9CuQsUx5KJwvbt0FejCS5bsuNGXqxHchcMCQ==
   dependencies:
     source-map "^0.7.0"
 
@@ -1052,15 +1052,15 @@
   dependencies:
     "@types/unist" "*"
 
-"@types/mdx@2.0.9":
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/@types/mdx/-/mdx-2.0.9.tgz#80971e367bb884350ab5b2ce8fc06b34960170e7"
-  integrity sha512-OKMdj17y8Cs+k1r0XFyp59ChSOwf8ODGtMQ4mnpfz5eFDk1aO41yN3pSKGuvVzmWAkFp37seubY1tzOVpwfWwg==
-
 "@types/mdx@^2.0.0":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@types/mdx/-/mdx-2.0.2.tgz#64be19baddba4323ae7893e077e98759316fe279"
   integrity sha512-mJGfgj4aWpiKb8C0nnJJchs1sHBHn0HugkVfqqyQi7Wn6mBRksLeQsPOFvih/Pu8L1vlDzfe/LidhVHBeUk3aQ==
+
+"@types/mdx@^2.0.9":
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/@types/mdx/-/mdx-2.0.9.tgz#80971e367bb884350ab5b2ce8fc06b34960170e7"
+  integrity sha512-OKMdj17y8Cs+k1r0XFyp59ChSOwf8ODGtMQ4mnpfz5eFDk1aO41yN3pSKGuvVzmWAkFp37seubY1tzOVpwfWwg==
 
 "@types/ms@*":
   version "0.7.31"

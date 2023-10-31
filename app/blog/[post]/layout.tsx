@@ -1,10 +1,8 @@
-import Head from 'next/head'
-
-interface LayoutProps {
+type Pros = {
   children: React.ReactNode
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children }: Pros) {
   return (
     <>
       <main className="mb-16">{children}</main>

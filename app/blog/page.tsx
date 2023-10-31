@@ -1,6 +1,6 @@
-import { Post } from 'components/post'
+import { Post } from '../../components/Post'
 
-export default function articles() {
+export default function BlogList() {
   return (
     <section>
       <Post />

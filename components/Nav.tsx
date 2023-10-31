@@ -25,6 +25,6 @@ function Nav() {
         </div>
       </section>
     </nav>
-  );
+  )
 }
 export { Nav }

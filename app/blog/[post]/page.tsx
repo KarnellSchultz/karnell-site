@@ -1,57 +1,51 @@
-'use client'
-
-import { useEffect } from 'react'
-import Prism from 'prismjs'
 import '../../../css/prism.css'
 
-import CssLastOfType from '../../../content/css-last-of-type.mdx'
-import FirstThreeMonths from '../../../content/first-three-months.mdx'
-import FlexboxZombiesReview from '../../../content/flexbox-zombies-review.mdx'
-import HowIBecame from '../../../content/how-i-became-a-developer.mdx'
-import HowIMadeMySite from '../../../content/how-i-made-my-site.mdx'
-import HowToCreateGithubREADME from '../../../content/how-to-create-a-github-readme.mdx'
-import UseRef from '../../../content/how-to-use-ref.mdx'
-import WhyUseMarkdown from '../../../content/why-learn-markdown.mdx'
-import ProjectsForJobs from '../../../content/projects-i-made-for-jobs.mdx'
-import WhyBlogMarkdown from '../../../content/why-a-new-blog.mdx'
-import Review2020 from '../../../content/review-2020.mdx'
-import Review2021 from '../../../content/review-2021.mdx'
-import Review2022 from '../../../content/review-2022.mdx'
-import MigrationToTailwindCss from '../../../content/migration-to-tailwindcss.mdx'
+import cssLastOfType from '../../../content/css-last-of-type.mdx'
+import firstThreeMonths from '../../../content/first-three-months.mdx'
+import flexboxZombiesReview from '../../../content/flexbox-zombies-review.mdx'
+import howIBecameADeveloper from '../../../content/how-i-became-a-developer.mdx'
+import howIMadeMySite from '../../../content/how-i-made-my-site.mdx'
+import howToCreateAGithubReadme from '../../../content/how-to-create-a-github-readme.mdx'
+import howToUseRef from '../../../content/how-to-use-ref.mdx'
+import whyLearnMarkdown from '../../../content/why-learn-markdown.mdx'
+import projectsIMadeForJobs from '../../../content/projects-i-made-for-jobs.mdx'
+import whyANewBlog from '../../../content/why-a-new-blog.mdx'
+import review2020 from '../../../content/review-2020.mdx'
+import review2021 from '../../../content/review-2021.mdx'
+import review2022 from '../../../content/review-2022.mdx'
+import migrationToTailwindcss from '../../../content/migration-to-tailwindcss.mdx'
 
 const Posts = {
-  'css-last-of-type': CssLastOfType,
-  'first-three-months': FirstThreeMonths,
-  'flexbox-zombies-review': FlexboxZombiesReview,
-  'how-i-became-a-developer': HowIBecame,
-  'how-i-made-my-site': HowIMadeMySite,
-  'how-to-create-a-github-readme': HowToCreateGithubREADME,
-  'how-to-use-ref': UseRef,
-  'why-learn-markdown': WhyUseMarkdown,
-  'projects-i-made-for-jobs': ProjectsForJobs,
-  'why-a-new-blog': WhyBlogMarkdown,
-  'review-2020': Review2020,
-  'review-2021': Review2021,
-  'review-2022': Review2022,
-  'migration-to-tailwindcss': MigrationToTailwindCss,
+  'css-last-of-type': cssLastOfType,
+  'first-three-months': firstThreeMonths,
+  'flexbox-zombies-review': flexboxZombiesReview,
+  'how-i-became-a-developer': howIBecameADeveloper,
+  'how-i-made-my-site': howIMadeMySite,
+  'how-to-create-a-github-readme': howToCreateAGithubReadme,
+  'how-to-use-ref': howToUseRef,
+  'why-learn-markdown': whyLearnMarkdown,
+  'projects-i-made-for-jobs': projectsIMadeForJobs,
+  'why-a-new-blog': whyANewBlog,
+  'review-2020': review2020,
+  'review-2021': review2021,
+  'review-2022': review2022,
+  'migration-to-tailwindcss': migrationToTailwindcss,
+} as const
+
+export async function generateStaticParams() {
+  return Object.keys(Posts).map((slug) => ({
+    post: slug,
+  }))
 }
 
-export default function Post({
+export default function Page({
   params,
 }: {
   params: { post: string }
 }) {
-  const Component = Posts[params.post]
-  // Try to get this out of here and move to server
-  useEffect(() => {
-    Prism.highlightAll()
-  }, [])
+  const { post } = params
+
+  const Component = Posts[post]
 
   return <Component />
-}
-
-export async function generateStaticParams() {
-  return Object.keys(Posts).map((slug) => ({
-    slug,
-  }))
 }

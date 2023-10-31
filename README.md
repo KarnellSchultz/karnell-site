@@ -4,7 +4,6 @@
 
 ![karnellschultz dot com screenshot](https://user-images.githubusercontent.com/50870173/200134727-5c1e6096-6f84-470b-99c6-16793450a1eb.png)
 
-
 ### Built with
 
 - [Next.js](https://nextjs.org/)

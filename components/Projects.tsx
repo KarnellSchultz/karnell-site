@@ -13,13 +13,15 @@ const Projects = () => {
             title={'Capitals-Magellan 🧭'}
             link={'https://capitals.nellzus.se/'}
             gitLink={'https://github.com/KarnellSchultz/capitals'}
-            blurb={`A game to guess the worlds capitals`}></ProjectItem>
+            blurb={`A game to guess the worlds capitals`}
+          ></ProjectItem>
         </div>
         <ProjectItem
           title={'TypeTypeType 🚤'}
           link={'https://typetypetype.vercel.app/'}
           gitLink={'https://github.com/KarnellSchultz/typetypetype'}
-          blurb={`An application to test your typing speed.`}></ProjectItem>
+          blurb={`An application to test your typing speed.`}
+        ></ProjectItem>
       </div>
     </>
   )

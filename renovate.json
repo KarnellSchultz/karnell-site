@@ -1,22 +1,12 @@
 {
-  "extends": [
-    "config:base"
-  ],
-  "schedule": [
-    "on tuesday and saturday"
-  ],
+  "extends": ["config:base"],
+  "schedule": ["on tuesday and saturday"],
   "prCreation": "not-pending",
   "stabilityDays": 5,
-  "labels": [
-    "deps"
-  ],
+  "labels": ["deps"],
   "packageRules": [
     {
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
-      ],
+      "matchUpdateTypes": ["major", "minor", "patch"],
       "automerge": true
     }
   ]

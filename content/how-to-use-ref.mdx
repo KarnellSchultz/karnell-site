@@ -58,14 +58,14 @@ created a ref, and attached it to a `<input>` element.
 > or this [quick dive 🩲](https://reactjs.org/docs/hooks-effect.html)
 
 ```jsx
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react'
 
 export default function RefExample() {
   useEffect(() => {
-    console.log(inputRef);
-  }, []);
-  const inputRef = useRef();
-  return <input ref={inputRef} />;
+    console.log(inputRef)
+  }, [])
+  const inputRef = useRef()
+  return <input ref={inputRef} />
 }
 ```
 
@@ -79,19 +79,19 @@ when the page loads. To do that we'd need to add the following to our
 useEffect:
 
 ```jsx
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react'
 
 export default function App() {
   useEffect(() => {
-    inputRef.current.value = 'email@address.com';
-  }, []);
+    inputRef.current.value = 'email@address.com'
+  }, [])
 
-  const inputRef = useRef();
+  const inputRef = useRef()
   return (
     <div className="App">
       <input ref={inputRef} />
     </div>
-  );
+  )
 }
 ```
 
@@ -112,26 +112,26 @@ For this example we're going to bring in useState to keep track of the
 size of the element, then use that state to be displayed on screen.
 
 ```jsx
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react'
 
 export default function App() {
-  const [height, setHeight] = useState(0);
+  const [height, setHeight] = useState(0)
 
-  const measuredRef = useRef();
+  const measuredRef = useRef()
   useEffect(() => {
     if (measuredRef.current) {
-      let node = measuredRef.current.getBoundingClientRect().height;
-      console.log(node);
-      setHeight(node);
+      let node = measuredRef.current.getBoundingClientRect().height
+      console.log(node)
+      setHeight(node)
     }
-  }, [measuredRef]);
+  }, [measuredRef])
 
   return (
     <>
       <h1 ref={measuredRef}>Hello, world</h1>
       <h2>The above header is {Math.round(height)}px tall</h2>
     </>
-  );
+  )
 }
 ```
 
@@ -146,19 +146,19 @@ The following example make this issue much more clear. Try it out to
 see for yourself.
 
 ```jsx
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react'
 
 export default function App() {
-  const [height, setHeight] = useState(0);
+  const [height, setHeight] = useState(0)
 
-  const measuredRef = useRef();
+  const measuredRef = useRef()
   useEffect(() => {
     if (measuredRef.current) {
-      let node = measuredRef.current.getBoundingClientRect().width;
-      console.log(node);
-      setHeight(node);
+      let node = measuredRef.current.getBoundingClientRect().width
+      console.log(node)
+      setHeight(node)
     }
-  }, [measuredRef]);
+  }, [measuredRef])
 
   return (
     <>
@@ -167,12 +167,13 @@ export default function App() {
           (measuredRef.current.innerHTML = 'MUCH LONGER TEXT HERE')
         }
         ref={measuredRef}
-        style={{ display: 'inline-block' }}>
+        style={{ display: 'inline-block' }}
+      >
         Hello, world
       </h1>
       <h2>The above header is {Math.round(height)}px tall</h2>
     </>
-  );
+  )
 }
 ```
 
@@ -182,23 +183,23 @@ function into a ref to get the height of an element, then pass that
 into state.
 
 ```jsx
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState } from 'react'
 
 export default function App() {
-  const [height, setHeight] = useState(0);
+  const [height, setHeight] = useState(0)
 
   const measuredRef = useCallback((node) => {
     if (node !== null) {
-      setHeight(node.getBoundingClientRect().height);
+      setHeight(node.getBoundingClientRect().height)
     }
-  }, []);
+  }, [])
 
   return (
     <>
       <h1 ref={measuredRef}>Hello, world</h1>
       <h2>The above header is {Math.round(height)}px tall</h2>
     </>
-  );
+  )
 }
 ```
 
@@ -208,21 +209,21 @@ In the case of getting user input from `<input/>` field I used to
 always reach for the useState hook. For example:
 
 ```jsx
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 export default function App() {
-  const [firstName, setFirstName] = useState();
+  const [firstName, setFirstName] = useState()
   return (
     <>
       <input
         value={firstName}
         onChange={(e) => {
-          setFirstName(e.target.value);
+          setFirstName(e.target.value)
         }}
         placeholder="input"
       />
     </>
-  );
+  )
 }
 ```
 
@@ -239,20 +240,21 @@ re-render the component. While again it's not the end of the world,
 and in most situations that's _fine,_ it can be done better.
 
 ```jsx
-import React, { useRef } from 'react';
+import React, { useRef } from 'react'
 
 export default function App() {
-  const inputRef = useRef();
+  const inputRef = useRef()
   return (
     <>
       <form
         onSubmit={(e) => {
-          e.preventDefault();
-        }}>
+          e.preventDefault()
+        }}
+      >
         <input ref={inputRef} placeholder="input" />
       </form>
     </>
-  );
+  )
 }
 ```
 
@@ -265,24 +267,25 @@ Finally, we bring back our good old friend useState to help us out
 there.
 
 ```jsx
-import React, { useRef, useState } from 'react';
-import './styles.css';
+import React, { useRef, useState } from 'react'
+import './styles.css'
 
 export default function App() {
-  const [firstName, setFirstName] = useState();
-  const inputRef = useRef();
+  const [firstName, setFirstName] = useState()
+  const inputRef = useRef()
   return (
     <div className="App">
       <form
         onSubmit={(e) => {
-          e.preventDefault();
-          setFirstName(inputRef.current.value);
-          console.log(firstName);
-        }}>
+          e.preventDefault()
+          setFirstName(inputRef.current.value)
+          console.log(firstName)
+        }}
+      >
         <input ref={inputRef} placeholder="input" />
       </form>
     </div>
-  );
+  )
 }
 ```
 
@@ -302,23 +305,23 @@ import React, {
   useState,
   useCallback,
   useEffect,
-} from 'react';
+} from 'react'
 
 export default function App() {
-  const [firstName, setFirstName] = useState();
-  const inputRef = useRef();
+  const [firstName, setFirstName] = useState()
+  const inputRef = useRef()
 
   const handleSubmit = useCallback(
     (e) => {
-      e.preventDefault();
-      setFirstName(inputRef.current.value);
+      e.preventDefault()
+      setFirstName(inputRef.current.value)
     },
     [inputRef]
-  );
+  )
 
   useEffect(() => {
-    console.log(firstName);
-  }, [firstName]);
+    console.log(firstName)
+  }, [firstName])
 
   return (
     <>
@@ -326,7 +329,7 @@ export default function App() {
         <input ref={inputRef} placeholder="input" />
       </form>
     </>
-  );
+  )
 }
 ```
 

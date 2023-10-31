@@ -11,9 +11,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mdx-js/loader": "3.0.0",
-    "@mdx-js/react": "3.0.0",
-    "@types/mdx": "2.0.9",
+    "@mdx-js/loader": "^3.0.0",
+    "@mdx-js/react": "^3.0.0",
+    "@types/mdx": "^2.0.9",
     "chokidar": "3.5.3",
     "eslint-config-nextjs": "1.0.7",
     "eslint-config-prettier": "9.0.0",
@@ -29,8 +29,9 @@
     "react-is": "18.2.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "7.22.15",
     "@next/eslint-plugin-next": "13.5.6",
-    "@next/mdx": "13.5.6",
+    "@next/mdx": "^14.0.1",
     "@tailwindcss/typography": "0.5.10",
     "@testing-library/jest-dom": "6.1.4",
     "@testing-library/react": "14.0.0",
@@ -42,7 +43,6 @@
     "@typescript-eslint/eslint-plugin": "6.9.0",
     "@typescript-eslint/parser": "6.9.0",
     "autoprefixer": "10.4.16",
-    "@babel/eslint-parser": "7.22.15",
     "concurrently": "^8.0.0",
     "eslint": "8.52.0",
     "eslint-config-airbnb": "19.0.4",

@@ -10,14 +10,16 @@ function Footer() {
         <Link href="/" legacyBehavior>
           <button
             className="  p-2 mx-2 transition-all hover:bg-zinc-300"
-            type="button">
+            type="button"
+          >
             Home
           </button>
         </Link>
         <Link href="/blog" legacyBehavior>
           <button
             className="  p-2 mx-2 transition-all hover:bg-zinc-300"
-            type="button">
+            type="button"
+          >
             Blog
           </button>
         </Link>
@@ -25,7 +27,8 @@ function Footer() {
         <Link href="/about" legacyBehavior>
           <button
             className="  p-2 mx-2 transition-all hover:bg-zinc-300"
-            type="button">
+            type="button"
+          >
             About
           </button>
         </Link>
@@ -33,17 +36,20 @@ function Footer() {
       <div className="py-4 flex ">
         <Link
           href="https://vercel.com/"
-          className=" p-2  hover:bg-zinc-300 hover:text-black">
+          className=" p-2  hover:bg-zinc-300 hover:text-black"
+        >
           <BsFillTriangleFill size={32} />
         </Link>
         <Link
           href="https://nextjs.org/"
-          className=" p-2  hover:bg-zinc-300 hover:text-black">
+          className=" p-2  hover:bg-zinc-300 hover:text-black"
+        >
           <SiNextDotJs size={32} />
         </Link>
         <Link
           href="https://github.com/KarnellSchultz/karnell-site"
-          className=" p-2  hover:bg-zinc-300 hover:text-black">
+          className=" p-2  hover:bg-zinc-300 hover:text-black"
+        >
           <AiFillGithub size={32} />
         </Link>
       </div>
