@@ -28,6 +28,7 @@ export default function Home() {
         <Projects />
       </section>
       <section>
+        <h2>Blog</h2>
         <Post />
       </section>
     </>

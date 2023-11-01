@@ -4,13 +4,13 @@
 
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import Blogs from '../app/blog/page'
+import Blog from '../app/blog/page'
 
 describe('Home', () => {
   it('renders a blog page heading', () => {
-    render(<Blogs />)
+    render(<Blog />)
 
-    const heading = screen.getByRole('heading', { name: /blogs/i })
+    const heading = screen.getByRole('heading', { name: /blog/i })
 
     expect(heading).toBeInTheDocument
   })

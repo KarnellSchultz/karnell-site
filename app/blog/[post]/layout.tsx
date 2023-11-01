@@ -1,11 +1,11 @@
-type Pros = {
+type Props = {
   children: React.ReactNode
 }
 
-export default function Layout({ children }: Pros) {
+export default function Layout({ children }: Props) {
   return (
     <>
-      <main className="mb-16">{children}</main>
+      <section>{children}</section>
       <footer>
         <h5 className="text-center">🌍Thanks for Reading🌍</h5>
       </footer>

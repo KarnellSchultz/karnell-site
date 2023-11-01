@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   description: 'Personal website of Karnell Schultz :-)',
 }
 
-type LayoutProps = {
+type Props = {
   children: React.ReactNode
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children }: Props) {
   return (
     <html lang="en" className="bg-white">
       <body
