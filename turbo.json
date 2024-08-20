@@ -1,7 +1,9 @@
 {
-  "pipeline": {
+  "tasks": {
     "build": {
-      "outputs": [".next/**"]
+      "outputs": [
+        ".next/**"
+      ]
     },
     "lint": {
       "outputs": []
