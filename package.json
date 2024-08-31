@@ -32,7 +32,7 @@
     "@babel/eslint-parser": "7.25.1",
     "@next/eslint-plugin-next": "14.2.6",
     "@next/mdx": "^14.0.1",
-    "@tailwindcss/typography": "0.5.14",
+    "@tailwindcss/typography": "0.5.15",
     "@testing-library/jest-dom": "6.5.0",
     "@testing-library/react": "16.0.0",
     "@types/jest": "29.5.12",
