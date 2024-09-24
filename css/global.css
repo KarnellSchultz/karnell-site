@@ -5,22 +5,3 @@
 * {
   box-sizing: border-box;
 }
-
-@layer base {
-  a {
-    @apply text-pink-500 cursor-pointer
-    hover:bg-pink-400 hover:text-white
-    p-0.5 rounded-sm
-    transition-all;
-  }
-}
-
-@layer components {
-  .pink-link {
-    @apply text-pink-500 cursor-pointer
-  hover:bg-pink-400 hover:text-white
-  p-0.5 rounded-sm
-  transition-all
-  inline;
-  }
-}

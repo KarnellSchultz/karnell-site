@@ -1,53 +1,24 @@
 import Link from 'next/link'
-import { AiFillGithub } from 'react-icons/ai'
-import { TbBrandNextjs } from 'react-icons/tb'
-import { SiVercel } from 'react-icons/si'
 
-function Footer() {
+export function Footer() {
   return (
-    <footer className="w-full flex flex-col items-center justify-center border-t-2">
-      <div className="pt-4">
-        <Link href="/">
-          <button
-            className="  p-2 mx-2 transition-all hover:bg-zinc-300"
-            type="button">
-            Home
-          </button>
-        </Link>
-        <Link href="/blog">
-          <button
-            className="  p-2 mx-2 transition-all hover:bg-zinc-300"
-            type="button">
-            Blog
-          </button>
-        </Link>
+    <footer className="w-full py-6 flex gap-10 justify-center border-t-2">
+      <Link href="/">
+        <button className="p-1 hover:underline " type="button">
+          Home
+        </button>
+      </Link>
+      <Link href="/contact">
+        <button className="p-1 hover:underline  " type="button">
+          Contact
+        </button>
+      </Link>
 
-        <Link href="/about">
-          <button
-            className="  p-2 mx-2 transition-all hover:bg-zinc-300"
-            type="button">
-            About
-          </button>
-        </Link>
-      </div>
-      <div className="py-4 flex ">
-        <Link
-          href="https://vercel.com/"
-          className=" p-2  hover:bg-zinc-300 hover:text-black">
-          <SiVercel size={32} />
-        </Link>
-        <Link
-          href="https://nextjs.org/"
-          className=" p-2  hover:bg-zinc-300 hover:text-black">
-          <TbBrandNextjs size={32} />
-        </Link>
-        <Link
-          href="https://github.com/KarnellSchultz/karnell-site"
-          className=" p-2  hover:bg-zinc-300 hover:text-black">
-          <AiFillGithub size={32} />
-        </Link>
-      </div>
+      <Link href="/about">
+        <button className="p-1  hover:underline " type="button">
+          About
+        </button>
+      </Link>
     </footer>
   )
 }
-export { Footer }

@@ -1,30 +1,28 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
-import { Nav } from '../components/Nav'
 import { Footer } from '../components/footer'
+import { GeistSans } from 'geist/font/sans'
+
 import '../css/global.css'
+import { PropsWithChildren } from 'react'
 
 export const metadata: Metadata = {
   title: 'Karnell Schultz',
   description: 'Personal website of Karnell Schultz :-)',
 }
 
-type Props = {
-  children: React.ReactNode
-}
-
-export default function Layout({ children }: Props) {
+export default function Layout({ children }: PropsWithChildren) {
   return (
-    <html lang="en" className="bg-white">
+    <html lang="en" className={GeistSans.className}>
       <body
-        className="prose h-full max-w-2xl flex flex-col items-center m-auto px-4
+        className="prose selection:bg-lime-300 selection:text-purple-800 h-full max-w-xl
+        flex flex-col items-center m-auto pt-10 px-4
         tracking-wider
         ">
-        <Nav />
         <main className="mb-16">{children}</main>
-        <Analytics />
         <Footer />
       </body>
+      <Analytics />
     </html>
   )
 }
