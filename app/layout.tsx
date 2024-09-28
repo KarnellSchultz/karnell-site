@@ -27,7 +27,6 @@ const comicMono = LocalFont({
 })
 
 export default function Layout({ children }: PropsWithChildren) {
-  console.log(comicMono)
   return (
     <html lang="en" className={comicMono.className}>
       <body
