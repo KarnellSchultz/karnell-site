@@ -6,10 +6,5 @@ export const metadata: Metadata = {
 }
 
 export default function BlogList() {
-  return (
-    <>
-      <h1>Blog</h1>
-      <Post />
-    </>
-  )
+  return <Post />
 }

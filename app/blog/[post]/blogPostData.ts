@@ -5,9 +5,8 @@ export type PostDetailsType = {
   slug: string
 }
 
-export const PostDetails: PostDetailsType[] = [
+export const POST_DETAILS: PostDetailsType[] = [
   //They appear in the order listed top to bottom
-
   {
     id: 13,
     title: '2022 into 2023',
@@ -92,4 +91,4 @@ export const PostDetails: PostDetailsType[] = [
     date: 'March 2020',
     slug: 'why-learn-markdown',
   },
-]
+] as const

@@ -6,7 +6,20 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              textDecoration: 'none', // Remove underline from all links
+              '&:hover': {
+                // textDecoration: 'underline', // Optional: Add underline on hover
+              },
+            },
+          },
+        },
+      }),
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 }

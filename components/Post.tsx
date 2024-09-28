@@ -1,16 +1,17 @@
 import Link from 'next/link'
-import { PostDetails } from 'app/blog/[post]/blogPostData'
+import { POST_DETAILS } from 'app/blog/[post]/blogPostData'
 
 export function Post() {
   return (
     <ul className="list-none p-0 mt-0 mb-0">
-      {PostDetails.map((row) => (
-        <li className="cursor-pointer hover:underline" key={row.id}>
+      {POST_DETAILS.map((row) => (
+        <li className="cursor-pointer py-2" key={row.id}>
           <Link
-            href={`blog/${row.slug}`}
-            className="font-normal no-underline hover:bg-inherit hover:text-gray-800">
+            className="text-lg text-pink-700"
+            href={`blog/${row.slug}`}>
             {row.title}
           </Link>
+          <div className="text-sm">{row.date}</div>
         </li>
       ))}
     </ul>

@@ -16,7 +16,6 @@ import review2021 from '../../../content/review-2021.mdx'
 import review2022 from '../../../content/review-2022.mdx'
 import migrationToTailwindcss from '../../../content/migration-to-tailwindcss.mdx'
 
-
 const Posts = {
   'css-last-of-type': cssLastOfType,
   'first-three-months': firstThreeMonths,
@@ -59,8 +58,6 @@ export default function Page({
   params: { post: string }
 }) {
   const { post } = params
-
   const Component = Posts[post]
-
   return <Component />
 }
