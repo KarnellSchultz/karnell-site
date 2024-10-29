@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.25.9",
-    "@next/eslint-plugin-next": "14.2.15",
+    "@next/eslint-plugin-next": "14.2.16",
     "@next/mdx": "^14.0.1",
     "@tailwindcss/typography": "0.5.15",
     "@testing-library/jest-dom": "6.6.2",
@@ -48,7 +48,7 @@
     "concurrently": "^9.0.0",
     "eslint": "9.13.0",
     "eslint-config-airbnb": "19.0.4",
-    "eslint-config-next": "14.2.15",
+    "eslint-config-next": "14.2.16",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jsx-a11y": "6.10.1",
     "eslint-plugin-react": "7.37.2",
