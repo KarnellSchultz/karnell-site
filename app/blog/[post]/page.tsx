@@ -16,6 +16,7 @@ import review2021 from '../../../content/review-2021.mdx'
 import review2022 from '../../../content/review-2022.mdx'
 import migrationToTailwindcss from '../../../content/migration-to-tailwindcss.mdx'
 import myJourneyToVim from '../../../content/my-journey-to-vim.mdx'
+import vimLevelUp from '../../../content/vim-level-up.mdx'
 
 const Posts = {
   'css-last-of-type': cssLastOfType,
@@ -32,7 +33,8 @@ const Posts = {
   'review-2021': review2021,
   'review-2022': review2022,
   'migration-to-tailwindcss': migrationToTailwindcss,
-  'my-journey-to-vim': myJourneyToVim
+  'my-journey-to-vim': myJourneyToVim,
+  'how-vim-leveled-me-up': vimLevelUp
 } as const
 
 export async function generateStaticParams() {

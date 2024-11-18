@@ -8,6 +8,12 @@ export type PostDetailsType = {
 export const POST_DETAILS: PostDetailsType[] = [
   //They appear in the order listed top to bottom
   {
+    id: 15,
+    title: "How vim leveled me up as a developer",
+    date: new Date('Nov 18 2024').toDateString(),
+    slug: 'how-vim-leveled-me-up'
+  },
+  {
     id: 14,
     title: "My Journey to Vim: From VsCode to Zed to NeoVim",
     date: new Date('Nov 11 2024').toDateString(),
