@@ -25,10 +25,10 @@
     "next": "^14.0.0",
     "prettier": "3.4.2",
     "prismjs": "^1.29.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-icons": "5.4.0",
-    "react-is": "18.3.1"
+    "react-is": "19.0.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.25.9",
@@ -40,8 +40,8 @@
     "@types/jest": "29.5.14",
     "@types/node": "22.10.1",
     "@types/prismjs": "1.26.5",
-    "@types/react": "18.3.14",
-    "@types/react-dom": "18.3.2",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.1",
     "@typescript-eslint/eslint-plugin": "8.1.0",
     "@typescript-eslint/parser": "8.1.0",
     "autoprefixer": "10.4.20",
@@ -58,7 +58,7 @@
     "jest-environment-jsdom": "29.7.0",
     "postcss": "^8.4.18",
     "postcss-cli": "^11.0.0",
-    "react-test-renderer": "18.3.1",
+    "react-test-renderer": "19.0.0",
     "tailwindcss": "3.4.16",
     "turbo": "^2.0.14",
     "typescript": "5.7.2"
