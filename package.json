@@ -31,7 +31,7 @@
     "react-is": "19.0.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.26.10",
+    "@babel/eslint-parser": "7.27.0",
     "@next/eslint-plugin-next": "14.2.26",
     "@next/mdx": "^14.0.1",
     "@tailwindcss/typography": "0.5.16",
