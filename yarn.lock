@@ -718,17 +718,17 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-14.2.28.tgz#4bfeac21949743bfc8d09cfc223439112bcd2538"
   integrity sha512-PAmWhJfJQlP+kxZwCjrVd9QnR5x0R3u0mTXTiZDgSd4h5LdXmjxCCWbN9kq6hkZBOax8Rm3xDW5HagWyJuT37g==
 
-"@next/eslint-plugin-next@14.2.29":
-  version "14.2.29"
-  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-14.2.29.tgz#db2ce87f0c55e04a5a6f5381bb233644e365e448"
-  integrity sha512-qpxSYiPNJTr9RzqjGi5yom8AIC8Kgdtw4oNIXAB/gDYMDctmfMEv452FRUhT06cWPgcmSsbZiEPYhbFiQtCWTg==
+"@next/eslint-plugin-next@14.2.30":
+  version "14.2.30"
+  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-14.2.30.tgz#852651bc31a7a01d84a54d95903f48cde6c8bc01"
+  integrity sha512-mvVsMIutMxQ4NGZEMZ1kiBNc+la8Xmlk30bKUmCPQz2eFkmsLv54Mha8QZarMaCtSPkkFA1TMD+FIZk0l/PpzA==
   dependencies:
     glob "10.3.10"
 
 "@next/mdx@^14.0.1":
-  version "14.2.29"
-  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-14.2.29.tgz#e96ef1752ad2355ec50a55d54334b82968c7b345"
-  integrity sha512-pXJzTP7N8sJQGjNb8lYFr+vlDLpGu9HS0Z3m5n9fYRMdr4H3H70ONd0Bi5+wYgPUnc2PPt6oila0gBdOLMI0rg==
+  version "14.2.30"
+  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-14.2.30.tgz#9ed1a44e55e20e6153ff0cef4f255f6c3d0dc043"
+  integrity sha512-CEUs6GR14NvRzxNVlVZw1YpPAY64N6uibQmaS7l+GCwhqHz5Z8aqBAtNfY/HVBJPzUCadJKsQI7ICLdZyw23eg==
   dependencies:
     source-map "^0.7.0"
 
@@ -2664,12 +2664,12 @@ eslint-config-airbnb@19.0.4:
     object.assign "^4.1.2"
     object.entries "^1.1.5"
 
-eslint-config-next@14.2.29:
-  version "14.2.29"
-  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-14.2.29.tgz#1b980bdd5b39a46fb5a47d5c8aa028664d911915"
-  integrity sha512-KBbGfrcs4y+YxNb9y9IqEcZhQBbtIHyw5ICiCzL+x/0AzYCUwMHJ6IwGDswkQj/SDlzgexDAE258GSpQ8TH3MQ==
+eslint-config-next@14.2.30:
+  version "14.2.30"
+  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-14.2.30.tgz#3a2be44099c6fbda60ba5c97098dd5f534bb18c7"
+  integrity sha512-4pTMb3wfpI+piVeEz3TWG1spjuXJJBZaYabi2H08z2ZTk6/N304POEovHdFmK6EZb4QlKpETulBNaRIITA0+xg==
   dependencies:
-    "@next/eslint-plugin-next" "14.2.29"
+    "@next/eslint-plugin-next" "14.2.30"
     "@rushstack/eslint-patch" "^1.3.3"
     "@typescript-eslint/eslint-plugin" "^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
     "@typescript-eslint/parser" "^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0"
