@@ -1084,9 +1084,9 @@
   integrity sha512-3qBGRW+sCGzgbpc5TS1a0p7eNxnOarGVQhZxfvTdnV0gFI61lX7QNtQ4V1TSREctXzYn5NetbUsLvyqwLFJM6Q==
 
 "@next/mdx@^14.0.1":
-  version "14.2.32"
-  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-14.2.32.tgz#d5f65c8d57cc6beca4b7715acc9b1de01f9ba3bc"
-  integrity sha512-5tzd86NLGQxzb+QpRxrbeDG5BC555ZpRnFWQNvMtJ6sDeiPvUq/rhkbwESSYi1v/9tIR14yoKB/QOx3QOrrWDA==
+  version "14.2.35"
+  resolved "https://registry.yarnpkg.com/@next/mdx/-/mdx-14.2.35.tgz#383f04edf13e98da374c7c4602ac4df35f7d7356"
+  integrity sha512-Pekqjb1Rm4mm0wJgRRmVIdN8eCEMMdDeCCa+REHYb8lZ9K7vYsEAVHJ8XBq8XaLKp110p8k6JdUT64sFE/y8Uw==
   dependencies:
     source-map "^0.7.0"
 
